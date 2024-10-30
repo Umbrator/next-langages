@@ -62,6 +62,24 @@ module.exports = {
         3: '3',
         999: '999',
       },
+
+      // Professional animations
+      keyframes: {
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        underlineDraw: {
+          '0%': { width: '0' },
+          '100%': { width: '100%' },
+        },
+      },
+      animation: {
+        'fade-up': 'fadeUp 1s ease-in-out forwards',
+        'fade-up-delayed': 'fadeUp 1s ease-in-out 0.3s forwards',
+        'fade-up-long': 'fadeUp 1.3s ease-in-out forwards',
+        'underline-draw': 'underlineDraw 0.6s ease-in-out forwards',
+      },
     },
   },
   plugins: [],
