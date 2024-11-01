@@ -1,134 +1,107 @@
 export const courseList = [
   {
-    title: 'General French',
-    description: 'Build a strong foundation in reading, writing, listening, and speaking skills in French.',
-    image: 'https://www.upload.ee/image/17221791/learn-french-language-online-education-concept.jpg',
+    title: 'General Italie',
+    description: 'Build a strong foundation in reading, writing, listening, and speaking skills.',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-stacks-table-working-space.jpg?alt=media&token=f3614889-d8b9-4054-91d9-fba83dbd3ba0',
   },
   {
-    title: 'Business French',
-    description: 'Enhance your business communication and professional skills in French.',
-    image: 'https://www.upload.ee/image/17219127/pencil-sharpener-notepad-books.jpg',
+    title: 'Business Italie',
+    description: 'Enhance your business communication and professional skills in Italie.',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books.jpg?alt=media&token=8903a1c6-fe60-4a04-aa00-efc291c6e989',
   },
   {
-    title: 'DELF Exam Preparation',
-    description: 'Prepare for French proficiency exams with focused practice and strategies.',
-    image: 'https://www.upload.ee/image/17219130/high-angle-man-holding-notebook.jpg',
+    title: 'Exam Preparation',
+    description: 'Prepare for Italie proficiency exams with focused practice and strategies.',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-assortment.jpg?alt=media&token=15f50f3c-535e-482b-b368-ff484c46c5eb',
   },
   {
-    title: 'French for Kids',
-    description: 'Fun and interactive lessons designed for young learners to grasp French skills.',
-    image: 'https://www.upload.ee/image/17219131/book-3089857_1280.jpg',
+    title: 'Italie for Kids',
+    description: 'Fun and interactive lessons designed for young learners to grasp Italie skills.',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-blue.jpg?alt=media&token=1a5e32fb-15bc-4d07-a189-3312c885613d',
   },
   {
-    title: 'Private French Lessons',
+    title: 'Private Lessons',
     description: 'Personalized lessons tailored to individual learning styles and goals.',
-    image: 'https://www.upload.ee/image/17219142/row-various-old-books.jpg',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books.jpg?alt=media&token=8903a1c6-fe60-4a04-aa00-efc291c6e989',
   },
   {
-    title: 'Self-study French Courses',
+    title: 'Self-study Courses',
     description: 'Flexible and self-paced courses for independent learners.',
-    image: 'https://www.upload.ee/image/17219148/english-books-with-blue-background.jpg',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-book-resting-table-working-space_23-2149429575.avif?alt=media&token=c597d799-e6de-441b-9f2b-9e6dda373a20',
   },
 ];
-export const faqData = [
-  {
-    question: "What levels of French courses do you offer?",
-    answer:
-      "We offer French courses for all proficiency levels, from beginner to advanced. Our courses are designed to cater to learners with various language abilities.",
-  },
-  {
-    question: "Are your instructors certified and experienced?",
-    answer:
-      "Yes, all our instructors are highly certified and have years of experience in teaching French, ensuring you receive quality education.",
-  },
-  {
-    question: "What teaching methods and materials do you use?",
-    answer:
-      "We combine traditional and modern teaching methods, including interactive materials, online resources, and practical case studies to provide a comprehensive learning experience.",
-  },
-  {
-    question: "Can I join a French course if I have a busy schedule?",
-    answer:
-      "Absolutely! We offer flexible scheduling options, including weekend and evening classes, to accommodate your busy lifestyle.",
-  },
-  {
-    question: "Is there any age restriction for enrolling in French courses?",
-    answer:
-      "No, we welcome learners of all ages. Whether you are a student, professional, or retiree, we have a course tailored to your needs.",
-  },
-];
-
 
 export const courseData = {
-  "general-french": {
-    title: "Français Général",
-    description: "Notre cours de français général est conçu pour bâtir une base solide dans les compétences fondamentales : lecture, écriture, écoute, et expression orale.",
+  "general-italie": {
+    title: "General Italie",
+    description: "Our Business Italie course is designed to build a strong foundation in the core areas of Italie: reading, writing, listening, and speaking.",
     image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
     levels: [
       {
-        level: 'Niveau Débutant',
-        description: 'Se concentre sur la grammaire de base et le vocabulaire. Vous apprendrez à tenir des conversations simples et à rédiger des textes de base.',
+        level: 'Beginner Level',
+        description: 'Focuses on basic grammar and business-related vocabulary. You will learn how to conduct simple conversations and write basic emails.',
         topics: [
-          'Introduction à la grammaire de base et au vocabulaire quotidien',
-          'Dialogues simples et conversations',
-          'Rédaction et réponse aux messages de base',
-          'Pratique des phrases courantes dans les contextes quotidiens',
+          'Introduction to basic grammar and professional vocabulary',
+          'Simple business dialogues and phone conversations',
+          'Writing and responding to basic emails',
+          'Practicing common phrases used in business settings',
         ],
       },
     ],
     objectives: [
-      'Atteindre la fluidité et la confiance en communication quotidienne',
-      'Développer des compétences d’écoute à travers des scénarios réels',
-      'Élargir le vocabulaire pour divers contextes',
+      'Achieve fluency and confidence in professional Italie communication',
+      'Develop effective listening skills through real-life business scenarios',
+      'Expand vocabulary for business, social, and networking events',
     ],
     schedule: [
-      { day: "Lundi - Jeudi", session: "Session du Matin", time: "10:00 - 12:00" },
-      { day: "Lundi - Jeudi", session: "Session du Soir", time: "18:00 - 20:00" },
+      { day: "Monday - Thursday", session: "Morning Session", time: "10:00 AM - 12:00 PM" },
+      { day: "Monday - Thursday", session: "Evening Session", time: "6:00 PM - 8:00 PM" },
     ],
     fee: 300,
-    prerequisites: "Aucun prérequis spécifique pour le niveau débutant. Les étudiants des niveaux supérieurs doivent avoir une connaissance de base de la grammaire et du vocabulaire français.",
+    prerequisites: "There are no specific prerequisites for the beginner level. Students enrolling in higher levels should have a basic understanding of Italie grammar and vocabulary.",
     faq: [
-      { question: 'Quels matériaux sont fournis ?', answer: 'Un manuel complet, des supports de cours et des ressources en ligne.' },
-      { question: 'Puis-je changer entre les cours du matin et du soir ?', answer: 'Oui, en nous contactant une semaine à l’avance.' },
-      { question: 'Y a-t-il un certificat après la fin du cours ?', answer: 'Oui, un certificat sera délivré après avoir réussi l’évaluation finale.' },
+      { question: 'What materials are provided?', answer: 'A comprehensive coursebook, handouts, and online resources.' },
+      { question: 'Can I switch between morning and evening classes?', answer: 'Yes, by contacting us one week in advance.' },
+      { question: 'Is there a certificate upon completion?', answer: 'Yes, you will receive a certificate upon passing the final assessment.' },
     ],
   },
-  "business-french": {
-    title: "Français des Affaires",
-    description: "Améliorez vos compétences en communication professionnelle en français grâce à notre cours dédié aux affaires.",
+  "business-italie": {
+    title: "Business Italie",
+    description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of Italie with a personalized approach.",
     image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
     levels: [
       {
-        level: 'Niveau Débutant',
-        description: 'Apprenez le vocabulaire et la grammaire nécessaires pour des situations professionnelles. Vous apprendrez à écrire des e-mails et à participer à des réunions.',
+        level: 'Beginner Level',
+        description: 'Focuses on basic grammar and vocabulary. You will learn how to have simple conversations and write basic texts.',
         topics: [
-          'Introduction à la grammaire professionnelle et au vocabulaire',
-          'Dialogues et conversations en entreprise',
-          'Rédaction et réponse à des e-mails professionnels',
-          'Pratique des phrases courantes dans des contextes professionnels',
+          'Introduction to basic grammar and everyday vocabulary',
+          'Simple dialogues and conversations',
+          'Writing and responding to basic messages',
+          'Practicing common phrases used in everyday settings',
         ],
       },
+      // ... other levels
     ],
     objectives: [
-      'Atteindre la fluidité et la confiance en communication professionnelle en français',
-      'Développer des compétences d’écoute à travers des scénarios d’affaires réels',
-      'Élargir le vocabulaire pour les événements professionnels et les réseaux',
+      'Achieve fluency and confidence in daily Italie communication',
+      'Develop listening skills through personalized lessons',
+      'Expand vocabulary for various contexts',
     ],
     schedule: [
-      { day: "Lundi - Vendredi", session: "Session du Matin", time: "9:00 - 11:00" },
-      { day: "Lundi - Vendredi", session: "Session de l’Après-midi", time: "13:00 - 15:00" },
+      { day: "Monday - Thursday", session: "Morning Session", time: "9:00 AM - 11:00 AM" },
+      { day: "Monday - Thursday", session: "Afternoon Session", time: "1:00 PM - 3:00 PM" },
     ],
-    fee: 400,
-    prerequisites: "Connaissance de base de la grammaire et du vocabulaire français requise pour les niveaux supérieurs.",
+    fee: 350,
+    prerequisites: "No specific prerequisites for beginners. Intermediate and advanced students should have a basic understanding of Italie grammar.",
     faq: [
-      { question: 'Quels matériaux sont fournis ?', answer: 'Un manuel personnalisé, des documents de cours et des ressources en ligne.' },
-      { question: 'Puis-je ajuster mon emploi du temps ?', answer: 'Oui, en nous contactant à l’avance, vous pouvez ajuster votre emploi du temps.' },
-      { question: 'Un certificat est-il fourni après le cours ?', answer: 'Oui, un certificat est fourni après la réussite de l’évaluation finale.' },
+      { question: 'What materials are provided?', answer: 'A personalized course plan, handouts, and access to online resources.' },
+      { question: 'Can I schedule lessons at different times?', answer: 'Yes, by contacting us in advance, you can adjust your schedule.' },
+      { question: 'Is there a certification after completion?', answer: 'Yes, upon successful completion, a certificate is provided.' },
     ],
   },
-  "delf-exam-preparation": {
+  "exam-preparation": {
     title: "Exam Preparation",
-    description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
+    description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of Italie with a personalized approach.",
     image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
     levels: [
       {
@@ -144,7 +117,7 @@ export const courseData = {
       // ... other levels
     ],
     objectives: [
-      'Achieve fluency and confidence in daily English communication',
+      'Achieve fluency and confidence in daily Italie communication',
       'Develop listening skills through personalized lessons',
       'Expand vocabulary for various contexts',
     ],
@@ -153,16 +126,16 @@ export const courseData = {
       { day: "Monday - Thursday", session: "Afternoon Session", time: "1:00 PM - 3:00 PM" },
     ],
     fee: 350,
-    prerequisites: "No specific prerequisites for beginners. Intermediate and advanced students should have a basic understanding of English grammar.",
+    prerequisites: "No specific prerequisites for beginners. Intermediate and advanced students should have a basic understanding of Italie grammar.",
     faq: [
       { question: 'What materials are provided?', answer: 'A personalized course plan, handouts, and access to online resources.' },
       { question: 'Can I schedule lessons at different times?', answer: 'Yes, by contacting us in advance, you can adjust your schedule.' },
       { question: 'Is there a certification after completion?', answer: 'Yes, upon successful completion, a certificate is provided.' },
     ],
   },
-  "french-for-kids": {
-    title: "English For Kids",
-    description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
+  "italie-for-kids": {
+    title: "Italie For Kids",
+    description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of Italie with a personalized approach.",
     image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
     levels: [
       {
@@ -178,7 +151,7 @@ export const courseData = {
       // ... other levels
     ],
     objectives: [
-      'Achieve fluency and confidence in daily English communication',
+      'Achieve fluency and confidence in daily Italie communication',
       'Develop listening skills through personalized lessons',
       'Expand vocabulary for various contexts',
     ],
@@ -187,16 +160,16 @@ export const courseData = {
       { day: "Monday - Thursday", session: "Afternoon Session", time: "1:00 PM - 3:00 PM" },
     ],
     fee: 350,
-    prerequisites: "No specific prerequisites for beginners. Intermediate and advanced students should have a basic understanding of English grammar.",
+    prerequisites: "No specific prerequisites for beginners. Intermediate and advanced students should have a basic understanding of Italie grammar.",
     faq: [
       { question: 'What materials are provided?', answer: 'A personalized course plan, handouts, and access to online resources.' },
       { question: 'Can I schedule lessons at different times?', answer: 'Yes, by contacting us in advance, you can adjust your schedule.' },
       { question: 'Is there a certification after completion?', answer: 'Yes, upon successful completion, a certificate is provided.' },
     ],
   },
-  "private-french-lessons": {
+  "private-lessons": {
     title: "Private Lessons",
-    description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
+    description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of Italie with a personalized approach.",
     image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
     levels: [
       {
@@ -212,7 +185,7 @@ export const courseData = {
       // ... other levels
     ],
     objectives: [
-      'Achieve fluency and confidence in daily English communication',
+      'Achieve fluency and confidence in daily Italie communication',
       'Develop listening skills through personalized lessons',
       'Expand vocabulary for various contexts',
     ],
@@ -221,16 +194,16 @@ export const courseData = {
       { day: "Monday - Thursday", session: "Afternoon Session", time: "1:00 PM - 3:00 PM" },
     ],
     fee: 350,
-    prerequisites: "No specific prerequisites for beginners. Intermediate and advanced students should have a basic understanding of English grammar.",
+    prerequisites: "No specific prerequisites for beginners. Intermediate and advanced students should have a basic understanding of Italie grammar.",
     faq: [
       { question: 'What materials are provided?', answer: 'A personalized course plan, handouts, and access to online resources.' },
       { question: 'Can I schedule lessons at different times?', answer: 'Yes, by contacting us in advance, you can adjust your schedule.' },
       { question: 'Is there a certification after completion?', answer: 'Yes, upon successful completion, a certificate is provided.' },
     ],
   },
-  "self-study-french-courses": {
+  "self-study-courses": {
     title: "self Study Courses",
-    description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
+    description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of Italie with a personalized approach.",
     image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
     levels: [
       {
@@ -246,7 +219,7 @@ export const courseData = {
       // ... other levels
     ],
     objectives: [
-      'Achieve fluency and confidence in daily English communication',
+      'Achieve fluency and confidence in daily Italie communication',
       'Develop listening skills through personalized lessons',
       'Expand vocabulary for various contexts',
     ],
@@ -255,7 +228,7 @@ export const courseData = {
       { day: "Monday - Thursday", session: "Afternoon Session", time: "1:00 PM - 3:00 PM" },
     ],
     fee: 350,
-    prerequisites: "No specific prerequisites for beginners. Intermediate and advanced students should have a basic understanding of English grammar.",
+    prerequisites: "No specific prerequisites for beginners. Intermediate and advanced students should have a basic understanding of Italie grammar.",
     faq: [
       { question: 'What materials are provided?', answer: 'A personalized course plan, handouts, and access to online resources.' },
       { question: 'Can I schedule lessons at different times?', answer: 'Yes, by contacting us in advance, you can adjust your schedule.' },

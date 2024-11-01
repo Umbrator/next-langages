@@ -1,25 +1,22 @@
-'use client';
-
+"use client";
 import React, { useState, useEffect } from "react";
-// import Navbar from "../navbar";
-// import Footer from "./footer";
-// import Modal from "./Modal";
-import LearnGermanOne from "../LearnGermanOne.jsx";
-import LearnGermanTwo from "../LearnGermanTwo.jsx";
-import LearnGermanThree from "../LearnGermanThree.jsx";
-import LearnGermanFor from "../LearnGermanFor.jsx";
-import LearnGermanFive from "../LearnGermanFive.jsx";
-import LearnGermanSix from "../LearnGermanSix.jsx";
-import LearnGermanModel from "../LearnGermanModel.jsx";
+import LearnGermanContent from "./LearnGermanContent";
+import LearnGermanFaQ from "../LearnGermanFaQ";
+import LearnGermanModel from "../LearnGermanModel";
+import Navbar from "../../header/navbar";
+import Footer from "../../header/Footer";
 
-const LearnGerman = () => {
+const LearnEnglish = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const [years, setYears] = useState(0);
   const [recommendedPercentage, setRecommendedPercentage] = useState(0);
   const [students, setStudents] = useState(0);
+
   const [yearsText, setYearsText] = useState("");
   const [recommendedText, setRecommendedText] = useState("");
   const [studentsText, setStudentsText] = useState("");
+
   const [headlineText, setHeadlineText] = useState("");
 
   useEffect(() => {
@@ -52,11 +49,24 @@ const LearnGerman = () => {
     incrementNumber(0, 96, setRecommendedPercentage, 2000);
     incrementNumber(0, 150, setStudents, 2000);
 
-    setTimeout(() => animateText("of excellence in German education", setYearsText, 50), 500);
-    setTimeout(() => animateText("Recommended by German learners", setRecommendedText, 50), 1000);
-    setTimeout(() => animateText("Students from 100 countries", setStudentsText, 50), 1500);
+    setTimeout(
+      () => animateText("of excellence in education", setYearsText, 50),
+      500
+    );
+    setTimeout(
+      () => animateText("Recommended by students", setRecommendedText, 50),
+      1000
+    );
+    setTimeout(
+      () => animateText("Students from 100 countries", setStudentsText, 50),
+      1500
+    );
 
-    animateText("Learn German with Professional Instructors", setHeadlineText, 50);
+    animateText(
+      "Learn German Online with Professional Instructors",
+      setHeadlineText,
+      50
+    );
   }, []);
 
   const openModal = () => {
@@ -68,9 +78,11 @@ const LearnGerman = () => {
   };
 
   return (
-    <div className="learn-german-page" style={{ fontFamily: '"Public Sans", sans-serif' }}>
-      {/* <Navbar /> */}
-
+    <div
+      className="learn-english-page"
+      style={{ fontFamily: '"Public Sans", sans-serif' }}
+    >
+      <Navbar />
       <section
         className="hero bg-cover bg-center h-screen text-white relative flex items-center"
         style={{
@@ -80,124 +92,143 @@ const LearnGerman = () => {
         <div className="overlay absolute inset-0 bg-black bg-opacity-60"></div>
 
         <div className="container mx-auto relative z-10 flex flex-col items-start text-left">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="text-5xl md:text-5xl font-bold mb-4 text-white">
             {headlineText}
           </h1>
 
-          <p className="text-lg md:text-2xl mb-8 max-w-2xl">
-            Your German progress is what matters the most to us. If you're not satisfied after 12 weeks of learning, you get your money back.
+          <p className="text-lg md:text-1xl mb-8 max-w-2xl text-gray-300">
+            Your German learning progress is what matters the most to us. If
+            you're not satisfied after 12 weeks of learning, you get your money
+            back.
           </p>
 
           <button
             onClick={openModal}
-            className="hover:bg-red-600 text-white py-3 px-8 rounded-full text-lg"
-            style={{ backgroundColor: "#FF0000" }} // Red color (German flag)
+            className="bg-red-600 hover:bg-yellow-500 text-white py-3 px-8 rounded-full text-lg transition-colors duration-300"
           >
             Start Now
           </button>
 
-          <div className="mt-10 flex justify-between w-full max-w-4xl text-left text-white items-start">
-            <div className="flex flex-col items-start mr-8">
-              <div className="flex items-baseline">
-                <h3
-                  className="font-bold"
-                  style={{
-                    fontSize: "42px",
-                    color: "#FFD700", // Gold color (German flag)
-                    fontFamily: '"Public Sans", sans-serif',
-                  }}
+          {/* Stats Section */}
+          <div className="mt-10 flex flex-col md:flex-row justify-between w-full max-w-4xl text-left text-white items-start">
+            {/* Years of Experience */}
+            <div className="flex flex-col items-start mb-6 md:mr-8">
+              <div className="flex flex-col items-start">
+                <div className="flex items-baseline">
+                  <h3
+                    className="font-bold"
+                    style={{
+                      fontSize: "42px",
+                      color: "#FFD700", // Yellow for the stat number
+                      fontFamily: '"Public Sans", sans-serif',
+                    }}
+                  >
+                    {years}
+                  </h3>
+                  <span
+                    style={{
+                      color: "#FFFFFF",
+                      fontSize: "26px",
+                      marginLeft: "8px",
+                      fontFamily: '"Public Sans", sans-serif',
+                    }}
+                  >
+                    Years
+                  </span>
+                </div>
+                <p
+                  className="text-sm mt-0 text-gray-300"
+                  style={{ textAlign: "left" }}
                 >
-                  {years}
-                </h3>
-                <span
-                  style={{
-                    color: "#FFFFFF",
-                    fontSize: "26px",
-                    marginLeft: "8px",
-                    fontFamily: '"Public Sans", sans-serif',
-                  }}
-                >
-                  Years
-                </span>
+                  {yearsText}
+                </p>
               </div>
-              <p className="text-sm mt-0" style={{ textAlign: "left" }}>
-                {yearsText}
-              </p>
             </div>
 
-            <div className="h-12 border-l-2 border-white mx-8"></div>
+            <div className="h-12 border-l-2 border-white mx-8 md:block"></div>
 
-            <div className="flex flex-col items-start mr-8">
-              <div className="flex items-baseline">
-                <h3
-                  className="font-bold"
-                  style={{
-                    fontSize: "42px",
-                    color: "#FFD700", // Gold color (German flag)
-                    fontFamily: '"Public Sans", sans-serif',
-                  }}
+            {/* Recommended Percentage */}
+            <div className="flex flex-col items-start mb-6 md:mr-8">
+              <div className="flex flex-col items-start">
+                <div className="flex items-baseline">
+                  <h3
+                    className="font-bold"
+                    style={{
+                      fontSize: "42px",
+                      color: "#FFD700", // Yellow for the stat number
+                      fontFamily: '"Public Sans", sans-serif',
+                    }}
+                  >
+                    {recommendedPercentage}%
+                  </h3>
+                  <span
+                    style={{
+                      color: "#FFFFFF",
+                      fontSize: "26px",
+                      marginLeft: "8px",
+                      fontFamily: '"Public Sans", sans-serif',
+                    }}
+                  >
+                    Recommended
+                  </span>
+                </div>
+                <p
+                  className="text-sm mt-0 text-gray-300"
+                  style={{ textAlign: "left" }}
                 >
-                  {recommendedPercentage}%
-                </h3>
-                <span
-                  style={{
-                    color: "#FFFFFF",
-                    fontSize: "26px",
-                    marginLeft: "8px",
-                    fontFamily: '"Public Sans", sans-serif',
-                  }}
-                >
-                  Recommended
-                </span>
+                  {recommendedText}
+                </p>
               </div>
-              <p className="text-sm mt-0" style={{ textAlign: "left" }}>
-                {recommendedText}
-              </p>
             </div>
 
-            <div className="h-12 border-l-2 border-white mx-8"></div>
+            <div className="h-12 border-l-2 border-white mx-8 md:block"></div>
 
-            <div className="flex flex-col items-start">
-              <div className="flex items-baseline">
-                <h3
-                  className="font-bold"
-                  style={{
-                    fontSize: "42px",
-                    color: "#FFD700", // Gold color (German flag)
-                    fontFamily: '"Public Sans", sans-serif',
-                  }}
+            {/* Number of Students */}
+            <div className="flex flex-col items-start mb-6">
+              <div className="flex flex-col items-start">
+                <div className="flex items-baseline">
+                  <h3
+                    className="font-bold"
+                    style={{
+                      fontSize: "42px",
+                      color: "#FFD700", // Yellow for the stat number
+                      fontFamily: '"Public Sans", sans-serif',
+                    }}
+                  >
+                    {students.toLocaleString()}
+                  </h3>
+                  <span
+                    style={{
+                      color: "#FFFFFF",
+                      fontSize: "26px",
+                      marginLeft: "8px",
+                      fontFamily: '"Public Sans", sans-serif',
+                    }}
+                  >
+                    Students
+                  </span>
+                </div>
+                <p
+                  className="text-sm mt-0 text-gray-300"
+                  style={{ textAlign: "left" }}
                 >
-                  {students.toLocaleString()}
-                </h3>
-                <span
-                  style={{
-                    color: "#FFFFFF",
-                    fontSize: "26px",
-                    marginLeft: "8px",
-                    fontFamily: '"Public Sans", sans-serif',
-                  }}
-                >
-                  Students
-                </span>
+                  {studentsText}
+                </p>
               </div>
-              <p className="text-sm mt-0" style={{ textAlign: "left" }}>
-                {studentsText}
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <LearnGermanOne /> 
-      <LearnGermanTwo />
-    <LearnGermanModel /> 
-   <LearnGermanThree />
-      <LearnGermanFor />
-     <LearnGermanFive />
-       <LearnGermanSix />  
+      <LearnGermanContent />
+      <LearnGermanFaQ />
+      <LearnGermanModel />
+
+      {/* Modal for sign-up */}
       {isModalOpen && <Modal closeModal={closeModal} />}
+      <Footer />
     </div>
   );
 };
 
-export default LearnGerman;
+export default LearnEnglish;

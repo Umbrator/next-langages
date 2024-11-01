@@ -24,14 +24,14 @@ const CourseSection = () => {
       title: "Learn German",
       description: "Master German with our intensive language program.",
       countryFlag: "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
-      link: "/German/learn",
+      link: "/german/learn",
     },
     {
       image: "https://www.upload.ee/image/17257067/home-bg-1-1.jpg",
       title: "Learn Italian",
       description: "Start speaking Italian from day one.",
       countryFlag: "https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg",
-      link: "/courses/italian-beginner",
+      link: "/italie/learn",
     },
     {
       image: "https://www.upload.ee/image/17257068/home-bg-6.jpg",

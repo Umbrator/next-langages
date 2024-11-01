@@ -1,7 +1,5 @@
-"use client";
 import React, { useState, useEffect } from 'react';
 import { FaTimes, FaClipboardCheck, FaRedo } from 'react-icons/fa';
-import { useRouter } from 'next/navigation';
 
 const PopupModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,9 +7,6 @@ const PopupModal = () => {
   const [hasOpenedOnce, setHasOpenedOnce] = useState(false);
   const [timerCount, setTimerCount] = useState(0);
   const [showReopenButton, setShowReopenButton] = useState(false);
-  const [showTooltip, setShowTooltip] = useState(false);
-  
-  const router = useRouter();
 
   useEffect(() => {
     const timers = [];
@@ -63,10 +58,6 @@ const PopupModal = () => {
     openModal();
   };
 
-  const navigateToLearnGermanEx = () => {
-    router.push('/pages/LearnGermanEx'); // Programmatically navigate to LearnGermanEx
-  };
-
   return (
     <>
       {isOpen && (
@@ -85,7 +76,6 @@ const PopupModal = () => {
               animation: `${isClosing ? 'scaleDownClose 0.5s ease-out forwards' : 'scaleUpOpen 0.8s ease-out forwards'}`,
             }}
           >
-            {/* Close Button */}
             <button
               className="absolute top-3 right-3 text-gray-600 hover:text-gray-800 focus:outline-none"
               onClick={closeModal}
@@ -94,21 +84,22 @@ const PopupModal = () => {
               <FaTimes className="text-2xl" />
             </button>
 
-            {/* Modal Content */}
             <div className="text-center">
               <div className="flex justify-center mb-4">
-                <FaClipboardCheck className="text-6xl text-[#65A662] animate-bounce" /> {/* German Test Icon */}
+                <FaClipboardCheck className="text-6xl text-[#65A662] animate-bounce" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Test Your German Level</h2>
+
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">Test Your English Level</h2>
               <p className="text-gray-600 mb-6">
-                Take an interactive test to evaluate your German proficiency. Find out your current level, from A1 to C2, and get an accurate assessment of your skills. Are you ready to discover your German level?
+                Take an interactive test to evaluate your English proficiency. Find out your current level, from A1 to C2, and get an accurate assessment of your skills. Are you ready to discover your English level?
               </p>
-              <button
-                onClick={navigateToLearnGermanEx}
+
+              <a
+                href="/exercise"
                 className="inline-block bg-[#65A662] text-white text-lg font-semibold px-6 py-3 rounded-lg hover:bg-green-600 transition-transform duration-300 ease-in-out transform hover:scale-105 shadow-lg"
               >
-                Start the German Level Test
-              </button>
+                Start the English Level Test
+              </a>
               <p className="mt-4 text-sm text-gray-500">Evaluate your skills and receive a detailed level assessment!</p>
             </div>
           </div>
@@ -120,8 +111,6 @@ const PopupModal = () => {
         <button
           className="fixed bg-[#65A662] text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-transform duration-300 ease-in-out z-50"
           onClick={handleButtonClick}
-          onMouseEnter={() => setShowTooltip(true)}
-          onMouseLeave={() => setShowTooltip(false)}
           aria-label="Reopen modal"
           style={{
             bottom: '20px',
@@ -130,30 +119,28 @@ const PopupModal = () => {
           }}
         >
           <FaRedo className="text-2xl" />
-          {showTooltip && (
-            <div
-              className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-green-700 text-white text-xs font-semibold px-4 py-2 rounded-md shadow-xl flex items-center animate-tooltipFadeIn"
-              style={{
-                maxWidth: '200px',
-                textAlign: 'center',
-                whiteSpace: 'normal',
-                zIndex: 50,
-              }}
+          {/* Static Tooltip */}
+          <div
+            className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-green-700 text-white text-xs font-semibold px-4 py-2 rounded-md shadow-xl flex items-center animate-tooltipFadeIn"
+            style={{
+              maxWidth: '200px',
+              textAlign: 'center',
+              whiteSpace: 'normal',
+              zIndex: 50,
+            }}
+          >
+            <svg
+              className="absolute text-green-700 -bottom-1 left-1/2 transform -translate-x-1/2 h-4 w-4"
+              viewBox="0 0 24 24"
+              fill="currentColor"
             >
-              <svg
-                className="absolute text-green-700 -bottom-1 left-1/2 transform -translate-x-1/2 h-4 w-4"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <polygon points="12,0 24,24 0,24" />
-              </svg>
-              Click to open the German Exercise
-            </div>
-          )}
+              <polygon points="12,0 24,24 0,24" />
+            </svg>
+            Click to open the English Exercise
+          </div>
         </button>
       )}
 
-      {/* Embedded keyframe animations */}
       <style>{`
         @keyframes modalOpenAnimation {
           from { opacity: 0; transform: scale(0.8) translateY(-50px); }

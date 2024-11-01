@@ -15,7 +15,7 @@ const CourseDetails = ({ params }) => {
 
   return (
     <div className="container mx-auto p-8 lg:p-16 bg-white shadow-xl rounded-lg">
-      <div className="relative text-center mb-16 bg-gradient-to-r from-green-500 to-green-700 rounded-lg shadow-md p-6 lg:p-8 mt-0">
+      <div className="relative text-center mb-16 bg-gradient-to-r from-green-500 to-red-600 rounded-lg shadow-md p-6 lg:p-8 mt-0">
         <h1 className="text-5xl font-bold text-white mb-4 drop-shadow-lg">{course.title}</h1>
         <p className="text-lg text-gray-100 mb-8 max-w-4xl mx-auto leading-relaxed">{course.description}</p>
         <img
@@ -28,7 +28,7 @@ const CourseDetails = ({ params }) => {
       <div className="bg-gradient-to-br from-white to-gray-50 p-10 rounded-lg shadow-lg mb-12">
         {course.levels.map((item, idx) => (
           <div key={idx} className="mb-8">
-            <h3 className="text-xl font-semibold text-[#65A662] mb-2">{item.level}</h3>
+            <h3 className="text-xl font-semibold text-green-700 mb-2">{item.level}</h3>
             <p className="text-gray-700 mb-4">{item.description}</p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               {item.topics.map((topic, i) => (
@@ -41,8 +41,8 @@ const CourseDetails = ({ params }) => {
 
       <div className="bg-gradient-to-br from-white to-gray-50 p-10 rounded-lg shadow-lg mb-12">
         <div className="flex items-center mb-4">
-          <FaUserGraduate className="text-[#65A662] text-2xl mr-2" />
-          <h2 className="text-3xl font-bold text-[#65A662]">Course Objectives</h2>
+          <FaUserGraduate className="text-green-700 text-2xl mr-2" />
+          <h2 className="text-3xl font-bold text-green-700">Course Objectives</h2>
         </div>
         <ul className="list-disc pl-6 text-gray-700 space-y-2">
           {course.objectives.map((objective, idx) => (
@@ -53,12 +53,12 @@ const CourseDetails = ({ params }) => {
 
       <div className="bg-gradient-to-br from-white to-gray-50 p-10 rounded-lg shadow-lg mb-12">
         <div className="flex items-center mb-4">
-          <FaCalendarAlt className="text-[#65A662] text-2xl mr-2" />
-          <h2 className="text-3xl font-bold text-[#65A662]">Timetable and Pricing</h2>
+          <FaCalendarAlt className="text-green-700 text-2xl mr-2" />
+          <h2 className="text-3xl font-bold text-green-700">Timetable and Pricing</h2>
         </div>
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-[#65A662] text-white">
+            <tr className="bg-green-700 text-white">
               <th className="p-3">Day</th>
               <th className="p-3">Session</th>
               <th className="p-3">Time</th>
@@ -80,16 +80,16 @@ const CourseDetails = ({ params }) => {
       </div>
 
       <div className="bg-gradient-to-br from-white to-gray-50 p-10 rounded-lg shadow-lg mb-12">
-        <h2 className="text-3xl font-bold text-[#65A662] mb-6">Prerequisites</h2>
+        <h2 className="text-3xl font-bold text-green-700 mb-6">Prerequisites</h2>
         <p className="text-gray-700">{course.prerequisites}</p>
       </div>
 
       <div className="bg-gradient-to-br from-white to-gray-50 p-10 rounded-lg shadow-lg mb-12">
-        <h2 className="text-3xl font-bold text-[#65A662] mb-6">Frequently Asked Questions (FAQ)</h2>
+        <h2 className="text-3xl font-bold text-green-700 mb-6">Frequently Asked Questions (FAQ)</h2>
         <div className="space-y-8">
           {course.faq.map((faq, idx) => (
             <div key={idx}>
-              <h3 className="text-xl font-semibold text-[#65A662]">{faq.question}</h3>
+              <h3 className="text-xl font-semibold text-green-700">{faq.question}</h3>
               <p className="text-gray-700">{faq.answer}</p>
             </div>
           ))}
