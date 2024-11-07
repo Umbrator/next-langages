@@ -2,32 +2,32 @@ export const courseList = [
     {
       title: 'General French',
       description: 'Build a strong foundation in reading, writing, listening, and speaking skills in French.',
-      image: 'https://www.upload.ee/image/17221791/learn-french-language-online-education-concept.jpg',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flearn-french-language-online-education-concept.jpg?alt=media&token=429c5302-c283-4690-afbd-1bba4108a041',
     },
     {
       title: 'Business French',
       description: 'Enhance your business communication and professional skills in French.',
-      image: 'https://www.upload.ee/image/17219127/pencil-sharpener-notepad-books.jpg',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fpencil-sharpener-notepad-books%20(1).jpg?alt=media&token=30676f52-3dcd-449c-9ab0-92c5ae66243b',
     },
     {
       title: 'DELF Exam Preparation',
       description: 'Prepare for French proficiency exams with focused practice and strategies.',
-      image: 'https://www.upload.ee/image/17219130/high-angle-man-holding-notebook.jpg',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhigh-angle-man-holding-notebook%20(1).jpg?alt=media&token=e024c3d8-f24a-4265-a056-cfae4d015578',
     },
     {
       title: 'French for Kids',
       description: 'Fun and interactive lessons designed for young learners to grasp French skills.',
-      image: 'https://www.upload.ee/image/17219131/book-3089857_1280.jpg',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbook-3089857_1280%20(1).jpg?alt=media&token=3964006d-a85b-4b24-984f-a079c34e9bc3',
     },
     {
       title: 'Private French Lessons',
       description: 'Personalized lessons tailored to individual learning styles and goals.',
-      image: 'https://www.upload.ee/image/17219142/row-various-old-books.jpg',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Frow-various.jpg?alt=media&token=dd0a1fc1-616b-48e5-b6de-40b33f6a394d',
     },
     {
       title: 'Self-study French Courses',
       description: 'Flexible and self-paced courses for independent learners.',
-      image: 'https://www.upload.ee/image/17219148/english-books-with-blue-background.jpg',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flivres-francais-recommander-debutants.jpg?alt=media&token=706ba5ed-5489-4874-94db-ceb356df370d',
     },
   ];
   export const faqData = [
@@ -63,7 +63,7 @@ export const courseList = [
     "general-french": {
       title: "Français Général",
       description: "Notre cours de français général est conçu pour bâtir une base solide dans les compétences fondamentales : lecture, écriture, écoute, et expression orale.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ftravel-france-learn-foreign-language-surprised-teen-girl-hold-french-flag-workbook-horizontal-isolated-poster-school-girl-student-banner-header-portrait-schoolgirl-copy-space_545934-68763.jpg?alt=media&token=2bdd5401-8081-4966-9164-46b2b4c8fd52",
       levels: [
         {
           level: 'Niveau Débutant',
@@ -96,7 +96,7 @@ export const courseList = [
     "business-french": {
       title: "Français des Affaires",
       description: "Améliorez vos compétences en communication professionnelle en français grâce à notre cours dédié aux affaires.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ftravel-france-learn-foreign-language-surprised-teen-girl-hold-french-flag-workbook-horizontal-isolated-poster-school-girl-student-banner-header-portrait-schoolgirl-copy-space_545934-68763.jpg?alt=media&token=2bdd5401-8081-4966-9164-46b2b4c8fd52",
       levels: [
         {
           level: 'Niveau Débutant',
@@ -129,7 +129,7 @@ export const courseList = [
     "delf-exam-preparation": {
       title: "Exam Preparation",
       description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ftravel-france-learn-foreign-language-surprised-teen-girl-hold-french-flag-workbook-horizontal-isolated-poster-school-girl-student-banner-header-portrait-schoolgirl-copy-space_545934-68763.jpg?alt=media&token=2bdd5401-8081-4966-9164-46b2b4c8fd52",
       levels: [
         {
           level: 'Beginner Level',
@@ -163,7 +163,7 @@ export const courseList = [
     "french-for-kids": {
       title: "English For Kids",
       description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ftravel-france-learn-foreign-language-surprised-teen-girl-hold-french-flag-workbook-horizontal-isolated-poster-school-girl-student-banner-header-portrait-schoolgirl-copy-space_545934-68763.jpg?alt=media&token=2bdd5401-8081-4966-9164-46b2b4c8fd52",
       levels: [
         {
           level: 'Beginner Level',
@@ -197,7 +197,7 @@ export const courseList = [
     "private-french-lessons": {
       title: "Private Lessons",
       description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ftravel-france-learn-foreign-language-surprised-teen-girl-hold-french-flag-workbook-horizontal-isolated-poster-school-girl-student-banner-header-portrait-schoolgirl-copy-space_545934-68763.jpg?alt=media&token=2bdd5401-8081-4966-9164-46b2b4c8fd52",
       levels: [
         {
           level: 'Beginner Level',
@@ -231,7 +231,7 @@ export const courseList = [
     "self-study-french-courses": {
       title: "self Study Courses",
       description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ftravel-france-learn-foreign-language-surprised-teen-girl-hold-french-flag-workbook-horizontal-isolated-poster-school-girl-student-banner-header-portrait-schoolgirl-copy-space_545934-68763.jpg?alt=media&token=2bdd5401-8081-4966-9164-46b2b4c8fd52",
       levels: [
         {
           level: 'Beginner Level',

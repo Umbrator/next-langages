@@ -44,7 +44,7 @@ const FAQSection = () => {
         {/* Image Section */}
         <div className="relative flex items-center">
           <img
-            src="https://img.freepik.com/free-photo/portrait-pretty-young-curly-boy-red-wear-yellow-studio-wall_155003-41478.jpg?t=st=1728394774~exp=1728398374~hmac=d230e2a7ad0a579caad13d9376e0405b6f2bb34fc113db7c59341135acd1cc68&w=996"
+            src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fchildren-learning-together-how-speak-therapy%20(1).jpg?alt=media&token=374a473a-456a-4af3-8b51-b38634a14699"
             alt="Happy Students"
             className="w-full h-full rounded-lg shadow-md object-cover"
             style={{ transform: "none", transition: "none" }}

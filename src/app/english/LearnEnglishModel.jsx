@@ -95,7 +95,7 @@ const PopupModal = () => {
               </p>
 
               <a
-                href="/exercise"
+                href="/test-english/level"
                 className="inline-block bg-[#65A662] text-white text-lg font-semibold px-6 py-3 rounded-lg hover:bg-green-600 transition-transform duration-300 ease-in-out transform hover:scale-105 shadow-lg"
               >
                 Start the English Level Test

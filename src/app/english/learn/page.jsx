@@ -8,15 +8,12 @@ import Footer from "../../header/Footer";
 
 const LearnEnglish = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const [years, setYears] = useState(0);
   const [recommendedPercentage, setRecommendedPercentage] = useState(0);
   const [students, setStudents] = useState(0);
-
   const [yearsText, setYearsText] = useState("");
   const [recommendedText, setRecommendedText] = useState("");
   const [studentsText, setStudentsText] = useState("");
-  
   const [headlineText, setHeadlineText] = useState("");
   
   useEffect(() => {
@@ -67,10 +64,35 @@ const LearnEnglish = () => {
   return (
     <div className="learn-english-page" style={{ fontFamily: '"Public Sans", sans-serif' }}>
       <Navbar/>
+      <style jsx>{`
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+          .hero h1 {
+            font-size: 1.8rem !important;
+            padding-top: 80px !important; /* Added padding for extra space */
+          }
+          .hero p {
+            font-size: 0.9rem !important;
+          }
+          .hero button {
+            font-size: 0.9rem !important;
+          }
+          .stats h3 {
+            font-size: 28px !important;
+          }
+          .stats span {
+            font-size: 18px !important;
+          }
+          /* Hide divider lines on mobile */
+          .divider-line {
+            display: none !important;
+          }
+        }
+      `}</style>
       <section
         className="hero bg-cover bg-center h-screen text-white relative flex items-center"
         style={{
-          backgroundImage: `url("https://www.upload.ee/image/17298423/schoolchild-sitting-desk-living-room-holding-school-book.jpg")`,
+          backgroundImage: `url("https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fschoolchild-sitting-desk-living-room-holding-school-book%20(1).jpg?alt=media&token=7b62b7f7-de89-44b8-8beb-4cd420b0043d")`,
         }}
       >
         <div className="overlay absolute inset-0 bg-black bg-opacity-60"></div>
@@ -93,7 +115,7 @@ const LearnEnglish = () => {
           </button>
 
           {/* Stats Section */}
-          <div className="mt-10 flex flex-col md:flex-row justify-between w-full max-w-4xl text-left text-white items-start">
+          <div className="mt-10 flex flex-col md:flex-row justify-between w-full max-w-4xl text-left text-white items-start stats">
             {/* Years of Experience */}
             <div className="flex flex-col items-start mb-6 md:mr-8">
               <div className="flex flex-col items-start">
@@ -124,7 +146,7 @@ const LearnEnglish = () => {
                 </p>
               </div>
             </div>
-            <div className="h-12 border-l-2 border-white mx-8 md:block"></div>
+            <div className="divider-line h-12 border-l-2 border-white mx-8 md:block"></div>
             <div className="flex flex-col items-start mb-6 md:mr-8">
               <div className="flex flex-col items-start">
                 <div className="flex items-baseline">
@@ -154,7 +176,7 @@ const LearnEnglish = () => {
                 </p>
               </div>
             </div>
-            <div className="h-12 border-l-2 border-white mx-8 md:block"></div>
+            <div className="divider-line h-12 border-l-2 border-white mx-8 md:block"></div>
 
             <div className="flex flex-col items-start mb-6">
               <div className="flex flex-col items-start">

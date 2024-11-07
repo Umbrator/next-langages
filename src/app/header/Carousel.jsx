@@ -1,27 +1,29 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import Image from "next/image";
 
 const Carousel = () => {
-  // State for the current slide
-  const [currentIndex] = useState(0);
+  // Utilisation de useMemo pour éviter de recréer les données de slide
+  const slides = useMemo(
+    () => [
+      {
+        title: "Learn New Languages and Move Forward",
+        subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fimage-JA74V7F-768x1054.png?alt=media&token=0080c1ec-ad15-496d-96e9-e74abd5984d3",
+        button1: "Get Started",
+        button2: "Watch Intro",
+        features: [
+          { title: "60+", description: "Interactive Courses" },
+          { title: "1250+", description: "Activate Students" },
+          { title: "Get 20% Disc Off", description: "On Every Course" },
+        ],
+      },
+    ],
+    []
+  );
 
-  // Slide Data
-  const slides = [
-    {
-      title: "Learn New Languages  and Move  Forward",
-      subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "https://www.upload.ee/image/17258013/image-JA74V7F-768x1054.png",
-      button1: "Get Started",
-      button2: "Watch Intro",
-      features: [
-        { title: "60+", description: "Interactive Courses" },
-        { title: "1250+", description: "Activate Students" },
-        { title: "Get 20% Disc Off", description: "On Every Course" },
-      ],
-    },
-  ];
+  const [currentIndex] = useState(0);
 
   return (
     <section className="relative bg-blue-50 py-16 overflow-hidden h-[700px]">
@@ -41,10 +43,9 @@ const Carousel = () => {
       </div>
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center h-full">
-        {/* Left Side: Text Content with Animation */}
+        {/* Left Side: Text Content */}
         <div className="space-y-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 leading-tight relative overflow-hidden">
-            {/* Main Title with typing effect */}
             <span className="block animate-typing">
               {slides[currentIndex].title.split(" ").map((word, i) => {
                 if (word === "Languages" || word === "Move") {
@@ -61,12 +62,10 @@ const Carousel = () => {
               })}
             </span>
           </h1>
-
           <p className="text-gray-600 text-lg italic animate-fade-in">
             {slides[currentIndex].subtitle}
           </p>
 
-          {/* Buttons with Hover Effects */}
           <div className="flex space-x-4 mt-6 animate-fade-in-delayed">
             <button className="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 hover:scale-105 shadow-lg transform transition duration-300">
               {slides[currentIndex].button1}
@@ -97,23 +96,21 @@ const Carousel = () => {
           </div>
         </div>
 
-        {/* Right Side: Image and Floating Feature Boxes with Animation */}
+        {/* Right Side: Image and Floating Features */}
         <div className="relative flex justify-center items-center animate-fade-up-delayed">
-          {/* Larger Circle Behind Image */}
           <div className="absolute w-[420px] h-[420px] bg-indigo-200 rounded-full bottom-0 right-0 z-0 animate-pulse-slow"></div>
-          {/* Smaller Circle Behind Image */}
           <div className="absolute w-[300px] h-[300px] bg-indigo-400 rounded-full top-10 right-12 z-0 animate-pulse-slow"></div>
 
-          {/* Image centered on top of the circles */}
           <Image
             src={slides[currentIndex].image}
             alt="Learn Languages"
             width={350}
             height={450}
+            priority
+            quality={75}
             className="object-contain relative z-10 transition-transform duration-700 ease-in-out transform scale-100"
           />
 
-          {/* Floating Feature Boxes with Fade-in Animation */}
           <div className="absolute top-5 right-0 w-[180px] p-4 bg-white rounded-lg shadow-lg z-20 transition-all transform hover:scale-105 hover:shadow-2xl animate-fade-up delay-[500ms]">
             <p className="text-blue-900 font-bold">60+</p>
             <p className="text-gray-500">Interactive Courses</p>

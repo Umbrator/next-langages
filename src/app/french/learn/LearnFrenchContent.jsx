@@ -62,8 +62,9 @@ const LearnFrenchContent = () => {
         <div className="bg-white shadow-lg rounded-lg overflow-hidden border-l-4 border-[#0052A5] transform hover:scale-105 transition-transform duration-300"> {/* Blue border */}
           <img
             className="w-full h-48 object-cover"
-            src="https://www.upload.ee/image/17221749/blonde-girl-painting.jpg"
+            src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fblonde-girl-painting.jpg?alt=media&token=d0799f0a-e9f6-4be9-a945-ea5ec6c4eb59"
             alt="1-on-1 lessons"
+            loading="lazy"
           />
           <div className="p-6">
             <h3 className="text-xl font-semibold text-[#0052A5]">1-on-1 Lessons</h3> {/* Blue text */}
@@ -77,8 +78,9 @@ const LearnFrenchContent = () => {
         <div className="bg-white shadow-lg rounded-lg overflow-hidden border-l-4 border-[#EF4135] transform hover:scale-105 transition-transform duration-300"> {/* Red border */}
           <img
             className="w-full h-48 object-cover"
-            src="https://www.upload.ee/image/17221768/answering-lesson.jpg"
+            src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fanswering-lesson.jpg?alt=media&token=ddd87039-df14-4df0-a4b7-18281632b424"
             alt="Group Class"
+            loading="lazy"
           />
           <div className="p-6">
             <h3 className="text-xl font-semibold text-[#EF4135]">Group Class</h3> {/* Red text */}
@@ -92,8 +94,9 @@ const LearnFrenchContent = () => {
         <div className="bg-white shadow-lg rounded-lg overflow-hidden border-l-4 border-[#0052A5] transform hover:scale-105 transition-transform duration-300"> {/* Blue border */}
           <img
             className="w-full h-48 object-cover"
-            src="https://www.upload.ee/image/17221772/woman-hands-hold-french-france-flag-patriotism.jpg"
+            src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flearn-french-language-online-education-concept%20(1).jpg?alt=media&token=54228a3f-8c6d-4b3e-a950-1f0dab6e60bd"
             alt="Practice for Free"
+            loading="lazy"
           />
           <div className="p-6">
             <h3 className="text-xl font-semibold text-[#0052A5]">Practice for Free</h3> {/* Blue text */}
@@ -110,8 +113,9 @@ const LearnFrenchContent = () => {
           <div className="overflow-hidden rounded-lg shadow-lg">
             <img
               className="w-full h-full object-cover transform hover:scale-105 transition duration-300"
-              src="https://www.upload.ee/image/17221782/lovely-happy-girl-posing-with-book.jpg"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flovely-happy-girl-posing-with-book.jpg?alt=media&token=07f1dbb8-8c10-46c8-83d8-d01f65c74884"
               alt="About Us"
+              loading="lazy"
             />
           </div>
 
@@ -173,6 +177,7 @@ const LearnFrenchContent = () => {
           className="w-full h-48 object-cover transition-opacity duration-700 ease-out"
           src={course.image}
           alt={course.title}
+          loading="lazy"
         />
       </div>
     ))}
@@ -225,8 +230,9 @@ const LearnFrenchContent = () => {
           <div className="lg:w-1/2">
             <img
               className="rounded-lg shadow-md object-cover w-full h-[400px]"
-              src="https://www.upload.ee/image/17219018/charming-student-posing-classroom.jpg"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fcharming-student-posing-classroom.jpg?alt=media&token=4eb59012-234c-4530-898a-2d894bcf8fd9"
               alt="Why Inlingo French Courses"
+              loading="lazy"
             />
           </div>
 
@@ -318,14 +324,16 @@ const LearnFrenchContent = () => {
             </a>
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://img.freepik.com/free-photo/smiley-little-boy-isolated-pink_23-2148984798.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fsmiley-little-boy-isolated-pink_23-2148984798.avif?alt=media&token=18f7385f-1572-4806-b2de-052acb9b06f5"
                 alt="Student 1"
                 className="rounded-lg object-cover w-full h-48"
+                loading="lazy"
               />
               <img
-                src="https://img.freepik.com/free-photo/pretty-clever-little-girl-child-with-blond-hairstyle-yellow-t-shirt-overalls-hold-something-palm-introduce-product-blank-white-copy-space-smiling-joyful-brag-what-she-got-b-day-present_176420-36184.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fpretty-clever-little-girl-child-with-blond-hairstyle-yellow-t-shirt-overalls-hold-something-palm-introduce-product-blank-white-copy-space-smiling-joyful-brag-what-she-got-b-day-present_176420-361.avif?alt=media&token=1ba15807-1cf8-4389-9596-e70e9cad4a39"
                 alt="Student 2"
                 className="rounded-lg object-cover w-full h-48"
+                loading="lazy"
               />
             </div>
           </div>
@@ -336,10 +344,11 @@ const LearnFrenchContent = () => {
               </div>
               <div className="flex items-start">
                 <img
-                  src="https://img.freepik.com/free-vector/smiling-man-with-glasses_1308-174409.jpg"
+                  src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fsmiling-man-with-glasses_1308-174409.avif?alt=media&token=4e4a4e04-8b3f-4929-b332-2ad830621692"
                   alt="Student"
                   className="w-28 h-28 rounded-lg object-cover shadow-lg -mt-8 mr-6"
                   style={{ marginBottom: "-16px" }}
+                  loading="lazy"
                 />
                 <div>
                   <div className="text-[#EF4135] mb-2 text-3xl">
@@ -363,10 +372,11 @@ const LearnFrenchContent = () => {
 
               <div className="flex items-start">
                 <img
-                  src="https://img.freepik.com/free-vector/smiling-man-with-glasses_1308-174409.jpg"
+                  src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fsmiling-man-with-glasses_1308-174409.avif?alt=media&token=4e4a4e04-8b3f-4929-b332-2ad830621692"
                   alt="Student"
                   className="w-28 h-28 rounded-lg object-cover shadow-lg -mt-8 mr-6"
                   style={{ marginBottom: "-16px" }}
+                  loading="lazy"
                 />
                 <div>
                   <div className="text-[#EF4135] mb-2 text-3xl">
@@ -390,10 +400,11 @@ const LearnFrenchContent = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
         <div className="relative flex items-center">
           <img
-            src="https://img.freepik.com/free-photo/portrait-pretty-young-curly-boy-red-wear-yellow-studio-wall_155003-41478.jpg?t=st=1728394774~exp=1728398374~hmac=d230e2a7ad0a579caad13d9376e0405b6f2bb34fc113db7c59341135acd1cc68&w=996"
+            src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fchildren-learning-together-how-speak-therapy%20(1).jpg?alt=media&token=374a473a-456a-4af3-8b51-b38634a14699"
             alt="Happy Students"
             className="w-full h-full rounded-lg shadow-md object-cover"
             style={{ transform: "none", transition: "none" }}
+            loading="lazy"
           />
           <div className="absolute bottom-0 right-0 flex space-x-1 space-y-1">
             <div className="w-4 h-4 bg-white"></div>
@@ -437,6 +448,25 @@ const LearnFrenchContent = () => {
         </div>
       </div>
       </section>
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes fadeOut {
+          from { opacity: 1; }
+          to { opacity: 0; }
+        }
+        @keyframes scaleUp {
+          0% { transform: scale(0.7) rotate(-3deg); opacity: 0; }
+          80% { transform: scale(1.05) rotate(3deg); opacity: 1; }
+          100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+        @keyframes scaleDown {
+          from { transform: scale(1); opacity: 1; }
+          to { transform: scale(0.7); opacity: 0; }
+        }
+      `}</style>
     </>
   );
 };

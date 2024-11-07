@@ -71,13 +71,13 @@ const PopupModal = () => {
           onClick={handleOverlayClick}
         >
           <div
-            className="bg-gradient-to-r from-white via-gray-50 to-white rounded-xl shadow-2xl p-8 max-w-lg w-full relative transition-transform duration-500 ease-in-out transform"
+            className="bg-gradient-to-r from-black via-gray-800 to-black rounded-xl shadow-2xl p-8 max-w-lg w-full relative transition-transform duration-500 ease-in-out transform"
             style={{
               animation: `${isClosing ? 'scaleDownClose 0.5s ease-out forwards' : 'scaleUpOpen 0.8s ease-out forwards'}`,
             }}
           >
             <button
-              className="absolute top-3 right-3 text-gray-600 hover:text-gray-800 focus:outline-none"
+              className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 focus:outline-none"
               onClick={closeModal}
               aria-label="Close modal"
             >
@@ -86,21 +86,21 @@ const PopupModal = () => {
 
             <div className="text-center">
               <div className="flex justify-center mb-4">
-                <FaClipboardCheck className="text-6xl text-[#65A662] animate-bounce" />
+                <FaClipboardCheck className="text-6xl text-yellow-500 animate-bounce" />
               </div>
 
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Test Your English Level</h2>
-              <p className="text-gray-600 mb-6">
-                Take an interactive test to evaluate your English proficiency. Find out your current level, from A1 to C2, and get an accurate assessment of your skills. Are you ready to discover your English level?
+              <h2 className="text-3xl font-bold text-white mb-4">Test Your German Level</h2>
+              <p className="text-gray-300 mb-6">
+                Take an interactive test to evaluate your German proficiency. Find out your current level, from A1 to C2, and get an accurate assessment of your skills. Are you ready to discover your English level?
               </p>
 
               <a
-                href="/exercise"
-                className="inline-block bg-[#65A662] text-white text-lg font-semibold px-6 py-3 rounded-lg hover:bg-green-600 transition-transform duration-300 ease-in-out transform hover:scale-105 shadow-lg"
+                href="/test-german/level"
+                className="inline-block bg-red-600 text-white text-lg font-semibold px-6 py-3 rounded-lg hover:bg-red-700 transition-transform duration-300 ease-in-out transform hover:scale-105 shadow-lg"
               >
-                Start the English Level Test
+                Start the German Level Test
               </a>
-              <p className="mt-4 text-sm text-gray-500">Evaluate your skills and receive a detailed level assessment!</p>
+              <p className="mt-4 text-sm text-gray-400">Evaluate your skills and receive a detailed level assessment!</p>
             </div>
           </div>
         </div>
@@ -109,7 +109,7 @@ const PopupModal = () => {
       {/* Reopen Button (only shows when modal is closed) */}
       {showReopenButton && (
         <button
-          className="fixed bg-[#65A662] text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-transform duration-300 ease-in-out z-50"
+          className="fixed bg-red-600 text-white p-4 rounded-full shadow-lg hover:bg-red-700 transition-transform duration-300 ease-in-out z-50"
           onClick={handleButtonClick}
           aria-label="Reopen modal"
           style={{
@@ -121,7 +121,7 @@ const PopupModal = () => {
           <FaRedo className="text-2xl" />
           {/* Static Tooltip */}
           <div
-            className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-green-700 text-white text-xs font-semibold px-4 py-2 rounded-md shadow-xl flex items-center animate-tooltipFadeIn"
+            className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-500 to-red-600 text-white text-xs font-semibold px-4 py-2 rounded-md shadow-xl flex items-center animate-tooltipFadeIn"
             style={{
               maxWidth: '200px',
               textAlign: 'center',
@@ -130,13 +130,13 @@ const PopupModal = () => {
             }}
           >
             <svg
-              className="absolute text-green-700 -bottom-1 left-1/2 transform -translate-x-1/2 h-4 w-4"
+              className="absolute text-red-600 -bottom-1 left-1/2 transform -translate-x-1/2 h-4 w-4"
               viewBox="0 0 24 24"
               fill="currentColor"
             >
               <polygon points="12,0 24,24 0,24" />
             </svg>
-            Click to open the English Exercise
+            Click to open the German Exercise
           </div>
         </button>
       )}

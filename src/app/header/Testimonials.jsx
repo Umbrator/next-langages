@@ -8,7 +8,7 @@ const Testimonials = () => {
       name: "Colette Daniel",
       role: "Student",
       text: "This program has significantly advanced my career! The hands-on projects and real-world applications were invaluable.",
-      image: "https://www.upload.ee/image/17260469/testi-83S5W35.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ftesti-83S5W35.jpg?alt=media&token=fe18257d-1a4d-4bad-9781-0c7e4c71fd5a",
       rating: 5,
       subtitle: "Achieved her dream career through practical learning.",
     },
@@ -16,7 +16,7 @@ const Testimonials = () => {
       name: "John Doe",
       role: "Graduate",
       text: "The courses were in-depth, and the instructors were always available to support my learning journey. I highly recommend it.",
-      image: "https://www.upload.ee/image/17260469/testi-83S5W35.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ftesti-83S5W35.jpg?alt=media&token=fe18257d-1a4d-4bad-9781-0c7e4c71fd5a",
       rating: 4,
       subtitle: "Gained a new job role thanks to the skills acquired.",
     },
@@ -52,8 +52,10 @@ const Testimonials = () => {
             <Image
               src={testimonialData[currentIndex].image}
               alt={testimonialData[currentIndex].name}
-              layout="fill"
-              className="object-cover"
+              fill
+              sizes="(max-width: 768px) 100px, 150px"
+              style={{ objectFit: "cover" }}
+              className="rounded-full"
             />
           </div>
 

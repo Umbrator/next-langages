@@ -35,7 +35,7 @@ export const courseList = [
     "general-english": {
       title: "General English",
       description: "Our Business English course is designed to build a strong foundation in the core areas of English: reading, writing, listening, and speaking.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot.jpg?alt=media&token=fdb3d1fe-f6a1-4dd0-98f9-785ae5ad1bf5",
       levels: [
         {
           level: 'Beginner Level',
@@ -68,7 +68,7 @@ export const courseList = [
     "business-english": {
       title: "Business English",
       description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot.jpg?alt=media&token=fdb3d1fe-f6a1-4dd0-98f9-785ae5ad1bf5",
       levels: [
         {
           level: 'Beginner Level',
@@ -102,7 +102,7 @@ export const courseList = [
     "exam-preparation": {
       title: "Exam Preparation",
       description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot.jpg?alt=media&token=fdb3d1fe-f6a1-4dd0-98f9-785ae5ad1bf5",
       levels: [
         {
           level: 'Beginner Level',
@@ -136,7 +136,7 @@ export const courseList = [
     "english-for-kids": {
       title: "English For Kids",
       description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot.jpg?alt=media&token=fdb3d1fe-f6a1-4dd0-98f9-785ae5ad1bf5",
       levels: [
         {
           level: 'Beginner Level',
@@ -170,7 +170,7 @@ export const courseList = [
     "private-lessons": {
       title: "Private Lessons",
       description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot.jpg?alt=media&token=fdb3d1fe-f6a1-4dd0-98f9-785ae5ad1bf5",
       levels: [
         {
           level: 'Beginner Level',
@@ -204,7 +204,7 @@ export const courseList = [
     "self-study-courses": {
       title: "self Study Courses",
       description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of English with a personalized approach.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot.jpg?alt=media&token=fdb3d1fe-f6a1-4dd0-98f9-785ae5ad1bf5",
       levels: [
         {
           level: 'Beginner Level',

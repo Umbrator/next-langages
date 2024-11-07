@@ -95,7 +95,7 @@ const PopupModal = () => {
               </p>
 
               <a
-                href="/exercise"
+                href="/test-italie/level"
                 className="inline-block bg-gradient-to-r from-green-600 to-red-600 text-white text-lg font-semibold px-6 py-3 rounded-lg hover:from-red-700 hover:to-green-700 transition-transform duration-300 ease-in-out transform hover:scale-105 shadow-lg"
               >
                 Start the Italian Level Test

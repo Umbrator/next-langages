@@ -67,6 +67,31 @@ const LearnEnglish = () => {
   return (
     <div className="learn-english-page" style={{ fontFamily: '"Public Sans", sans-serif' }}>
       <Navbar/>
+      <style jsx>{`
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+          .hero h1 {
+            font-size: 1.8rem !important;
+            padding-top: 80px !important; /* Added padding for extra space */
+          }
+          .hero p {
+            font-size: 0.9rem !important;
+          }
+          .hero button {
+            font-size: 0.9rem !important;
+          }
+          .stats h3 {
+            font-size: 28px !important;
+          }
+          .stats span {
+            font-size: 18px !important;
+          }
+          /* Hide divider lines on mobile */
+          .divider-line {
+            display: none !important;
+          }
+        }
+      `}</style>
       <section
   className="hero bg-cover bg-center h-screen text-white relative flex items-center"
   style={{
@@ -92,7 +117,7 @@ const LearnEnglish = () => {
     </button>
 
     {/* Stats Section */}
-    <div className="mt-10 flex flex-col md:flex-row justify-between w-full max-w-4xl text-left text-white items-start">
+    <div className="mt-10 flex flex-col md:flex-row justify-between w-full max-w-4xl text-left text-white items-start stats">
       {/* Years of Experience */}
       <div className="flex flex-col items-start mb-6 md:mr-8">
         <div className="flex flex-col items-start">
@@ -123,7 +148,7 @@ const LearnEnglish = () => {
           </p>
         </div>
       </div>
-      <div className="h-12 border-l-2 border-white mx-8 md:block"></div>
+      <div className="divider-line h-12 border-l-2 border-white mx-8 md:block"></div>
 
       {/* Recommended Percentage */}
       <div className="flex flex-col items-start mb-6 md:mr-8">
@@ -155,7 +180,7 @@ const LearnEnglish = () => {
           </p>
         </div>
       </div>
-      <div className="h-12 border-l-2 border-white mx-8 md:block"></div>
+      <div className="divider-line h-12 border-l-2 border-white mx-8 md:block"></div>
 
       {/* Number of Students */}
       <div className="flex flex-col items-start mb-6">

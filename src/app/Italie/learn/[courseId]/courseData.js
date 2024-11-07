@@ -2,27 +2,27 @@ export const courseList = [
   {
     title: 'General Italie',
     description: 'Build a strong foundation in reading, writing, listening, and speaking skills.',
-    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-stacks-table-working-space.jpg?alt=media&token=f3614889-d8b9-4054-91d9-fba83dbd3ba0',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flooking-side-pleased-young-pretty-girl-holding-folders.jpg?alt=media&token=bd9c7c49-6bdd-4e20-805d-2439c48cf3cc',
   },
   {
     title: 'Business Italie',
     description: 'Enhance your business communication and professional skills in Italie.',
-    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books.jpg?alt=media&token=8903a1c6-fe60-4a04-aa00-efc291c6e989',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fitalian-flag-yellow-background.jpg?alt=media&token=5e816c19-4cc2-4f27-bcfb-281409a8e5d3',
   },
   {
     title: 'Exam Preparation',
     description: 'Prepare for Italie proficiency exams with focused practice and strategies.',
-    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-assortment.jpg?alt=media&token=15f50f3c-535e-482b-b368-ff484c46c5eb',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbook-3089857_1280%20(1).jpg?alt=media&token=83a9dfb8-377e-44b3-ad14-06e37222682d',
   },
   {
     title: 'Italie for Kids',
     description: 'Fun and interactive lessons designed for young learners to grasp Italie skills.',
-    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-blue.jpg?alt=media&token=1a5e32fb-15bc-4d07-a189-3312c885613d',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flittle-girl-boy-holding-fla_1089479-3411.jpg?alt=media&token=00ea1142-6e6f-43c7-9f5b-296e19119785',
   },
   {
     title: 'Private Lessons',
     description: 'Personalized lessons tailored to individual learning styles and goals.',
-    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books.jpg?alt=media&token=8903a1c6-fe60-4a04-aa00-efc291c6e989',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fsmiling-boy-seven-years-old-keeps-book-flag-italy-as-background-closeup_106434-3820.jpg?alt=media&token=5c3d6f81-80bb-488c-b240-7b2b41aef72c',
   },
   {
     title: 'Self-study Courses',
@@ -35,7 +35,7 @@ export const courseData = {
   "general-italie": {
     title: "General Italie",
     description: "Our Business Italie course is designed to build a strong foundation in the core areas of Italie: reading, writing, listening, and speaking.",
-    image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+    image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbeautiful-asian-student-showing-italy-flag-pink-isolated-background-education-concept_67155-33175.jpg?alt=media&token=7cf28213-1e14-4067-b849-1ad5c78ef6a4",
     levels: [
       {
         level: 'Beginner Level',
@@ -68,7 +68,7 @@ export const courseData = {
   "business-italie": {
     title: "Business Italie",
     description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of Italie with a personalized approach.",
-    image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+    image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbeautiful-asian-student-showing-italy-flag-pink-isolated-background-education-concept_67155-33175.jpg?alt=media&token=7cf28213-1e14-4067-b849-1ad5c78ef6a4",
     levels: [
       {
         level: 'Beginner Level',
@@ -102,7 +102,7 @@ export const courseData = {
   "exam-preparation": {
     title: "Exam Preparation",
     description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of Italie with a personalized approach.",
-    image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+    image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbeautiful-asian-student-showing-italy-flag-pink-isolated-background-education-concept_67155-33175.jpg?alt=media&token=7cf28213-1e14-4067-b849-1ad5c78ef6a4",
     levels: [
       {
         level: 'Beginner Level',
@@ -136,7 +136,7 @@ export const courseData = {
   "italie-for-kids": {
     title: "Italie For Kids",
     description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of Italie with a personalized approach.",
-    image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+    image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbeautiful-asian-student-showing-italy-flag-pink-isolated-background-education-concept_67155-33175.jpg?alt=media&token=7cf28213-1e14-4067-b849-1ad5c78ef6a4",
     levels: [
       {
         level: 'Beginner Level',
@@ -170,7 +170,7 @@ export const courseData = {
   "private-lessons": {
     title: "Private Lessons",
     description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of Italie with a personalized approach.",
-    image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+    image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbeautiful-asian-student-showing-italy-flag-pink-isolated-background-education-concept_67155-33175.jpg?alt=media&token=7cf28213-1e14-4067-b849-1ad5c78ef6a4",
     levels: [
       {
         level: 'Beginner Level',
@@ -204,7 +204,7 @@ export const courseData = {
   "self-study-courses": {
     title: "self Study Courses",
     description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of Italie with a personalized approach.",
-    image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+    image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbeautiful-asian-student-showing-italy-flag-pink-isolated-background-education-concept_67155-33175.jpg?alt=media&token=7cf28213-1e14-4067-b849-1ad5c78ef6a4",
     levels: [
       {
         level: 'Beginner Level',

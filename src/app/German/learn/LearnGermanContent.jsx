@@ -5,7 +5,7 @@ import { FaAngleDoubleRight, FaTimes } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { courseList } from "./[courseId]/courseData";
 
-const LearnEnglishContent = () => {
+const LearnGermanContent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [isClosing, setIsClosing] = useState(false);
@@ -56,7 +56,7 @@ const LearnEnglishContent = () => {
           <div className="bg-gradient-to-br from-black to-gray-900 shadow-2xl rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-yellow-600">
             <img
               className="w-full h-48 object-cover opacity-80"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fback-view-kids-writing-whiteboard%20(1).jpg?alt=media&token=c78a6aaf-0cea-4981-8d94-634411e9ba57"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-holding-english-class.jpg?alt=media&token=9221c4ad-b8c3-4a11-942a-36625ff4cd4"
               alt="1-on-1 lessons"
               loading="lazy"
             />
@@ -74,7 +74,7 @@ const LearnEnglishContent = () => {
           <div className="bg-gradient-to-br from-black to-gray-900 shadow-2xl rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-yellow-600">
             <img
               className="w-full h-48 object-cover opacity-80"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-holding-english-class.jpg?alt=media&token=9221c4ad-b8c3-4a11-942a-36625ff4cd4c"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fback-view-kids-writing-whiteboard%20(1).jpg?alt=media&token=c78a6aaf-0cea-4981-8d94-634411e9ba57"
               alt="Group Class"
             />
             <div className="p-6">
@@ -91,7 +91,7 @@ const LearnEnglishContent = () => {
           <div className="bg-gradient-to-br from-black to-gray-900 shadow-2xl rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-yellow-600">
             <img
               className="w-full h-48 object-cover opacity-80"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-assortment.jpg?alt=media&token=15f50f3c-535e-482b-b368-ff484c46c5eb"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fgirl-with-notebook-giving-ok-sign%20(1).jpg?alt=media&token=d5bad9a7-0f17-4f57-aea8-753333661fa2"
               alt="Practice for Free"
               loading="lazy"
             />
@@ -114,7 +114,7 @@ const LearnEnglishContent = () => {
           <div className="overflow-hidden rounded-lg">
             <img
               className="w-full h-full object-cover"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmale-teacher-doing-english-lesson-online-his-students.jpg?alt=media&token=93f0c01b-53a1-47ae-bda1-75b5b7ee6881"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fcute-little-girl-table-with-lot-colorful-books%20(1).jpg?alt=media&token=aca4a34c-0582-492a-a1f3-4d3be7e80f04"
               alt="About Us"
               loading="lazy"
             />
@@ -268,7 +268,7 @@ const LearnEnglishContent = () => {
           <div className="lg:w-1/2">
             <img
               className="rounded-lg shadow-md object-cover w-full h-[400px]"
-              src="https://www.upload.ee/image/17295968/happy-girl-gesturing-class.jpg"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhappy-girl-gesturing-class%20(1).jpg?alt=media&token=91b705d1-2a46-456b-82d6-27769d74db02"
               alt="Why Inlingo German Courses"
               loading="lazy"
             />
@@ -512,4 +512,4 @@ const LearnEnglishContent = () => {
   );
 };
 
-export default LearnEnglishContent;
+export default LearnGermanContent;

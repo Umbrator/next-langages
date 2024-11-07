@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import OffrsSection from "./LearnFrenchContent";
 import LearnFrenchModel from "../LearnFrenchModel";
+import Navbar from "../../header/navbar";
+import Footer from "../../header/Footer";
 
 const LearnFrench = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -60,8 +62,31 @@ const LearnFrench = () => {
 
   return (
     <div className="learn-french-page" style={{ fontFamily: '"Public Sans", sans-serif' }}>
-      {/* <Navbar /> */}
-
+      <Navbar/>
+      <style jsx>{`
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+          .hero h1 {
+            font-size: 1.8rem !important;
+          }
+          .hero p {
+            font-size: 0.9rem !important;
+          }
+          .hero button {
+            font-size: 0.9rem !important;
+          }
+          .stats h3 {
+            font-size: 28px !important;
+          }
+          .stats span {
+            font-size: 18px !important;
+          }
+          /* Hide divider lines on mobile */
+          .divider-line {
+            display: none !important;
+          }
+        }
+      `}</style>
       <section
         className="hero bg-cover bg-center h-screen text-white relative flex items-center"
         style={{
@@ -71,7 +96,7 @@ const LearnFrench = () => {
         <div className="overlay absolute inset-0 bg-black bg-opacity-50"></div>
 
         <div className="container mx-auto relative z-10 flex flex-col items-start text-left">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="text-5xl md:text-5xl font-bold mb-4">
             {headlineText}
           </h1>
 
@@ -88,9 +113,9 @@ const LearnFrench = () => {
           </button>
 
           {/* Stats Section */}
-          <div className="mt-10 flex justify-between w-full max-w-4xl text-left text-white items-start">
+          <div className="mt-10 flex flex-col md:flex-row justify-between w-full max-w-4xl text-left text-white items-start stats">
             {/* Years of Experience */}
-            <div className="flex flex-col items-start mr-8">
+            <div className="flex flex-col items-start mb-6 md:mr-8">
               <div className="flex flex-col items-start">
                 <div className="flex items-baseline">
                   <h3
@@ -119,8 +144,8 @@ const LearnFrench = () => {
                 </p>
               </div>
             </div>
-            <div className="h-12 border-l-2 border-white mx-8"></div>
-            <div className="flex flex-col items-start mr-8">
+            <div className="divider-line h-12 border-l-2 border-white mx-8 md:block"></div>
+            <div className="flex flex-col items-start mb-6 md:mr-8">
               <div className="flex flex-col items-start">
                 <div className="flex items-baseline">
                   <h3
@@ -149,9 +174,9 @@ const LearnFrench = () => {
                 </p>
               </div>
             </div>
-            <div className="h-12 border-l-2 border-white mx-8"></div>
+            <div className="divider-line h-12 border-l-2 border-white mx-8 md:block"></div>
 
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-start mb-6">
               <div className="flex flex-col items-start">
                 <div className="flex items-baseline">
                   <h3
@@ -187,6 +212,7 @@ const LearnFrench = () => {
       <LearnFrenchModel />
       {/* Modal for sign-up */}
       {isModalOpen && <Modal closeModal={closeModal} />}
+      <Footer/>
     </div>
   );
 };

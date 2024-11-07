@@ -56,7 +56,7 @@ const LearnEnglishContent = () => {
           <div className="bg-gradient-to-br from-gray-900 to-gray-700 shadow-2xl rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-red-700">
             <img
               className="w-full h-48 object-cover opacity-80"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fback-view-kids-writing-whiteboard%20(1).jpg?alt=media&token=c78a6aaf-0cea-4981-8d94-634411e9ba57"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-holding-english-class.jpg?alt=media&token=9221c4ad-b8c3-4a11-942a-36625ff4cd4c"
               alt="1-on-1 Lessons"
               loading="lazy"
             />
@@ -74,7 +74,7 @@ const LearnEnglishContent = () => {
           <div className="bg-gradient-to-br from-gray-900 to-gray-700 shadow-2xl rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-red-700">
             <img
               className="w-full h-48 object-cover opacity-80"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-holding-english-class.jpg?alt=media&token=9221c4ad-b8c3-4a11-942a-36625ff4cd4c"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fback-view-kids-writing-whiteboard%20(1).jpg?alt=media&token=c78a6aaf-0cea-4981-8d94-634411e9ba57"
               alt="Group Class"
             />
             <div className="p-6">
@@ -91,7 +91,7 @@ const LearnEnglishContent = () => {
           <div className="bg-gradient-to-br from-gray-900 to-gray-700 shadow-2xl rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-red-700">
             <img
               className="w-full h-48 object-cover opacity-80"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-assortment.jpg?alt=media&token=15f50f3c-535e-482b-b368-ff484c46c5eb"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fyoung-man-wearing-glasses-holding-books-with-flag-italy-learn-studying_877288-2813.jpg?alt=media&token=72dc663e-f7cb-4236-acc8-9e5c11ceee5a"
               alt="Practice for Free"
               loading="lazy"
             />
@@ -114,7 +114,7 @@ const LearnEnglishContent = () => {
           <div className="overflow-hidden rounded-lg">
             <img
               className="w-full h-full object-cover"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmale-teacher-doing-english-lesson-online-his-students.jpg?alt=media&token=93f0c01b-53a1-47ae-bda1-75b5b7ee6881"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbeautiful-asian-student-showing-italy-flag-pink-isolated-background-education-concept_67155-33175.jpg?alt=media&token=7cf28213-1e14-4067-b849-1ad5c78ef6a4"
               alt="About Us"
               loading="lazy"
             />
@@ -261,7 +261,7 @@ const LearnEnglishContent = () => {
           <div className="lg:w-1/2">
             <img
               className="rounded-lg shadow-md object-cover w-full h-[400px]"
-              src="https://www.upload.ee/image/17295968/happy-girl-gesturing-class.jpg"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhappy-girl-gesturing-class%20(1).jpg?alt=media&token=91b705d1-2a46-456b-82d6-27769d74db02"
               alt="Why Inlingo Italian Courses"
               loading="lazy"
             />

@@ -2,32 +2,32 @@ export const courseList = [
     {
       title: 'General German',
       description: 'Build a strong foundation in reading, writing, listening, and speaking skills.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-stacks-table-working-space.jpg?alt=media&token=f3614889-d8b9-4054-91d9-fba83dbd3ba0',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fwoman-hands-hold-germany-deutschland-flag-patriotism.jpg?alt=media&token=8e9b91aa-2e0c-4146-8207-6a23ad6a9663',
     },
     {
       title: 'Business German',
       description: 'Enhance your business communication and professional skills in German.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books.jpg?alt=media&token=8903a1c6-fe60-4a04-aa00-efc291c6e989',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flearn-german-language-online-education-concept%20(1).jpg?alt=media&token=1fb21271-15ce-43d0-8a32-66750fdf2d05',
     },
     {
       title: 'Exam Preparation',
       description: 'Prepare for German proficiency exams with focused practice and strategies.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-assortment.jpg?alt=media&token=15f50f3c-535e-482b-b368-ff484c46c5eb',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flearn-german-language-online-education-concept.jpg?alt=media&token=5d012e81-467c-4ba4-93ec-3121b8ae4b2e',
     },
     {
       title: 'German for Kids',
       description: 'Fun and interactive lessons designed for young learners to grasp German skills.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-blue.jpg?alt=media&token=1a5e32fb-15bc-4d07-a189-3312c885613d',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flittle-german-girl-holding-her-countrys-flag-stick_1270757-2005.jpg?alt=media&token=ab15b3fd-7b9c-4625-ba16-a7f6301e2360',
     },
     {
       title: 'Private Lessons',
       description: 'Personalized lessons tailored to individual learning styles and goals.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books.jpg?alt=media&token=8903a1c6-fe60-4a04-aa00-efc291c6e989',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fpeople-education-learning-school-concept-happy-student-girl-with-folders-pointing-finger-german-flag-background_380164-112358.jpg?alt=media&token=4dd56436-fb3a-475e-a7e6-51db6540b05f',
     },
     {
       title: 'Self-study Courses',
       description: 'Flexible and self-paced courses for independent learners.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-book-resting-table-working-space_23-2149429575.avif?alt=media&token=c597d799-e6de-441b-9f2b-9e6dda373a20',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Feducation-foreign-school-teen-girl-football-fan-choose-direction-happy-child-pointing-finger_545934-19162.jpg?alt=media&token=c4abfbca-595c-48a1-b849-360ff3c2af32',
     },
   ];
 
@@ -35,7 +35,7 @@ export const courseList = [
     "general-german": {
       title: "General German",
       description: "Our Business German course is designed to build a strong foundation in the core areas of German: reading, writing, listening, and speaking.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Feducation-foreign-school-teen-girl-football-fan-choose-direction-happy-child-pointing-finger_545934-19162.jpg?alt=media&token=c4abfbca-595c-48a1-b849-360ff3c2af32",
       levels: [
         {
           level: 'Beginner Level',
@@ -68,7 +68,7 @@ export const courseList = [
     "business-german": {
       title: "Business German",
       description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of German with a personalized approach.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Feducation-foreign-school-teen-girl-football-fan-choose-direction-happy-child-pointing-finger_545934-19162.jpg?alt=media&token=c4abfbca-595c-48a1-b849-360ff3c2af32",
       levels: [
         {
           level: 'Beginner Level',
@@ -102,7 +102,7 @@ export const courseList = [
     "exam-preparation": {
       title: "Exam Preparation",
       description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of German with a personalized approach.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Feducation-foreign-school-teen-girl-football-fan-choose-direction-happy-child-pointing-finger_545934-19162.jpg?alt=media&token=c4abfbca-595c-48a1-b849-360ff3c2af32",
       levels: [
         {
           level: 'Beginner Level',
@@ -136,7 +136,7 @@ export const courseList = [
     "english-for-kids": {
       title: "German For Kids",
       description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of German with a personalized approach.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Feducation-foreign-school-teen-girl-football-fan-choose-direction-happy-child-pointing-finger_545934-19162.jpg?alt=media&token=c4abfbca-595c-48a1-b849-360ff3c2af32",
       levels: [
         {
           level: 'Beginner Level',
@@ -170,7 +170,7 @@ export const courseList = [
     "private-lessons": {
       title: "Private Lessons",
       description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of German with a personalized approach.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Feducation-foreign-school-teen-girl-football-fan-choose-direction-happy-child-pointing-finger_545934-19162.jpg?alt=media&token=c4abfbca-595c-48a1-b849-360ff3c2af32",
       levels: [
         {
           level: 'Beginner Level',
@@ -204,7 +204,7 @@ export const courseList = [
     "self-study-courses": {
       title: "self Study Courses",
       description: "Our Private Lessons are tailored to meet your individual learning needs and objectives. We focus on the core areas of German with a personalized approach.",
-      image: "https://www.upload.ee/image/17196190/medium-shot-smiley-girl-wearing-earphones.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Feducation-foreign-school-teen-girl-football-fan-choose-direction-happy-child-pointing-finger_545934-19162.jpg?alt=media&token=c4abfbca-595c-48a1-b849-360ff3c2af32",
       levels: [
         {
           level: 'Beginner Level',

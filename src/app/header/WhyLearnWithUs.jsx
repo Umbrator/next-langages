@@ -38,7 +38,7 @@ const WhyLearnWithUs = () => {
 
           {/* Image centered on top of the circles */}
           <Image
-            src="https://www.upload.ee/image/17259690/imagee-6CHT7KZ-768x1133.png"
+            src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fimagee-6CHT7KZ-768x1133.png?alt=media&token=bf6a488e-d083-4757-b34e-e9590e61f251"
             alt="Why Learn With Us"
             width={350}
             height={450}
