@@ -15,10 +15,10 @@ const Navbar = () => {
   ];
 
   const learnLinks = [
-    { href: "/spain/learn", label: "Spanish", icon: "fi fi-es" },
+    { href: "/Spain/learn", label: "Spanish", icon: "fi fi-es" },
     { href: "/french/learn", label: "French", icon: "fi fi-fr" },
-    { href: "/german/learn", label: "German", icon: "fi fi-de" },
-    { href: "/italie/learn", label: "Italian", icon: "fi fi-it" },
+    { href: "/German/learn", label: "German", icon: "fi fi-de" },
+    { href: "/Italie/learn", label: "Italian", icon: "fi fi-it" },
     { href: "/english/learn", label: "English", icon: "fi fi-gb" },
   ];
 
