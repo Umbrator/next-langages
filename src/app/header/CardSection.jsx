@@ -69,7 +69,7 @@ const CardSection = () => {
                 width={40}
                 height={40}
                 className="object-contain"
-                priority={index === 0} // Priorité pour la première image
+                priority={index === 0}
               />
             </div>
             <h3 className="text-2xl font-semibold text-gray-800">{card.title}</h3>

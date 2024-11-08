@@ -16,7 +16,7 @@ const CourseSection = () => {
       title: "Learn Spanish",
       description: "Improve your Spanish with interactive exercises.",
       countryFlag: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg",
-      link: "/Spain/learn",
+      link: "/spain/learn",
     },
     {
       image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhome-bg-4-1.jpg?alt=media&token=9f917b68-e190-4f9b-91dc-3776ab0bd7de",
