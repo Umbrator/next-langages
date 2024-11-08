@@ -4,7 +4,7 @@ import LearnEnglishContent from './LearnEnglishContent';
 import LearnEnligshFaQ from "../LearnEnligshFaQ";
 import LearnEnglishModel from "../LearnEnglishModel";
 import Navbar from "../../header/navbar";
-import Footer from "../../header/Footer";
+import footer from "../../header/Footer";
 
 const LearnEnglish = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
