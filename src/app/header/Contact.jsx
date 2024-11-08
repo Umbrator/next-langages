@@ -32,35 +32,35 @@ const Contact = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-br bg-indigo-50 py-12">
+    <section className="bg-indigo-50 dark:bg-gray-900 py-12">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <div className="space-y-8">
           <motion.div
-            className="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
+            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <h2 className="text-3xl font-bold text-blue-900 mb-4">
+            <h2 className="text-3xl font-bold text-blue-900 dark:text-white mb-4">
               Visit Our Office
             </h2>
-            <p className="text-gray-700 text-base mb-4">
+            <p className="text-gray-700 dark:text-gray-300 text-base mb-4">
               We are here to assist you with any inquiries or support.
             </p>
             {locationData.map((location, index) => (
               <div
                 key={index}
-                className="space-y-3 border-b border-gray-200 pb-3 mb-3"
+                className="space-y-3 border-b border-gray-200 dark:border-gray-700 pb-3 mb-3"
               >
-                <div className="flex items-center space-x-2 text-blue-900">
+                <div className="flex items-center space-x-2 text-blue-900 dark:text-white">
                   <FaMapMarkerAlt className="text-xl" />
                   <p className="text-base font-medium">{location.address}</p>
                 </div>
-                <div className="flex items-center space-x-2 text-blue-900">
+                <div className="flex items-center space-x-2 text-blue-900 dark:text-white">
                   <FaPhoneAlt className="text-xl" />
                   <p className="text-base">{location.phone}</p>
                 </div>
-                <div className="flex items-center space-x-2 text-blue-900">
+                <div className="flex items-center space-x-2 text-blue-900 dark:text-white">
                   <FaEnvelope className="text-xl" />
                   <p className="text-base">{location.email}</p>
                 </div>
@@ -70,7 +70,7 @@ const Contact = () => {
 
           {/* Embedded Map */}
           <motion.div
-            className="bg-white p-3 rounded-xl shadow-lg h-56 lg:h-72"
+            className="bg-white dark:bg-gray-800 p-3 rounded-xl shadow-lg h-56 lg:h-72"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
@@ -86,12 +86,12 @@ const Contact = () => {
         </div>
 
         <motion.div
-          className="bg-white p-8 rounded-xl shadow-lg transition-transform duration-500 transform hover:-translate-y-1 h-full flex flex-col justify-between"
+          className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg transition-transform duration-500 transform hover:-translate-y-1 h-full flex flex-col justify-between"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
         >
-          <h3 className="text-2xl font-bold text-blue-900 mb-4">Contact Us</h3>
+          <h3 className="text-2xl font-bold text-blue-900 dark:text-white mb-4">Contact Us</h3>
           <form
             onSubmit={handleSubmit}
             className="space-y-6 flex-grow flex flex-col"
@@ -104,13 +104,13 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="peer h-10 w-full border-b-2 border-gray-300 placeholder-transparent focus:outline-none focus:border-blue-500 transition"
+                  className="peer h-10 w-full border-b-2 border-gray-300 dark:border-gray-600 placeholder-transparent focus:outline-none focus:border-blue-500 transition bg-white dark:bg-gray-800"
                   placeholder="Full Name"
                   required
                 />
                 <label
                   htmlFor="name"
-                  className="absolute left-0 -top-3 text-gray-600 text-xs peer-placeholder-shown:text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 transition-all duration-200"
+                  className="absolute left-0 -top-3 text-gray-600 dark:text-gray-400 text-xs peer-placeholder-shown:text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 transition-all duration-200"
                 >
                   Full Name
                 </label>
@@ -123,13 +123,13 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="peer h-10 w-full border-b-2 border-gray-300 placeholder-transparent focus:outline-none focus:border-blue-500 transition"
+                  className="peer h-10 w-full border-b-2 border-gray-300 dark:border-gray-600 placeholder-transparent focus:outline-none focus:border-blue-500 transition bg-white dark:bg-gray-800"
                   placeholder="Email Address"
                   required
                 />
                 <label
                   htmlFor="email"
-                  className="absolute left-0 -top-3 text-gray-600 text-xs peer-placeholder-shown:text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 transition-all duration-200"
+                  className="absolute left-0 -top-3 text-gray-600 dark:text-gray-400 text-xs peer-placeholder-shown:text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 transition-all duration-200"
                 >
                   Email Address
                 </label>
@@ -142,13 +142,13 @@ const Contact = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="peer h-10 w-full border-b-2 border-gray-300 placeholder-transparent focus:outline-none focus:border-blue-500 transition"
+                  className="peer h-10 w-full border-b-2 border-gray-300 dark:border-gray-600 placeholder-transparent focus:outline-none focus:border-blue-500 transition bg-white dark:bg-gray-800"
                   placeholder="Subject"
                   required
                 />
                 <label
                   htmlFor="subject"
-                  className="absolute left-0 -top-3 text-gray-600 text-xs peer-placeholder-shown:text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 transition-all duration-200"
+                  className="absolute left-0 -top-3 text-gray-600 dark:text-gray-400 text-xs peer-placeholder-shown:text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 transition-all duration-200"
                 >
                   Subject
                 </label>
@@ -161,13 +161,13 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows="3"
-                  className="peer min-h-[200px] w-full border-b-2 border-gray-300 placeholder-transparent focus:outline-none focus:border-blue-500 transition"
+                  className="peer min-h-[200px] w-full border-b-2 border-gray-300 dark:border-gray-600 placeholder-transparent focus:outline-none focus:border-blue-500 transition bg-white dark:bg-gray-800"
                   placeholder="Message"
                   required
                 ></textarea>
                 <label
                   htmlFor="message"
-                  className="absolute left-0 -top-3 text-gray-600 text-xs peer-placeholder-shown:text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 transition-all duration-200"
+                  className="absolute left-0 -top-3 text-gray-600 dark:text-gray-400 text-xs peer-placeholder-shown:text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 transition-all duration-200"
                 >
                   Message
                 </label>

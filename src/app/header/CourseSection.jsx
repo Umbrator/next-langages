@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
+
 const CourseSection = () => {
   const courses = [
     {
@@ -54,7 +55,7 @@ const CourseSection = () => {
           }
         });
       },
-      { threshold: 0.1 } // 10% de visibilité pour déclencher
+      { threshold: 0.1 } // 10% visibility to trigger
     );
 
     const cards = sectionRef.current.querySelectorAll(".course-card");
@@ -66,12 +67,12 @@ const CourseSection = () => {
   }, []);
 
   return (
-    <section  className="py-16 bg-with" ref={sectionRef} id="CourseSection">
+    <section className="py-16 bg-white dark:bg-gray-900" ref={sectionRef} id="CourseSection">
       <div className="container mx-auto px-4 lg:px-8 xl:px-16">
-        <h2 className="text-4xl font-extrabold text-blue-900 mb-6 text-center">
+        <h2 className="text-4xl font-extrabold text-blue-900 dark:text-white mb-6 text-center">
           Language Courses
         </h2>
-        <p className="text-gray-600 mb-12 text-center max-w-lg mx-auto">
+        <p className="text-gray-600 dark:text-gray-300 mb-12 text-center max-w-lg mx-auto">
           Explore our top language courses, designed to help you master new languages with ease.
         </p>
 
@@ -79,12 +80,12 @@ const CourseSection = () => {
           {courses.map((course, index) => (
             <Link href={course.link} key={index} passHref>
               <div
-                className={`course-card relative bg-white rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer ${
+                className={`course-card relative bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer ${
                   visibleCards.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                 }`}
                 data-index={index}
               >
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center border-2 border-gray-300 z-10 overflow-hidden">
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white dark:bg-gray-700 rounded-full shadow-md flex items-center justify-center border-2 border-gray-300 dark:border-gray-600 z-10 overflow-hidden">
                   <Image
                     src={course.countryFlag}
                     alt={`${course.title} Flag`}
@@ -105,10 +106,10 @@ const CourseSection = () => {
                   />
                 </div>
                 <div className="p-6 pt-16">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-2 text-center">
+                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2 text-center">
                     {course.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4 text-center">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 text-center">
                     {course.description}
                   </p>
                   <button className="w-full bg-gradient-to-r from-blue-600 to-blue-400 text-white py-2 mt-4 rounded-lg text-sm font-semibold shadow-md hover:shadow-lg transition-all duration-300 hover:bg-blue-500">

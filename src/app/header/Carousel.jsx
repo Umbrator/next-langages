@@ -26,7 +26,7 @@ const Carousel = () => {
   const [currentIndex] = useState(0);
 
   return (
-    <section className="relative bg-blue-50 py-16 overflow-hidden h-[700px]">
+    <section className="relative bg-blue-50 pt-32 py-16 overflow-hidden min-h-screen">
       {/* SVG Wave Background */}
       <div className="absolute inset-0 -z-10">
         <svg
