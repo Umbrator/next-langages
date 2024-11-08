@@ -4,11 +4,10 @@ import React, { useState, useMemo } from "react";
 import Image from "next/image";
 
 const Carousel = () => {
-  // Utilisation de useMemo pour éviter de recréer les données de slide
   const slides = useMemo(
     () => [
       {
-        title: "Learn New Languages and Move Forward",
+        title: "Learn New Languages  and Move  Forward",
         subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fimage-JA74V7F-768x1054.png?alt=media&token=0080c1ec-ad15-496d-96e9-e74abd5984d3",
         button1: "Get Started",
