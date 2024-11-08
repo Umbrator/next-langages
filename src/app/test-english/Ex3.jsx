@@ -4,7 +4,12 @@ import React, { useState, useEffect } from "react";
 import { FiCheckCircle } from "react-icons/fi";
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
 
-const Ex3 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease }) => {
+const Ex3 = ({
+  onScoreUpdate,
+  nextStep,
+  remainingAttempts,
+  handleAttemptDecrease,
+}) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
   const [correctCount, setCorrectCount] = useState(0);
@@ -13,17 +18,78 @@ const Ex3 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
   const [showCompletionModal, setShowCompletionModal] = useState(false);
 
   const questions = [
-    { question: "What is the largest planet in our solar system?", options: [{ text: "Jupiter", correct: true }, { text: "Mars", correct: false }] },
-    { question: "What is the smallest continent?", options: [{ text: "Australia", correct: true }, { text: "Europe", correct: false }] },
-    { question: "Who painted the Mona Lisa?", options: [{ text: "Leonardo da Vinci", correct: true }, { text: "Pablo Picasso", correct: false }] },
-    { question: "What is the hardest natural substance?", options: [{ text: "Diamond", correct: true }, { text: "Gold", correct: false }] },
-    { question: "What is the capital city of Canada?", options: [{ text: "Ottawa", correct: true }, { text: "Toronto", correct: false }] },
-    { question: "What is the tallest mountain in the world?", options: [{ text: "Mount Everest", correct: true }, { text: "K2", correct: false }] },
-    { question: "What is the longest river in the world?", options: [{ text: "Nile", correct: false }, { text: "Amazon", correct: true }] },
-    { question: "What language has the most native speakers?", options: [{ text: "Mandarin", correct: true }, { text: "English", correct: false }] },
-    { question: "What country has the most islands?", options: [{ text: "Sweden", correct: true }, { text: "Philippines", correct: false }] },
-    { question: "What is the smallest country in the world?", options: [{ text: "Vatican City", correct: true }, { text: "Monaco", correct: false }] },
-  ];
+    {
+      question: "Choose the correct form: 'If it ___ tomorrow, we will cancel the picnic.'",
+      options: [
+        { text: "rains", correct: true },
+        { text: "rain", correct: false },
+      ],
+    },
+    {
+      question: "Which sentence is correct?",
+      options: [
+        { text: "She has lived here for ten years.", correct: true },
+        { text: "She has live here for ten years.", correct: false },
+      ],
+    },
+    {
+      question: "Select the correct option: 'I have ___ my keys. I can't find them anywhere.'",
+      options: [
+        { text: "lost", correct: true },
+        { text: "lose", correct: false },
+      ],
+    },
+    {
+      question: "What is the correct question tag? 'You’re coming to the party, ___?'",
+      options: [
+        { text: "aren't you", correct: true },
+        { text: "don’t you", correct: false },
+      ],
+    },
+    {
+      question: "Complete the sentence: 'By the time we arrived, they ___ dinner.'",
+      options: [
+        { text: "had finished", correct: true },
+        { text: "finish", correct: false },
+      ],
+    },
+    {
+      question: "Choose the correct answer: 'He went to the doctor because he was feeling ___.'",
+      options: [
+        { text: "unwell", correct: true },
+        { text: "unwellly", correct: false },
+      ],
+    },
+    {
+      question: "Which sentence uses the passive voice?",
+      options: [
+        { text: "The book was written by J.K. Rowling.", correct: true },
+        { text: "J.K. Rowling wrote the book.", correct: false },
+      ],
+    },
+    {
+      question: "Choose the correct answer: 'I'm looking forward ___ you soon.'",
+      options: [
+        { text: "to seeing", correct: true },
+        { text: "to see", correct: false },
+      ],
+    },
+    {
+      question: "Which word best completes the sentence: 'She speaks English ___ than her brother.'",
+      options: [
+        { text: "better", correct: true },
+        { text: "more good", correct: false },
+      ],
+    },
+    {
+      question: "Select the correct answer: 'They decided to go for a walk despite ___.'",
+      options: [
+        { text: "the rain", correct: true },
+        { text: "it is raining", correct: false },
+      ],
+    },
+];
+
 
   useEffect(() => {
     if (remainingAttempts <= 0 && correctCount < 3) {
@@ -78,15 +144,17 @@ const Ex3 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
         Answer the following questions to proceed to the next level.
       </p>
 
-      <p className="text-lg font-semibold text-gray-700 mb-6 text-center">
-        Remaining Attempts: {remainingAttempts}
-      </p>
-
       {showCompletionModal ? (
         <div className="text-center mt-8">
-          <p className="text-2xl font-bold text-green-500 mb-2">🎉 Congratulations! 🎉</p>
-          <p className="text-gray-600 mb-4">You have successfully completed Level B1.</p>
-          <p className="text-lg font-semibold text-green-600 mb-4">Level B2 is now unlocked!</p>
+          <p className="text-2xl font-bold text-green-500 mb-2">
+            🎉 Congratulations! 🎉
+          </p>
+          <p className="text-gray-600 mb-4">
+            You have successfully completed Level B1.
+          </p>
+          <p className="text-lg font-semibold text-green-600 mb-4">
+            Level B2 is now unlocked!
+          </p>
           <button
             onClick={handleConfirm}
             className="bg-green-500 text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 mt-4 transition-transform duration-300"
@@ -96,16 +164,24 @@ const Ex3 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
         </div>
       ) : showNotQualifiedModal ? (
         <div className="text-center mt-8 p-6 bg-white rounded-lg shadow-lg">
-          <h3 className="text-2xl font-bold text-red-600 mb-4">Level Not Qualified</h3>
+          <h3 className="text-2xl font-bold text-red-600 mb-4">
+            Level Not Qualified
+          </h3>
           <p className="text-gray-700 mb-4">
             Unfortunately, you did not meet the requirements to pass this level.
           </p>
           <p className="text-gray-700 mb-6">
-            Please visit our center to get the necessary support and improve your skills.
+            Please visit our center to get the necessary support and improve
+            your skills.
           </p>
           <div className="flex justify-center space-x-4">
             <button
-              onClick={() => window.open("https://wa.me/?text=I need help to improve my English proficiency at Level B1.", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://wa.me/?text=I need help to improve my English proficiency at Level B1.",
+                  "_blank"
+                )
+              }
               className="bg-green-500 text-white flex items-center py-2 px-4 rounded-full shadow-md hover:bg-green-600 transition-all duration-300"
             >
               <FaWhatsapp className="mr-2" size={18} /> Share on WhatsApp
@@ -145,10 +221,10 @@ const Ex3 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
           <button
             onClick={handleSubmit}
             disabled={selectedOptionIndex === null || remainingAttempts <= 0}
-            className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none"
+            className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none flex items-center justify-center space-x-2"
           >
-            <FiCheckCircle className="mr-2" />
-            Submit Answer
+            <FiCheckCircle className="text-white" />
+            <span>Submit</span>
           </button>
         </>
       )}

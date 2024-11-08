@@ -4,7 +4,12 @@ import React, { useState, useEffect } from "react";
 import { FiCheckCircle } from "react-icons/fi";
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
 
-const Ex5 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease }) => {
+const Ex5 = ({
+  onScoreUpdate,
+  nextStep,
+  remainingAttempts,
+  handleAttemptDecrease,
+}) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
   const [correctCount, setCorrectCount] = useState(0);
@@ -13,17 +18,79 @@ const Ex5 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
   const [showCompletionModal, setShowCompletionModal] = useState(false);
 
   const questions = [
-    { question: "What is the largest planet in our solar system?", options: [{ text: "Jupiter", correct: true }, { text: "Mars", correct: false }] },
-    { question: "What is the smallest continent?", options: [{ text: "Australia", correct: true }, { text: "Europe", correct: false }] },
-    { question: "Who painted the Mona Lisa?", options: [{ text: "Leonardo da Vinci", correct: true }, { text: "Pablo Picasso", correct: false }] },
-    { question: "What is the hardest natural substance?", options: [{ text: "Diamond", correct: true }, { text: "Gold", correct: false }] },
-    { question: "What is the capital city of Canada?", options: [{ text: "Ottawa", correct: true }, { text: "Toronto", correct: false }] },
-    { question: "What is the tallest mountain in the world?", options: [{ text: "Mount Everest", correct: true }, { text: "K2", correct: false }] },
-    { question: "What is the longest river in the world?", options: [{ text: "Nile", correct: false }, { text: "Amazon", correct: true }] },
-    { question: "What language has the most native speakers?", options: [{ text: "Mandarin", correct: true }, { text: "English", correct: false }] },
-    { question: "What country has the most islands?", options: [{ text: "Sweden", correct: true }, { text: "Philippines", correct: false }] },
-    { question: "What is the smallest country in the world?", options: [{ text: "Vatican City", correct: true }, { text: "Monaco", correct: false }] },
-  ];
+    {
+      question: "Choose the correct form: 'Had he known about the traffic, he ___ earlier.'",
+      options: [
+        { text: "would have left", correct: true },
+        { text: "would leave", correct: false },
+      ],
+    },
+    {
+      question: "Select the sentence that uses 'hardly' correctly.",
+      options: [
+        { text: "He had entered hardly the room when the phone rang.", correct: false },
+        { text: "He had hardly entered the room when the phone rang.", correct: true },
+      ],
+    },
+    {
+      question: "What is the correct meaning of the phrase? 'To hit the nail on the head.'",
+      options: [
+        { text: "To describe something accurately.", correct: true },
+        { text: "To misunderstand a situation.", correct: false },
+      ],
+    },
+    {
+      question: "Choose the best option to complete the sentence: 'Not only ___ the contract, but she also received a promotion.'",
+      options: [
+        { text: "did she sign", correct: true },
+        { text: "she signed", correct: false },
+      ],
+    },
+    {
+      question: "Which option best completes the sentence? 'The witness’s account was inconsistent and full of ___.'",
+      options: [
+        { text: "contradictory", correct: false },
+        { text: "contradictions", correct: true },
+      ],
+    },
+    {
+      question: "Which sentence uses the correct tense? 'By this time next year, he ___ his degree.'",
+      options: [
+        { text: "would complete", correct: false },
+        { text: "will have completed", correct: true },
+      ],
+    },
+    {
+      question: "What does this sentence imply? 'She was bound to find out eventually.'",
+      options: [
+        { text: "It was inevitable that she would find out.", correct: true },
+        { text: "It was impossible for her to find out.", correct: false },
+      ],
+    },
+    {
+      question: "Select the correct word: 'The research was carried out ___ to provide accurate results.'",
+      options: [
+        { text: "meticulously", correct: true },
+        { text: "meticulous", correct: false },
+      ],
+    },
+    {
+      question: "Which option best completes the sentence? 'Having ___ the decision, she felt relieved.'",
+      options: [
+        { text: "made", correct: true },
+        { text: "make", correct: false },
+      ],
+    },
+    {
+      question: "Choose the correct sentence.",
+      options: [
+        { text: "No sooner had they arrived than it started to rain.", correct: true },
+        { text: "No sooner they had arrived than it started to rain.", correct: false },
+      ],
+    },
+];
+
+
 
   useEffect(() => {
     if (remainingAttempts <= 0 && correctCount < 3) {
@@ -77,16 +144,17 @@ const Ex5 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
       <p className="text-lg text-gray-500 mb-4 text-center">
         Answer the following questions to complete the proficiency test.
       </p>
-
-      <p className="text-lg font-semibold text-gray-700 mb-6 text-center">
-        Remaining Attempts: {remainingAttempts}
-      </p>
-
       {showCompletionModal ? (
         <div className="text-center mt-8">
-          <p className="text-2xl font-bold text-green-500 mb-2">🎉 Congratulations! 🎉</p>
-          <p className="text-gray-600 mb-4">You have successfully completed Level C1.</p>
-          <p className="text-lg font-semibold text-green-600 mb-4">Your language proficiency test is complete!</p>
+          <p className="text-2xl font-bold text-green-500 mb-2">
+            🎉 Congratulations! 🎉
+          </p>
+          <p className="text-gray-600 mb-4">
+            You have successfully completed Level C1.
+          </p>
+          <p className="text-lg font-semibold text-green-600 mb-4">
+            Your language proficiency test is complete!
+          </p>
           <button
             onClick={handleConfirm}
             className="bg-green-500 text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 mt-4 transition-transform duration-300"
@@ -96,16 +164,24 @@ const Ex5 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
         </div>
       ) : showNotQualifiedModal ? (
         <div className="text-center mt-8 p-6 bg-white rounded-lg shadow-lg">
-          <h3 className="text-2xl font-bold text-red-600 mb-4">Level Not Qualified</h3>
+          <h3 className="text-2xl font-bold text-red-600 mb-4">
+            Level Not Qualified
+          </h3>
           <p className="text-gray-700 mb-4">
             Unfortunately, you did not meet the requirements to pass this level.
           </p>
           <p className="text-gray-700 mb-6">
-            Please visit our center to get the necessary support and improve your skills.
+            Please visit our center to get the necessary support and improve
+            your skills.
           </p>
           <div className="flex justify-center space-x-4">
             <button
-              onClick={() => window.open("https://wa.me/?text=I need help to improve my English proficiency at Level C1.", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://wa.me/?text=I need help to improve my English proficiency at Level C1.",
+                  "_blank"
+                )
+              }
               className="bg-green-500 text-white flex items-center py-2 px-4 rounded-full shadow-md hover:bg-green-600 transition-all duration-300"
             >
               <FaWhatsapp className="mr-2" size={18} /> Share on WhatsApp
@@ -145,10 +221,10 @@ const Ex5 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
           <button
             onClick={handleSubmit}
             disabled={selectedOptionIndex === null || remainingAttempts <= 0}
-            className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none"
+            className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none flex items-center justify-center space-x-2"
           >
-            <FiCheckCircle className="mr-2" />
-            Submit Answer
+            <FiCheckCircle className="text-white" />
+            <span>Submit</span>
           </button>
         </>
       )}

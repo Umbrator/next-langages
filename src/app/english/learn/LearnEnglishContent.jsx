@@ -56,21 +56,21 @@ const LearnEnglishContent = () => {
           {[
             {
               imgSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-holding-english-class.jpg?alt=media&token=9221c4ad-b8c3-4a11-942a-36625ff4cd4c",
+                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-holding-english-class.jpg?alt=media&token=ae6daef5-ddd9-4c3c-b7b5-42f670c1b28a",
               title: "1-on-1 Lessons",
               description:
                 "Find teachers from all over the world sharing their languages, dialects, and cultures.",
             },
             {
               imgSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fback-view-kids-writing-whiteboard%20(1).jpg?alt=media&token=c78a6aaf-0cea-4981-8d94-634411e9ba57",
+                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fback-view-kids-writing-whiteboard%20(1).jpg?alt=media&token=6f3bb071-7dcc-4c8c-bf46-bd45e5eb5df3",
               title: "Group Class",
               description:
                 "Join group classes to improve your language skills with peers.",
             },
             {
               imgSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-assortment.jpg?alt=media&token=15f50f3c-535e-482b-b368-ff484c46c5eb",
+                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-assortment.jpg?alt=media&token=ce9c7ca8-debb-44d5-a54a-621cc1f25441",
               title: "Practice for Free",
               description:
                 "Access free practice materials to enhance your learning experience.",
