@@ -88,7 +88,7 @@ const LearnFrench = () => {
         }
       `}</style>
       <section
-        className="hero bg-cover bg-center h-screen text-white relative flex items-center"
+        className="hero bg-cover bg-center h-screen text-white relative flex items-center pt-20"
         style={{
           backgroundImage: `url("https://img.freepik.com/premium-photo/eiffel-tower-french-flag-sunset_1276750-8399.jpg?w=1060")`, // French flag image background
         }}

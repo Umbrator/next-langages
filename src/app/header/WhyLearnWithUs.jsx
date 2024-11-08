@@ -59,8 +59,7 @@ const WhyLearnWithUs = () => {
             Find Out Why You Should Learn With Us
           </h1>
           <p className="text-gray-600 text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Enhance your language skills and discover new cultures with our comprehensive language courses.
           </p>
 
           {/* Feature Cards */}
@@ -85,10 +84,10 @@ const WhyLearnWithUs = () => {
                 </div>
                 <div>
                   <h4 className="text-md font-semibold text-blue-900">
-                    Create Account
+                    Language Proficiency Test
                   </h4>
                   <p className="text-gray-600 text-xs">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Take a test to assess your current skill level and choose the right course.
                   </p>
                 </div>
               </div>
@@ -114,10 +113,10 @@ const WhyLearnWithUs = () => {
                 </div>
                 <div>
                   <h4 className="text-md font-semibold text-blue-900">
-                    Select Course
+                    Select Your Language Course
                   </h4>
                   <p className="text-gray-600 text-xs">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Choose from English, Spanish, French, German, and Italian courses.
                   </p>
                 </div>
               </div>
@@ -143,10 +142,10 @@ const WhyLearnWithUs = () => {
                 </div>
                 <div>
                   <h4 className="text-md font-semibold text-blue-900">
-                    Learn Your Skill
+                    Improve Language Skills
                   </h4>
                   <p className="text-gray-600 text-xs">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Develop your speaking, listening, reading, and writing abilities.
                   </p>
                 </div>
               </div>
@@ -172,10 +171,10 @@ const WhyLearnWithUs = () => {
                 </div>
                 <div>
                   <h4 className="text-md font-semibold text-blue-900">
-                    Success Story
+                    Explore Culture
                   </h4>
                   <p className="text-gray-600 text-xs">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dive into the culture of your chosen language to enhance learning.
                   </p>
                 </div>
               </div>
@@ -186,4 +185,5 @@ const WhyLearnWithUs = () => {
     </section>
   );
 };
+
 export default WhyLearnWithUs;

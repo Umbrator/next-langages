@@ -2,10 +2,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const router = useRouter();
 
   const mainLinks = [
     { href: "/", label: "About Us" },
@@ -13,18 +15,27 @@ const Navbar = () => {
   ];
 
   const learnLinks = [
-    { href: "/Spain/learn", label: "Spanish", icon: "fi fi-es" },
+    { href: "/spain/learn", label: "Spanish", icon: "fi fi-es" },
     { href: "/french/learn", label: "French", icon: "fi fi-fr" },
     { href: "/german/learn", label: "German", icon: "fi fi-de" },
     { href: "/italie/learn", label: "Italian", icon: "fi fi-it" },
     { href: "/english/learn", label: "English", icon: "fi fi-gb" },
   ];
 
-  // Smooth scroll to CourseSection
   const scrollToCourseSection = () => {
     const courseSection = document.getElementById("CourseSection");
     if (courseSection) {
       courseSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleGetStartedClick = (e) => {
+    e.preventDefault();
+
+    if (window.location.pathname === "/") {
+      scrollToCourseSection();
+    } else {
+      router.push("/#CourseSection");
     }
   };
 
@@ -56,7 +67,6 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="relative">
-              {/* Toggle Dropdown on Click */}
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
                 className="text-gray-600 hover:text-blue-600 flex items-center transition duration-300 ease-in-out"
@@ -102,7 +112,7 @@ const Navbar = () => {
 
           {/* Get Started Button */}
           <button
-            onClick={scrollToCourseSection}
+            onClick={handleGetStartedClick}
             className="bg-blue-600 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
           >
             Get Started

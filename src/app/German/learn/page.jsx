@@ -88,7 +88,6 @@ const LearnEnglish = () => {
         @media (max-width: 768px) {
           .hero h1 {
             font-size: 1.8rem !important;
-            padding-top: 80px !important; /* Added padding for extra space */
           }
           .hero p {
             font-size: 0.9rem !important;
@@ -109,7 +108,7 @@ const LearnEnglish = () => {
         }
       `}</style>
       <section
-        className="hero bg-cover bg-center h-screen text-white relative flex items-center"
+        className="hero bg-cover bg-center h-screen text-white relative flex items-center pt-20"
         style={{
           backgroundImage: `url("https://cdn1.ntv.com.tr/gorsel/st8X_lDYpE60jNKzBeDN8w.jpg?width=952&height=540&mode=both&scale=both&v=1624005311597")`,
         }}

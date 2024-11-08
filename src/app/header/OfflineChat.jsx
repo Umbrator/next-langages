@@ -14,6 +14,7 @@ const OfflineChat = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
   const [showCard, setShowCard] = useState(true);
+  const [showOptions, setShowOptions] = useState(true); // Added to control options visibility
 
   const chatEndRef = useRef(null);
 
@@ -55,30 +56,52 @@ const OfflineChat = () => {
       };
       setChatHistory((prevHistory) => [...prevHistory, newBotMessage]);
       setIsTyping(false);
+      setShowOptions(false); // Hide options after bot responds
     }, 1000);
   };
 
   const getBotResponse = (message) => {
     const lowercasedMessage = message.toLowerCase();
-    if (lowercasedMessage.includes('pricing')) {
-      return 'Our pricing ranges from $50 to $200 depending on the package you choose. Would you like to learn more?';
-    } else if (lowercasedMessage.includes('contact')) {
-      return 'You can reach us at support@example.com or call us at +1234567890.';
-    } else {
-      return 'I’m here to help! Please select one of the options below or ask your question directly.';
-    }
-  };
 
-  const getResponseOptions = (message) => {
+    if (lowercasedMessage.includes('pricing')) {
+        return 'Our pricing ranges from $50 to $200 depending on the package and level you choose. Would you like more details about specific language courses?';
+    } else if (lowercasedMessage.includes('contact')) {
+        return 'You can reach us at support@example.com or call us at +1234567890. How else can I assist you?';
+    } else if (lowercasedMessage.includes('learn english')) {
+        return 'We offer English courses from beginner to advanced levels. Would you like information on course levels, pricing, or learning resources?';
+    } else if (lowercasedMessage.includes('learn french')) {
+        return 'Our French courses focus on grammar, vocabulary, and conversation practice. Are you interested in beginner or advanced materials, or would you like help selecting a level?';
+    } else if (lowercasedMessage.includes('learn spanish')) {
+        return 'We provide Spanish courses covering levels A1 to C2. Let us know if you need help choosing a level or want to explore our resources.';
+    } else if (lowercasedMessage.includes('learn german')) {
+        return 'Our German courses are designed to help you build fluency. Would you like details on course levels, pricing, or learning materials?';
+    } else if (lowercasedMessage.includes('learn italian')) {
+        return 'We offer Italian language learning for all levels, from beginner to advanced. Let us know if you need guidance on resources or specific learning strategies.';
+    } else {
+        return 'I’m here to help! Please select one of the options below or ask your question directly.';
+    }
+};
+
+const getResponseOptions = (message) => {
     const lowercasedMessage = message.toLowerCase();
     if (lowercasedMessage.includes('pricing') || lowercasedMessage.includes('contact')) {
-      return null;
+        return null;
     }
-    return ['Pricing Information', 'Contact Support', 'General Inquiry', 'Service Details'];
-  };
+    return [
+        'Pricing Information',
+        'Contact Support',
+        'Learn English',
+        'Learn French',
+        'Learn Spanish',
+        'Learn German',
+        'Learn Italian'
+    ];
+};
+
 
   const handleOptionClick = (option) => {
     handleSendMessage(option);
+    setShowOptions(false); // Hide options after selecting one
   };
 
   const handleKeyDown = (event) => {
@@ -222,9 +245,8 @@ const OfflineChat = () => {
                   )}
                   <div ref={chatEndRef} />
                 </div>
-                {chatHistory.length > 0 &&
-                  chatHistory[chatHistory.length - 1].options &&
-                  (
+                {showOptions && chatHistory.length > 0 &&
+                  chatHistory[chatHistory.length - 1].options && (
                     <div className="p-4 bg-gray-100 flex flex-col space-y-2">
                       {chatHistory[chatHistory.length - 1].options.map((option, index) => (
                         <button
@@ -237,6 +259,15 @@ const OfflineChat = () => {
                       ))}
                     </div>
                   )}
+                {!showOptions && (
+                  <button
+                  onClick={() => setShowOptions(true)}
+                  className="bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 px-4 rounded-full hover:from-blue-600 hover:to-blue-800 transition duration-300 m-4"
+                >
+                  Show Options
+                </button>
+                
+                )}
                 {showInput && (
                   <div className="p-4 bg-gray-200 rounded-b-lg flex items-center">
                     <input

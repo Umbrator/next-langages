@@ -79,7 +79,7 @@ const LearnSpain = () => {
 
   return (
     <div
-      className="learn-spain-page"
+      className="learn-spain-page "
       style={{ fontFamily: '"Public Sans", sans-serif' }}
     >
       <Navbar />
@@ -88,7 +88,6 @@ const LearnSpain = () => {
         @media (max-width: 768px) {
           .hero h1 {
             font-size: 1.8rem !important;
-            padding-top: 80px !important; /* Added padding for extra space */
           }
           .hero p {
             font-size: 0.9rem !important;
@@ -109,7 +108,7 @@ const LearnSpain = () => {
         }
       `}</style>
       <section
-        className="hero bg-cover bg-center h-screen text-white relative flex items-center"
+        className="hero bg-cover bg-center h-screen text-white relative flex items-center pt-20"
         style={{
           backgroundImage: `url("https://img.freepik.com/premium-photo/against-backlit-sunset-spanish-flag-waves-prominently-cityscape-creating-symbol-national-pride_95891-71775.jpg?w=1060")`,
         }}

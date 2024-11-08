@@ -46,8 +46,19 @@ export default function ContactUs() {
   return (
     <div className="min-h-screen flex flex-col bg-blue-50 text-gray-800">
       <Navbar />
-      <main className="flex-1 py-20">
-        <div className="container mx-auto px-8 max-w-7xl">
+
+      {/* Image Banner Below Navbar */}
+      <div className="w-full">
+  <img
+    src="https://img.freepik.com/premium-photo/business-people-wearing-headset-working-office-support-remote-customer-colleague-call-center-telemarketing-customer-support-agent-provide-service-telephone-video-conference-oratory-call_31965-245544.jpg?w=1380"
+    alt="Contact Us Banner"
+    className="w-full max-h-[500px] object-cover" // Limits the max height to 200 pixels
+  />
+</div>
+
+      {/* Main Content Area with Padding and Width Adjustment */}
+      <main className="flex-1 pt-20">
+        <div className="container mx-auto px-8 max-w-6xl">
           <header className="text-center mb-14">
             <h1 className="text-4xl font-extrabold text-blue-900">
               Get in Touch
@@ -216,6 +227,7 @@ export default function ContactUs() {
           </div>
         </div>
       </main>
+
       <Footer />
     </div>
   );

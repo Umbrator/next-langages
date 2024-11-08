@@ -69,7 +69,6 @@ const LearnEnglish = () => {
         @media (max-width: 768px) {
           .hero h1 {
             font-size: 1.8rem !important;
-            padding-top: 80px !important; /* Added padding for extra space */
           }
           .hero p {
             font-size: 0.9rem !important;
@@ -90,7 +89,7 @@ const LearnEnglish = () => {
         }
       `}</style>
       <section
-        className="hero bg-cover bg-center h-screen text-white relative flex items-center"
+        className="hero bg-cover bg-center h-screen text-white relative flex items-center pt-20"
         style={{
           backgroundImage: `url("https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fschoolchild-sitting-desk-living-room-holding-school-book%20(1).jpg?alt=media&token=7b62b7f7-de89-44b8-8beb-4cd420b0043d")`,
         }}
