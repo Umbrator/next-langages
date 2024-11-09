@@ -13,7 +13,7 @@ const Navbar = () => {
     { href: "/", label: "About Us" },
     { href: "/contact", label: "Contact Us" },
   ];
-
+console.log('f')
   const learnLinks = [
     { href: "/Spain/learn", label: "Spanish", icon: "fi fi-es" },
     { href: "/french/learn", label: "French", icon: "fi fi-fr" },
