@@ -34,10 +34,10 @@ const Page = () => {
       {/* Contact Section */}
       <Contact />
 
-      {/* Footer Section */}
       <Footer />
 
       <OfflineChat/>
+
     </div>
   );
 };

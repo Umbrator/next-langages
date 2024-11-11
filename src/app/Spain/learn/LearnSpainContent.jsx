@@ -41,67 +41,79 @@ const LearnEnglishContent = () => {
     <>
       {/* Offers Section */}
       <section className="py-16 bg-[#FFF0E5]">
-      {/* Offers Section Heading */}
-      <div className="text-center mb-12">
-        <h3 className="text-sm font-semibold text-[#FF5733] mb-2 flex items-center justify-center">
-          <FaAngleDoubleRight className="mr-2" />
-          OFFERS
-        </h3>
-        <p className="text-gray-600 mt-4">
-          Discover our exclusive learning options to help you achieve fluency in Spanish.
-        </p>
-      </div>
-
-      {/* Cards Section */}
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Card 1 */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden border-l-4 border-[#FF5733] transform hover:scale-105 transition-transform duration-300">
-          <img
-            className="w-full h-48 object-cover"
-            src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot-man-correcting-grammar-mistakes.jpg?alt=media&token=9f670054-b9ba-450e-a4f0-965215473dae"
-            alt="1-on-1 lessons"
-          />
-          <div className="p-6">
-            <h3 className="text-xl font-semibold text-[#FF5733]">1-on-1 Lessons</h3>
-            <p className="text-gray-600 mt-2">
-              Learn Spanish with personalized sessions from expert instructors.
-            </p>
-          </div>
+        {/* Offers Section Heading */}
+        <div className="text-center mb-12">
+          <h3 className="text-sm font-semibold text-[#FF5733] mb-2 flex items-center justify-center">
+            <FaAngleDoubleRight className="mr-2" />
+            OFFERS
+          </h3>
+          <p className="text-gray-600 mt-4">
+            Discover our exclusive learning options to help you achieve fluency
+            in Spanish.
+          </p>
         </div>
 
-        {/* Card 2 */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden border-l-4 border-[#FF5733] transform hover:scale-105 transition-transform duration-300">
-          <img
-            className="w-full h-48 object-cover"
-            src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot-colleagues-high-five.jpg?alt=media&token=0beb345f-5744-4545-b930-2120f67597bc"
-            alt="Group Class"
-          />
-          <div className="p-6">
-            <h3 className="text-xl font-semibold text-[#FF5733]">Group Class</h3>
-            <p className="text-gray-600 mt-2">
-              Join interactive group classes and practice Spanish in a fun environment.
-            </p>
+        {/* Cards Section */}
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Card 1 */}
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden border-l-4 border-[#FF5733] transform hover:scale-105 transition-transform duration-300">
+            <img
+              className="w-full h-48 object-cover"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot-man-correcting-grammar-mistakes.jpg?alt=media&token=9f670054-b9ba-450e-a4f0-965215473dae"
+              alt="1-on-1 lessons"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-[#FF5733]">
+                1-on-1 Lessons
+              </h3>
+              <p className="text-gray-600 mt-2">
+                Learn Spanish with personalized sessions from expert
+                instructors.
+              </p>
+            </div>
           </div>
-        </div>
 
-        {/* Card 3 */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden border-l-4 border-[#FF5733] transform hover:scale-105 transition-transform duration-300">
-          <img
-            className="w-full h-48 object-cover"
-            src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flearn-spanish-language-online-education-concept%20(1)%20(1).jpg?alt=media&token=cb324783-4aed-4716-991f-0fb5b6208d57"
-            alt="Practice for Free"
-          />
-          <div className="p-6">
-            <h3 className="text-xl font-semibold text-[#FF5733]">Practice for Free</h3>
-            <p className="text-gray-600 mt-2">
-              Access free resources and practice sessions to improve your Spanish.
-            </p>
+          {/* Card 2 */}
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden border-l-4 border-[#FF5733] transform hover:scale-105 transition-transform duration-300">
+            <img
+              className="w-full h-48 object-cover"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot-colleagues-high-five.jpg?alt=media&token=0beb345f-5744-4545-b930-2120f67597bc"
+              alt="Group Class"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-[#FF5733]">
+                Group Class
+              </h3>
+              <p className="text-gray-600 mt-2">
+                Join interactive group classes and practice Spanish in a fun
+                environment.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden border-l-4 border-[#FF5733] transform hover:scale-105 transition-transform duration-300">
+            <img
+              className="w-full h-48 object-cover"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flearn-spanish-language-online-education-concept%20(1)%20(1).jpg?alt=media&token=cb324783-4aed-4716-991f-0fb5b6208d57"
+              alt="Practice for Free"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-[#FF5733]">
+                Practice for Free
+              </h3>
+              <p className="text-gray-600 mt-2">
+                Access free resources and practice sessions to improve your
+                Spanish.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
       </section>
 
-      <section className="py-16 bg-[#FFF0E5]"> {/* Background color for the Spanish theme */}
+      <section className="py-16 bg-[#FFF0E5]">
+        {" "}
+        {/* Background color for the Spanish theme */}
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
           {/* Left Image */}
           <div className="overflow-hidden rounded-lg">
@@ -118,12 +130,18 @@ const LearnEnglishContent = () => {
               <FaAngleDoubleRight className="mr-2" />
               ABOUT US
             </h3>
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Dedicated to the Best Spanish Courses</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              Dedicated to the Best Spanish Courses
+            </h2>
             <p className="text-gray-600 mb-6">
-              Experience high-quality Spanish education with our tailored courses, designed to help you master the language effectively and engagingly. Our method adapts to your level and learning style.
+              Experience high-quality Spanish education with our tailored
+              courses, designed to help you master the language effectively and
+              engagingly. Our method adapts to your level and learning style.
             </p>
             <p className="text-gray-600 mb-6">
-              From beginner to advanced levels, we offer a complete educational experience to help you reach your language goals and expand your opportunities in Spanish-speaking environments.
+              From beginner to advanced levels, we offer a complete educational
+              experience to help you reach your language goals and expand your
+              opportunities in Spanish-speaking environments.
             </p>
             <button
               onClick={openModal}
@@ -138,12 +156,12 @@ const LearnEnglishContent = () => {
       {isModalOpen && (
         <div
           className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 transition-all duration-300 ease-in-out ${
-            isClosing ? 'fadeOut' : 'fadeIn'
+            isClosing ? "fadeOut" : "fadeIn"
           }`}
         >
           <div
             className={`bg-gradient-to-r from-white via-gray-50 to-white rounded-lg shadow-2xl p-8 max-w-md w-full relative transition-all duration-500 transform ${
-              isClosing ? 'scaleDown' : 'scaleUp'
+              isClosing ? "scaleDown" : "scaleUp"
             }`}
           >
             <button
@@ -156,17 +174,25 @@ const LearnEnglishContent = () => {
 
             {isLoading ? (
               <div className="text-center">
-                <div className="animate-spin text-5xl text-[#FF5733] mb-4">⏳</div>
+                <div className="animate-spin text-5xl text-[#FF5733] mb-4">
+                  ⏳
+                </div>
                 <p className="text-gray-700">Loading course details...</p>
               </div>
             ) : (
               <div className="text-center">
-                <h2 className="text-2xl font-semibold mb-4">Our Course Details</h2>
+                <h2 className="text-2xl font-semibold mb-4">
+                  Our Course Details
+                </h2>
                 <p className="text-gray-600 mb-6">
-                  We offer a variety of courses designed to help you achieve fluency in Spanish. Our offerings include 1-on-1 lessons, group classes, and practice sessions tailored to your needs.
+                  We offer a variety of courses designed to help you achieve
+                  fluency in Spanish. Our offerings include 1-on-1 lessons,
+                  group classes, and practice sessions tailored to your needs.
                 </p>
                 <p className="text-gray-600 mb-6">
-                  Whether you're a beginner or looking to refine your skills, our expert teachers are here to guide you through an interactive and engaging learning experience in Spanish.
+                  Whether you're a beginner or looking to refine your skills,
+                  our expert teachers are here to guide you through an
+                  interactive and engaging learning experience in Spanish.
                 </p>
                 <button
                   onClick={closeModal}
@@ -180,9 +206,9 @@ const LearnEnglishContent = () => {
         </div>
       )}
       {/* Courses Section */}
-      <section className="py-16 bg-[#FFF0E5]">
-      <div className="container mx-auto text-center mb-12">
-      <h3 className="text-sm font-semibold text-[#FF5733] mb-2 flex items-center justify-center">
+      <section className="py-16 bg-[#FFF0E5]" id="OurCourses">
+        <div className="container mx-auto text-center mb-12">
+          <h3 className="text-sm font-semibold text-[#FF5733] mb-2 flex items-center justify-center">
             {" "}
             {/* Red accent for "COURSES" */}
             <FaAngleDoubleRight className="ml-2 text-yellow-600" />{" "}
@@ -384,10 +410,10 @@ const LearnEnglishContent = () => {
               vitae urna sagittis quisque.
             </p>
             <a
-            href="#"
-            className="bg-[#FF5733] text-white px-4 py-2 rounded-full hover:bg-[#D04B2C] transition duration-300 ease-in-out mb-6"
-            style={{ width: "300px", textAlign: "center" }}
-          >
+              href="#"
+              className="bg-[#FF5733] text-white px-4 py-2 rounded-full hover:bg-[#D04B2C] transition duration-300 ease-in-out mb-6"
+              style={{ width: "300px", textAlign: "center" }}
+            >
               ➤ VIEW ALL TESTIMONIALS
             </a>
             <div className="grid grid-cols-2 gap-4">

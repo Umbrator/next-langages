@@ -12,6 +12,7 @@ const Ex3 = ({
 }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+  const [inputAnswer, setInputAnswer] = useState("");
   const [correctCount, setCorrectCount] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [showNotQualifiedModal, setShowNotQualifiedModal] = useState(false);
@@ -23,6 +24,8 @@ const Ex3 = ({
       options: [
         { text: "rains", correct: true },
         { text: "rain", correct: false },
+        { text: "raining", correct: false },
+        { text: "rains", correct: true },
       ],
     },
     {
@@ -30,6 +33,8 @@ const Ex3 = ({
       options: [
         { text: "She has lived here for ten years.", correct: true },
         { text: "She has live here for ten years.", correct: false },
+        { text: "She has lived here for ten years.", correct: true },
+        { text: "She live here for ten years.", correct: false },
       ],
     },
     {
@@ -37,6 +42,8 @@ const Ex3 = ({
       options: [
         { text: "lost", correct: true },
         { text: "lose", correct: false },
+        { text: "losing", correct: false },
+        { text: "lost", correct: true },
       ],
     },
     {
@@ -44,6 +51,8 @@ const Ex3 = ({
       options: [
         { text: "aren't you", correct: true },
         { text: "don’t you", correct: false },
+        { text: "won't you", correct: false },
+        { text: "aren't you", correct: true },
       ],
     },
     {
@@ -51,6 +60,22 @@ const Ex3 = ({
       options: [
         { text: "had finished", correct: true },
         { text: "finish", correct: false },
+        { text: "have finished", correct: false },
+        { text: "had finished", correct: true },
+      ],
+    },
+    {
+      question: "Fill in the blank: 'I ___ to the store earlier today.'",
+      type: "text",
+      answer: "went",
+    },
+    {
+      question: "Which word best completes the sentence: 'She speaks English ___ than her brother.'",
+      options: [
+        { text: "better", correct: true },
+        { text: "more good", correct: false },
+        { text: "good", correct: false },
+        { text: "better", correct: true },
       ],
     },
     {
@@ -58,34 +83,22 @@ const Ex3 = ({
       options: [
         { text: "unwell", correct: true },
         { text: "unwellly", correct: false },
+        { text: "not good", correct: false },
+        { text: "unwell", correct: true },
       ],
     },
     {
-      question: "Which sentence uses the passive voice?",
-      options: [
-        { text: "The book was written by J.K. Rowling.", correct: true },
-        { text: "J.K. Rowling wrote the book.", correct: false },
-      ],
+      question: "Write the past tense of 'read'.",
+      type: "text",
+      answer: "read", // pronounced 'red'
     },
     {
-      question: "Choose the correct answer: 'I'm looking forward ___ you soon.'",
-      options: [
-        { text: "to seeing", correct: true },
-        { text: "to see", correct: false },
-      ],
-    },
-    {
-      question: "Which word best completes the sentence: 'She speaks English ___ than her brother.'",
-      options: [
-        { text: "better", correct: true },
-        { text: "more good", correct: false },
-      ],
-    },
-    {
-      question: "Select the correct answer: 'They decided to go for a walk despite ___.'",
+      question: "Complete the sentence with a suitable word: 'They decided to go for a walk despite ___.'",
       options: [
         { text: "the rain", correct: true },
         { text: "it is raining", correct: false },
+        { text: "raining", correct: false },
+        { text: "the rain", correct: true },
       ],
     },
 ];
@@ -116,6 +129,28 @@ const Ex3 = ({
     setAnswered(true);
   };
 
+  const handleInputSubmit = () => {
+    const isCorrect = inputAnswer.trim().toLowerCase() === questions[currentQuestionIndex].answer.toLowerCase();
+    if (isCorrect) {
+      setCorrectCount((prev) => prev + 1);
+      if (correctCount + 1 >= 3) {
+        setShowCompletionModal(true);
+        onScoreUpdate(correctCount + 1);
+        return;
+      }
+    }
+
+    handleAttemptDecrease();
+    setInputAnswer("");
+    setAnswered(false);
+
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex((prev) => prev + 1);
+    } else if (correctCount < 3) {
+      setShowNotQualifiedModal(true);
+    }
+  };
+
   const handleConfirm = () => {
     setShowCompletionModal(false);
     nextStep();
@@ -126,6 +161,7 @@ const Ex3 = ({
 
     setAnswered(false);
     setSelectedOptionIndex(null);
+    setInputAnswer("");
 
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
@@ -200,27 +236,41 @@ const Ex3 = ({
             <p className="text-xl text-gray-800 mb-6 text-center font-medium">
               {questions[currentQuestionIndex].question}
             </p>
-            {questions[currentQuestionIndex].options.map((option, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleOptionSelect(idx)}
-                disabled={answered || remainingAttempts <= 0}
-                className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
-                  selectedOptionIndex === idx
-                    ? option.correct
-                      ? "bg-green-100 border-green-500"
-                      : "bg-red-100 border-red-500"
-                    : "bg-gray-100 border-gray-300 hover:bg-gray-200"
-                }`}
-              >
-                {option.text}
-              </button>
-            ))}
+            {questions[currentQuestionIndex].type === "text" ? (
+              <input
+                type="text"
+                value={inputAnswer}
+                onChange={(e) => setInputAnswer(e.target.value)}
+                className="border-2 p-3 rounded-lg mb-4 block w-full"
+                placeholder="Type your answer"
+              />
+            ) : (
+              questions[currentQuestionIndex].options.map((option, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleOptionSelect(idx)}
+                  disabled={answered || remainingAttempts <= 0}
+                  className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
+                    selectedOptionIndex === idx
+                      ? option.correct
+                        ? "bg-green-100 border-green-500"
+                        : "bg-red-100 border-red-500"
+                      : "bg-gray-100 border-gray-300 hover:bg-gray-200"
+                  }`}
+                >
+                  {option.text}
+                </button>
+              ))
+            )}
           </div>
 
           <button
-            onClick={handleSubmit}
-            disabled={selectedOptionIndex === null || remainingAttempts <= 0}
+            onClick={
+              questions[currentQuestionIndex].type === "text"
+                ? handleInputSubmit
+                : handleSubmit
+            }
+            disabled={(selectedOptionIndex === null && inputAnswer === "") || remainingAttempts <= 0}
             className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none flex items-center justify-center space-x-2"
           >
             <FiCheckCircle className="text-white" />

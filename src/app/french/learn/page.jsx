@@ -52,8 +52,11 @@ const LearnFrench = () => {
     animateText("Learn French Online with Certified Instructors", setHeadlineText, 50);
   }, []);
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const scrollToOurCourses = () => {
+    const ourCoursesSection = document.getElementById("OurCourses");
+    if (ourCoursesSection) {
+      ourCoursesSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const closeModal = () => {
@@ -105,7 +108,7 @@ const LearnFrench = () => {
           </p>
 
           <button
-            onClick={openModal}
+            onClick={scrollToOurCourses}
             className="hover:bg-blue-800 text-white py-3 px-8 rounded-full text-lg"
             style={{ backgroundColor: "#0052A5" }} // Blue color for French theme
           >
