@@ -4,25 +4,103 @@ import React, { useState, useEffect } from "react";
 import { FiCheckCircle } from "react-icons/fi";
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
 
-const Ex3 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease }) => {
+const Ex3 = ({
+  onScoreUpdate,
+  nextStep,
+  remainingAttempts,
+  handleAttemptDecrease,
+}) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+  const [inputAnswer, setInputAnswer] = useState("");
   const [correctCount, setCorrectCount] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [showNotQualifiedModal, setShowNotQualifiedModal] = useState(false);
   const [showCompletionModal, setShowCompletionModal] = useState(false);
 
   const questions = [
-    { question: "What is the largest planet in our solar system?", options: [{ text: "Jupiter", correct: true }, { text: "Mars", correct: false }] },
-    { question: "What is the smallest continent?", options: [{ text: "Australia", correct: true }, { text: "Europe", correct: false }] },
-    { question: "Who painted the Mona Lisa?", options: [{ text: "Leonardo da Vinci", correct: true }, { text: "Pablo Picasso", correct: false }] },
-    { question: "What is the hardest natural substance?", options: [{ text: "Diamond", correct: true }, { text: "Gold", correct: false }] },
-    { question: "What is the capital city of Canada?", options: [{ text: "Ottawa", correct: true }, { text: "Toronto", correct: false }] },
-    { question: "What is the tallest mountain in the world?", options: [{ text: "Mount Everest", correct: true }, { text: "K2", correct: false }] },
-    { question: "What is the longest river in the world?", options: [{ text: "Nile", correct: false }, { text: "Amazon", correct: true }] },
-    { question: "What language has the most native speakers?", options: [{ text: "Mandarin", correct: true }, { text: "English", correct: false }] },
-    { question: "What country has the most islands?", options: [{ text: "Sweden", correct: true }, { text: "Philippines", correct: false }] },
-    { question: "What is the smallest country in the world?", options: [{ text: "Vatican City", correct: true }, { text: "Monaco", correct: false }] },
+    {
+      question: "Wählen Sie die richtige Form: „Wenn es morgen ___, sagen wir das Picknick ab.“",
+      options: [
+        { text: "regnet", correct: true },
+        { text: "regnen", correct: false },
+        { text: "Regnen", correct: false },
+        { text: "regnet", correct: true },
+      ],
+    },
+    {
+      question: "Welche Aussage ist korrekt?",
+      options: [
+        { text: "Sie lebt hier seit zehn Jahren.", correct: true },
+        { text: "Sie lebt hier für zehn Jahre.", correct: false },
+        { text: "Sie wohnte hier für zehn Jahre.", correct: false },
+        { text: "Sie hat hier zehn Jahre gewohnt.", correct: true },
+      ],
+    },
+    {
+      question: "Wählen Sie die richtige Option: „Ich habe meine Schlüssel ___.“",
+      options: [
+        { text: "verloren", correct: true },
+        { text: "verlieren", correct: false },
+        { text: "verliere", correct: false },
+        { text: "verloren", correct: true },
+      ],
+    },
+    {
+      question: "Was ist das richtige Frage-Tag? „Du kommst zur Party, ___?“",
+      options: [
+        { text: "nicht wahr", correct: true },
+        { text: "oder?", correct: false },
+        { text: "bist du?", correct: false },
+        { text: "nicht wahr", correct: true },
+      ],
+    },
+    {
+      question: "Vervollständigen Sie den Satz: „Als wir ankamen, hatten sie das Abendessen ___.“",
+      options: [
+        { text: "fertig", correct: false },
+        { text: "beendet", correct: true },
+        { text: "abgeschlossen", correct: false },
+        { text: "fertiggestellt", correct: true },
+      ],
+    },
+    {
+      question: "Füllen Sie die Lücke: „Ich bin heute früher zum Laden ___.“",
+      type: "text",
+      answer: "gegangen",
+    },
+    {
+      question: "Welches Wort vervollständigt den Satz: „Sie spricht Deutsch ___ als ihr Bruder.“",
+      options: [
+        { text: "besser", correct: true },
+        { text: "mehr gut", correct: false },
+        { text: "am besten", correct: false },
+        { text: "gut", correct: true },
+      ],
+    },
+    {
+      question: "Wählen Sie die richtige Antwort: „Er ging zum Arzt, weil er sich ___ fühlte.“",
+      options: [
+        { text: "schlecht", correct: true },
+        { text: "kranklich", correct: false },
+        { text: "nicht gut", correct: false },
+        { text: "schlecht", correct: true },
+      ],
+    },
+    {
+      question: "Schreiben Sie das Partizip Perfekt von „lesen“.",
+      type: "text",
+      answer: "gelesen",
+    },
+    {
+      question: "Vervollständigen Sie den Satz: „Sie entschieden sich, trotz des ___ spazieren zu gehen.“",
+      options: [
+        { text: "Regen", correct: true },
+        { text: "Wetters", correct: false },
+        { text: "Regnens", correct: false },
+        { text: "Regens", correct: true },
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -50,6 +128,23 @@ const Ex3 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
     setAnswered(true);
   };
 
+  const handleInputSubmit = () => {
+    const isCorrect =
+      inputAnswer.trim().toLowerCase() ===
+      questions[currentQuestionIndex].answer.toLowerCase();
+    if (isCorrect) {
+      setCorrectCount((prev) => prev + 1);
+      if (correctCount + 1 >= 3) {
+        setShowCompletionModal(true);
+        onScoreUpdate(correctCount + 1);
+        return;
+      }
+    }
+
+    handleAttemptDecrease();
+    setAnswered(true);
+  };
+
   const handleConfirm = () => {
     setShowCompletionModal(false);
     nextStep();
@@ -60,6 +155,7 @@ const Ex3 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
 
     setAnswered(false);
     setSelectedOptionIndex(null);
+    setInputAnswer("");
 
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
@@ -70,49 +166,56 @@ const Ex3 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
 
   return (
     <div className="p-8 bg-white rounded-lg shadow-lg max-w-3xl mx-auto mt-16">
-      <h2 className="text-4xl font-bold text-center text-[#65A662] mb-6">
-        Level B1: English Proficiency Quiz
+      <h2 className="text-4xl font-bold text-center text-[#FFCC00] mb-6">
+        Level B1: German Language Proficiency Test
       </h2>
 
       <p className="text-lg text-gray-500 mb-4 text-center">
-        Answer the following questions to proceed to the next level.
-      </p>
-
-      <p className="text-lg font-semibold text-gray-700 mb-6 text-center">
-        Remaining Attempts: {remainingAttempts}
+        Answer the questions to proceed to the next level.
       </p>
 
       {showCompletionModal ? (
         <div className="text-center mt-8">
-          <p className="text-2xl font-bold text-green-500 mb-2">🎉 Congratulations! 🎉</p>
-          <p className="text-gray-600 mb-4">You have successfully completed Level B1.</p>
-          <p className="text-lg font-semibold text-green-600 mb-4">Level B2 is now unlocked!</p>
+          <p className="text-2xl font-bold  text-[#FF0000] mb-2">
+            🎉 Congratulations! 🎉
+          </p>
+          <p className="text-gray-600 mb-4">
+            You have successfully completed level B1.
+          </p>
+          <p className="text-lg font-semibold text-[#FFCC00] mb-4">
+            Level B2 is now unlocked!
+          </p>
           <button
             onClick={handleConfirm}
-            className="bg-green-500 text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 mt-4 transition-transform duration-300"
+            className="bg-[#FFCC00] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-[#FF0000] mt-4 transition-transform duration-300"
           >
-            Proceed to Next Level
+            Proceed to the next level
           </button>
         </div>
       ) : showNotQualifiedModal ? (
         <div className="text-center mt-8 p-6 bg-white rounded-lg shadow-lg">
-          <h3 className="text-2xl font-bold text-red-600 mb-4">Level Not Qualified</h3>
+          <h3 className="text-2xl font-bold text-[#FF0000] mb-4">Level Not Reached</h3>
           <p className="text-gray-700 mb-4">
-            Unfortunately, you did not meet the requirements to pass this level.
+            Unfortunately, you did not meet the requirements for this level.
           </p>
           <p className="text-gray-700 mb-6">
-            Please visit our center to get the necessary support and improve your skills.
+            Please contact us for assistance and to improve your language skills.
           </p>
           <div className="flex justify-center space-x-4">
             <button
-              onClick={() => window.open("https://wa.me/?text=I need help to improve my English proficiency at Level B1.", "_blank")}
-              className="bg-green-500 text-white flex items-center py-2 px-4 rounded-full shadow-md hover:bg-green-600 transition-all duration-300"
+              onClick={() =>
+                window.open(
+                  "https://wa.me/?text=I need help to improve my German at level B1.",
+                  "_blank"
+                )
+              }
+              className="bg-[#FFCC00] text-white flex items-center py-2 px-4 rounded-full shadow-md hover:bg-[#FF0000] transition-all duration-300"
             >
               <FaWhatsapp className="mr-2" size={18} /> Share on WhatsApp
             </button>
             <button
-              onClick={() => (window.location.href = "tel:+212689164146")}
-              className="bg-blue-500 text-white flex items-center py-2 px-4 rounded-full shadow-md hover:bg-blue-600 transition-all duration-300"
+              onClick={() => (window.location.href = "tel:+49123456789")}
+              className="bg-[#FF0000] text-white flex items-center py-2 px-4 rounded-full shadow-md hover:bg-[#FFCC00] transition-all duration-300"
             >
               <FaPhone className="mr-2" size={18} /> Call for Assistance
             </button>
@@ -124,31 +227,45 @@ const Ex3 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
             <p className="text-xl text-gray-800 mb-6 text-center font-medium">
               {questions[currentQuestionIndex].question}
             </p>
-            {questions[currentQuestionIndex].options.map((option, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleOptionSelect(idx)}
-                disabled={answered || remainingAttempts <= 0}
-                className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
-                  selectedOptionIndex === idx
-                    ? option.correct
-                      ? "bg-green-100 border-green-500"
-                      : "bg-red-100 border-red-500"
-                    : "bg-gray-100 border-gray-300 hover:bg-gray-200"
-                }`}
-              >
-                {option.text}
-              </button>
-            ))}
+            {questions[currentQuestionIndex].type === "text" ? (
+              <input
+                type="text"
+                value={inputAnswer}
+                onChange={(e) => setInputAnswer(e.target.value)}
+                className="border-2 p-3 rounded-lg mb-4 block w-full"
+                placeholder="Type your answer"
+              />
+            ) : (
+              questions[currentQuestionIndex].options.map((option, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleOptionSelect(idx)}
+                  disabled={answered || remainingAttempts <= 0}
+                  className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
+                    selectedOptionIndex === idx
+                      ? option.correct
+                        ? "bg-[#FFCC00] border-[#FFCC00]"
+                        : "bg-[#FF0000] border-[#FF0000]"
+                      : "bg-gray-100 border-gray-300 hover:bg-gray-200"
+                  }`}
+                >
+                  {option.text}
+                </button>
+              ))
+            )}
           </div>
 
           <button
-            onClick={handleSubmit}
-            disabled={selectedOptionIndex === null || remainingAttempts <= 0}
-            className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none"
+            onClick={
+              questions[currentQuestionIndex].type === "text"
+                ? handleInputSubmit
+                : handleSubmit
+            }
+            disabled={(selectedOptionIndex === null && inputAnswer === "") || remainingAttempts <= 0}
+            className="bg-[#FFCC00] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-[#FF0000] transition-transform duration-300 focus:outline-none flex items-center justify-center space-x-2"
           >
-            <FiCheckCircle className="mr-2" />
-            Submit Answer
+            <FiCheckCircle className="text-white" />
+            <span>Submit</span>
           </button>
         </>
       )}

@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import { FiCheckCircle } from "react-icons/fi";
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
@@ -20,78 +18,78 @@ const Ex1 = ({
 
   const questions = [
     {
-      question: "Complete the sentence: 'I ___ breakfast at 8:00 every morning.'",
+      question: "Wählen Sie das richtige Verb: „Ich ___ ein Buch.“",
       options: [
-        { text: "had", correct: false },
-        { text: "have", correct: true },
-        { text: "has", correct: false },
-        { text: "having", correct: false },
+        { text: "liest", correct: false },
+        { text: "lese", correct: true },
+        { text: "lesen", correct: false },
+        { text: "liestest", correct: false },
       ],
     },
     {
-      question: "What is the opposite of 'cold'?",
+      question: "Was ist das Gegenteil von 'kalt'?",
       type: "text",
-      answer: "hot",
+      answer: "warm",
     },
     {
-      question: "Choose the correct preposition: 'She is going ___ the store.'",
+      question: "Ergänzen Sie den Satz: „Er geht ___ Schule.“",
       options: [
-        { text: "in", correct: false },
-        { text: "to", correct: true },
-        { text: "at", correct: false },
-        { text: "on", correct: false },
+        { text: "auf die", correct: true },
+        { text: "zum", correct: false },
+        { text: "im", correct: false },
+        { text: "bei der", correct: false },
       ],
     },
     {
-      question: "Write the plural form of 'child'.",
+      question: "Schreiben Sie das Plural von 'Kind'.",
       type: "text",
-      answer: "children",
+      answer: "Kinder",
     },
     {
-      question: "Which of these is a type of weather?",
+      question: "Wählen Sie das richtige Wort: „Das ist ___ Katze.“",
       options: [
-        { text: "Rain", correct: true },
-        { text: "Stone", correct: false },
-        { text: "Carpet", correct: false },
-        { text: "Noise", correct: false },
+        { text: "meine", correct: true },
+        { text: "mein", correct: false },
+        { text: "meiner", correct: false },
+        { text: "meines", correct: false },
       ],
     },
     {
-      question: "Fill in the blank: 'He ___ a student.'",
+      question: "Ergänzen Sie den Satz: „Wir ___ zu Hause.“",
       options: [
-        { text: "is", correct: true },
-        { text: "are", correct: false },
-        { text: "am", correct: false },
-        { text: "be", correct: false },
+        { text: "sind", correct: true },
+        { text: "seid", correct: false },
+        { text: "bin", correct: false },
+        { text: "ist", correct: false },
       ],
     },
     {
-      question: "What is the plural of 'mouse'?",
+      question: "Wie sagt man 'Auto' im Plural?",
       type: "text",
-      answer: "mice",
+      answer: "Autos",
     },
     {
-      question: "Choose the correct word: 'The cat ___ on the mat.'",
+      question: "Wählen Sie das richtige Wort: „Die Sonne ___ am Himmel.“",
       options: [
-        { text: "sit", correct: false },
-        { text: "sits", correct: true },
-        { text: "sat", correct: false },
-        { text: "sitting", correct: false },
+        { text: "scheint", correct: true },
+        { text: "scheinen", correct: false },
+        { text: "scheinst", correct: false },
+        { text: "scheintest", correct: false },
       ],
     },
     {
-      question: "Which of these is a color?",
+      question: "Welches dieser Wörter beschreibt eine Farbe?",
       options: [
-        { text: "Blue", correct: true },
-        { text: "Chair", correct: false },
-        { text: "Table", correct: false },
-        { text: "Laptop", correct: false },
+        { text: "Blau", correct: true },
+        { text: "Tisch", correct: false },
+        { text: "Stuhl", correct: false },
+        { text: "Lampe", correct: false },
       ],
     },
     {
-      question: "What time is this? '5:00'",
+      question: "Wie spät ist es? „2:00“",
       type: "text",
-      answer: "five o'clock",
+      answer: "zwei Uhr",
     },
   ];
 
@@ -121,7 +119,9 @@ const Ex1 = ({
   };
 
   const handleInputSubmit = () => {
-    const isCorrect = inputAnswer.toLowerCase() === questions[currentQuestionIndex].answer.toLowerCase();
+    const isCorrect =
+      inputAnswer.toLowerCase() ===
+      questions[currentQuestionIndex].answer.toLowerCase();
     if (isCorrect) {
       setCorrectCount((prev) => prev + 1);
       if (correctCount + 1 >= 3) {
@@ -165,59 +165,59 @@ const Ex1 = ({
   return (
     <div className="p-8 bg-white rounded-lg shadow-lg max-w-3xl mx-auto mt-16">
       <h2 className="text-4xl font-bold text-center text-[#FFCC00] mb-6">
-        Level A1: German Proficiency Test
+        Level A1: German Proficiency Quiz
       </h2>
 
-      <p className="text-lg text-gray-500 mb-4 text-center">
-        Answer the questions to proceed to the next level.
+      <p className="text-lg text-gray-600 mb-4 text-center">
+        Answer the following questions to proceed to the next level.
       </p>
 
       {showCompletionModal ? (
         <div className="text-center mt-8">
-          <p className="text-2xl font-bold text-green-500 mb-2">
-            🎉 Glückwunsch! 🎉
+          <p className="text-2xl font-bold text-[#FF0000] mb-2">
+            🎉 Herzlichen Glückwunsch! 🎉
           </p>
           <p className="text-gray-600 mb-4">
-            Sie haben das Level A1 erfolgreich abgeschlossen.
+            You have successfully completed Level A1.
           </p>
-          <p className="text-lg font-semibold text-green-600 mb-4">
-            Level A2 ist jetzt freigeschaltet!
+          <p className="text-lg font-semibold text-[#FFCC00] mb-4">
+            Level A2 is now unlocked!
           </p>
           <button
             onClick={handleConfirm}
-            className="bg-[#FFCC00] text-black py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-yellow-600 mt-4 transition-transform duration-300"
+            className="bg-[#FFCC00] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-[#FF0000] mt-4 transition-transform duration-300"
           >
-            Nächstes Level
+            Proceed to Next Level
           </button>
         </div>
       ) : showNotQualifiedModal ? (
         <div className="text-center mt-8 p-6 bg-white rounded-lg shadow-lg">
-          <h3 className="text-2xl font-bold text-red-600 mb-4">
-            Niveau Nicht Erreicht
+          <h3 className="text-2xl font-bold text-[#FF0000] mb-4">
+            Level Not Qualified
           </h3>
           <p className="text-gray-700 mb-4">
-            Leider haben Sie die Anforderungen für dieses Level nicht erfüllt.
+            Unfortunately, you did not meet the requirements to pass this level.
           </p>
           <p className="text-gray-700 mb-6">
-            Bitte kontaktieren Sie uns, um die notwendige Unterstützung zu erhalten.
+            Please contact us for the necessary support to improve your skills.
           </p>
           <div className="flex justify-center space-x-4">
             <button
               onClick={() =>
                 window.open(
-                  "https://wa.me/?text=Ich benötige Unterstützung, um mein Englisch-Level A1 zu verbessern.",
+                  "https://wa.me/?text=I need help to improve my German proficiency at Level A1.",
                   "_blank"
                 )
               }
-              className="bg-[#FFCC00] text-black flex items-center py-2 px-4 rounded-full shadow-md hover:bg-yellow-600 transition-all duration-300"
+              className="bg-[#FFCC00] text-white flex items-center py-2 px-4 rounded-full shadow-md hover:bg-[#FF0000] transition-all duration-300"
             >
-              <FaWhatsapp className="mr-2" size={18} /> Auf WhatsApp teilen
+              <FaWhatsapp className="mr-2" size={18} /> Share on WhatsApp
             </button>
             <button
               onClick={() => (window.location.href = "tel:+49123456789")}
-              className="bg-green-500 text-white flex items-center py-2 px-4 rounded-full shadow-md hover:bg-green-600 transition-all duration-300"
+              className="bg-[#FF0000] text-white flex items-center py-2 px-4 rounded-full shadow-md hover:bg-[#FFCC00] transition-all duration-300"
             >
-              <FaPhone className="mr-2" size={18} /> Unterstützung anrufen
+              <FaPhone className="mr-2" size={18} /> Call for Assistance
             </button>
           </div>
         </div>
@@ -233,7 +233,7 @@ const Ex1 = ({
                 value={inputAnswer}
                 onChange={(e) => setInputAnswer(e.target.value)}
                 className="border-2 p-3 rounded-lg mb-4 block w-full"
-                placeholder="Geben Sie Ihre Antwort ein"
+                placeholder="Type your answer"
               />
             ) : (
               questions[currentQuestionIndex].options.map((option, idx) => (
@@ -244,8 +244,8 @@ const Ex1 = ({
                   className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
                     selectedOptionIndex === idx
                       ? option.correct
-                        ? "bg-green-100 border-green-500"
-                        : "bg-red-100 border-red-500"
+                        ? "bg-[#FFCC00] border-[#FFCC00]"
+                        : "bg-[#FF0000] border-[#FF0000]"
                       : "bg-gray-100 border-gray-300 hover:bg-gray-200"
                   }`}
                 >
@@ -265,10 +265,10 @@ const Ex1 = ({
               (selectedOptionIndex === null && inputAnswer === "") ||
               remainingAttempts <= 0
             }
-            className="bg-[#FFCC00] text-black py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-yellow-600 transition-transform duration-300 focus:outline-none flex items-center justify-center space-x-2"
+            className="bg-[#FFCC00] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-[#FF0000] transition-transform duration-300 focus:outline-none flex items-center justify-center space-x-2"
           >
-            <FiCheckCircle className="text-black" />
-            <span>Absenden</span>
+            <FiCheckCircle className="text-white" />
+            <span>Submit</span>
           </button>
         </>
       )}

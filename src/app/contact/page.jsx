@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import Navbar from "../header/navbar";
 import Footer from "../header/Footer";
+import OfflineChat from "../header/OfflineChat";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -44,17 +45,17 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-blue-50 text-gray-800">
+    <div className="min-h-screen flex flex-col bg-blue-50 text-gray-800 ">
       <Navbar />
 
       {/* Image Banner Below Navbar */}
       <div className="w-full">
-  <img
-    src="https://img.freepik.com/premium-photo/business-people-wearing-headset-working-office-support-remote-customer-colleague-call-center-telemarketing-customer-support-agent-provide-service-telephone-video-conference-oratory-call_31965-245544.jpg?w=1380"
-    alt="Contact Us Banner"
-    className="w-full max-h-[500px] object-cover" // Limits the max height to 200 pixels
-  />
-</div>
+        <img
+          src="https://img.freepik.com/premium-photo/business-people-wearing-headset-working-office-support-remote-customer-colleague-call-center-telemarketing-customer-support-agent-provide-service-telephone-video-conference-oratory-call_31965-245544.jpg?w=1380"
+          alt="Contact Us Banner"
+          className="w-full max-h-[500px] object-cover" // Limits the max height to 200 pixels
+        />
+      </div>
 
       {/* Main Content Area with Padding and Width Adjustment */}
       <main className="flex-1 pt-20">
@@ -142,7 +143,7 @@ export default function ContactUs() {
                   name="issue"
                   value={formData.issue}
                   onChange={handleChange}
-                  className="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  className="mt-2 block w-full p-3 bg-white text-black border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
                   required
                 >
                   <option value="">Select...</option>
@@ -170,7 +171,7 @@ export default function ContactUs() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  className="mt-2 block w-full p-3 bg-white text-black border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
                   required
                 />
                 {errors.email && (
@@ -188,7 +189,7 @@ export default function ContactUs() {
                   name="contact"
                   value={formData.contact}
                   onChange={handleChange}
-                  className="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  className="mt-2 block w-full p-3 bg-white text-black border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
                 />
                 {errors.contact && (
                   <p className="text-red-600 text-xs mt-1">{errors.contact}</p>
@@ -205,7 +206,7 @@ export default function ContactUs() {
                   value={formData.message}
                   onChange={handleChange}
                   rows="5"
-                  className="mt-2 block w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+                  className="mt-2 block w-full p-3 bg-white text-black border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
                   maxLength="300"
                   required
                   placeholder="Enter your message here"
@@ -229,6 +230,7 @@ export default function ContactUs() {
       </main>
 
       <Footer />
+      <OfflineChat/>
     </div>
   );
 }

@@ -276,7 +276,7 @@ const getResponseOptions = (message) => {
                       onChange={(e) => setUserMessage(e.target.value)}
                       onKeyDown={handleKeyDown}
                       placeholder="Type your message..."
-                      className="flex-1 p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
+                      className="flex-1 p-2 border bg-white border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
                     />
                     <button
                       onClick={() => handleSendMessage(userMessage)}

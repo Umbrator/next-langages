@@ -171,7 +171,7 @@ const Ex3 = ({
 
   return (
     <div className="p-8 bg-white rounded-lg shadow-lg max-w-3xl mx-auto mt-16">
-      <h2 className="text-4xl font-bold text-center text-[#65A662] mb-6">
+      <h2 className="text-4xl font-bold text-center text-[#007bff] mb-6">
         Niveau B1 : Test de Compétence en Français
       </h2>
 
