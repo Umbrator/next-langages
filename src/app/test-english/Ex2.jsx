@@ -250,7 +250,7 @@ const Ex2 = ({
                 type="text"
                 value={inputAnswer}
                 onChange={(e) => setInputAnswer(e.target.value)}
-                className="border-2 p-3 rounded-lg mb-4 block w-full"
+                className="border-2 p-3 rounded-lg mb-4 block w-full bg-white"
                 placeholder="Type your answer"
               />
             ) : (
