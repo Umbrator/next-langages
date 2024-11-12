@@ -4,25 +4,95 @@ import React, { useState, useEffect } from "react";
 import { FiCheckCircle } from "react-icons/fi";
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
 
-const Ex1 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease }) => {
+const Ex1 = ({
+  onScoreUpdate,
+  nextStep,
+  remainingAttempts,
+  handleAttemptDecrease,
+}) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+  const [inputAnswer, setInputAnswer] = useState("");
   const [correctCount, setCorrectCount] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [showNotQualifiedModal, setShowNotQualifiedModal] = useState(false);
   const [showCompletionModal, setShowCompletionModal] = useState(false);
 
   const questions = [
-    { question: "What is the largest planet in our solar system?", options: [{ text: "Jupiter", correct: true }, { text: "Mars", correct: false }] },
-    { question: "What is the smallest continent?", options: [{ text: "Australia", correct: true }, { text: "Europe", correct: false }] },
-    { question: "Who painted the Mona Lisa?", options: [{ text: "Leonardo da Vinci", correct: true }, { text: "Pablo Picasso", correct: false }] },
-    { question: "What is the hardest natural substance?", options: [{ text: "Diamond", correct: true }, { text: "Gold", correct: false }] },
-    { question: "What is the capital city of Canada?", options: [{ text: "Ottawa", correct: true }, { text: "Toronto", correct: false }] },
-    { question: "What is the tallest mountain in the world?", options: [{ text: "Mount Everest", correct: true }, { text: "K2", correct: false }] },
-    { question: "What is the longest river in the world?", options: [{ text: "Nile", correct: false }, { text: "Amazon", correct: true }] },
-    { question: "What language has the most native speakers?", options: [{ text: "Mandarin", correct: true }, { text: "English", correct: false }] },
-    { question: "What country has the most islands?", options: [{ text: "Sweden", correct: true }, { text: "Philippines", correct: false }] },
-    { question: "What is the smallest country in the world?", options: [{ text: "Vatican City", correct: true }, { text: "Monaco", correct: false }] },
+    {
+      question: "Scegli la forma corretta: «Se lui ___ per l'esame, avrebbe superato il test.»",
+      options: [
+        { text: "ha studiato", correct: false },
+        { text: "studiasse", correct: false },
+        { text: "studiasse", correct: true },
+        { text: "studia", correct: false },
+      ],
+    },
+    {
+      question: "Qual è il contrario di 'freddo'?",
+      type: "text",
+      answer: "caldo",
+    },
+    {
+      question: "Completa la frase: «Va ___ scuola ogni giorno.»",
+      options: [
+        { text: "a", correct: true },
+        { text: "al", correct: false },
+        { text: "di", correct: false },
+        { text: "in", correct: false },
+      ],
+    },
+    {
+      question: "Scrivi il plurale di 'ragazzo'.",
+      type: "text",
+      answer: "ragazzi",
+    },
+    {
+      question: "Scegli la parola corretta: «Questa è la mia ___ casa.»",
+      options: [
+        { text: "bella", correct: true },
+        { text: "belle", correct: false },
+        { text: "belli", correct: false },
+        { text: "bel", correct: false },
+      ],
+    },
+    {
+      question: "Completa la frase: «Siamo ___ casa.»",
+      options: [
+        { text: "a", correct: true },
+        { text: "di", correct: false },
+        { text: "al", correct: false },
+        { text: "alla", correct: false },
+      ],
+    },
+    {
+      question: "Come si dice 'bambino' al plurale?",
+      type: "text",
+      answer: "bambini",
+    },
+    {
+      question: "Scegli la parola corretta: «Il sole ___ nel cielo.»",
+      options: [
+        { text: "splende", correct: true },
+        { text: "splendono", correct: false },
+        { text: "splenda", correct: false },
+        { text: "splenderà", correct: false },
+      ],
+    },
+    {
+      question: "Quale di queste parole descrive un colore?",
+      options: [
+        { text: "Rosso", correct: true },
+        { text: "Tavolo", correct: false },
+        { text: "Sedia", correct: false },
+        { text: "Lampada", correct: false },
+      ],
+    },
+    {
+      question: "Che ora è? «14:00»",
+      type: "text",
+      answer: "due",
+    },
   ];
 
   useEffect(() => {
@@ -46,8 +116,31 @@ const Ex1 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
       }
     }
 
-    handleAttemptDecrease(); // Decrement attempts globally via prop function
+    handleAttemptDecrease();
     setAnswered(true);
+  };
+
+  const handleInputSubmit = () => {
+    const isCorrect = inputAnswer.toLowerCase() === questions[currentQuestionIndex].answer.toLowerCase();
+    if (isCorrect) {
+      setCorrectCount((prev) => prev + 1);
+      if (correctCount + 1 >= 3) {
+        setShowCompletionModal(true);
+        onScoreUpdate(correctCount + 1);
+        return;
+      }
+    }
+    handleAttemptDecrease();
+    setAnswered(true);
+    setTimeout(() => {
+      setAnswered(false);
+      setInputAnswer("");
+      if (currentQuestionIndex < questions.length - 1) {
+        setCurrentQuestionIndex((prev) => prev + 1);
+      } else if (correctCount < 3) {
+        setShowNotQualifiedModal(true);
+      }
+    }, 500);
   };
 
   const handleConfirm = () => {
@@ -60,6 +153,7 @@ const Ex1 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
 
     setAnswered(false);
     setSelectedOptionIndex(null);
+    setInputAnswer("");
 
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
@@ -70,8 +164,8 @@ const Ex1 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
 
   return (
     <div className="p-8 bg-white rounded-lg shadow-lg max-w-3xl mx-auto mt-16">
-      <h2 className="text-4xl font-bold text-center text-[#65A662] mb-6">
-        Level A1: English Proficiency Quiz
+      <h2 className="text-4xl font-bold text-center text-[#008C45] mb-6">
+        Level A1: Italian Proficiency Test
       </h2>
 
       <p className="text-lg text-gray-500 mb-4 text-center">
@@ -80,35 +174,48 @@ const Ex1 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
 
       {showCompletionModal ? (
         <div className="text-center mt-8">
-          <p className="text-2xl font-bold text-green-500 mb-2">🎉 Congratulations! 🎉</p>
-          <p className="text-gray-600 mb-4">You have successfully completed Level A1.</p>
-          <p className="text-lg font-semibold text-green-600 mb-4">Level A2 is now unlocked!</p>
+          <p className="text-2xl font-bold text-[#008C45] mb-2">
+            🎉 Congratulations! 🎉
+          </p>
+          <p className="text-gray-600 mb-4">
+            You have successfully completed Level A1.
+          </p>
+          <p className="text-lg font-semibold text-[#008C45] mb-4">
+            Level A2 is now unlocked!
+          </p>
           <button
             onClick={handleConfirm}
-            className="bg-green-500 text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 mt-4 transition-transform duration-300"
+            className="bg-[#008C45] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-[#006F35] mt-4 transition-transform duration-300"
           >
             Proceed to Next Level
           </button>
         </div>
       ) : showNotQualifiedModal ? (
         <div className="text-center mt-8 p-6 bg-white rounded-lg shadow-lg">
-          <h3 className="text-2xl font-bold text-red-600 mb-4">Level Not Qualified</h3>
+          <h3 className="text-2xl font-bold text-[#D52B1E] mb-4">
+            Level Not Qualified
+          </h3>
           <p className="text-gray-700 mb-4">
             Unfortunately, you did not meet the requirements to pass this level.
           </p>
           <p className="text-gray-700 mb-6">
-            Please visit our center to get the necessary support and improve your skills.
+            Please contact us for the necessary support to improve your skills.
           </p>
           <div className="flex justify-center space-x-4">
             <button
-              onClick={() => window.open("https://wa.me/?text=I need help to improve my English proficiency at Level A1.", "_blank")}
-              className="bg-green-500 text-white flex items-center py-2 px-4 rounded-full shadow-md hover:bg-green-600 transition-all duration-300"
+              onClick={() =>
+                window.open(
+                  "https://wa.me/?text=I need help to improve my Italian proficiency at Level A1.",
+                  "_blank"
+                )
+              }
+              className="bg-[#008C45] text-white flex items-center py-2 px-4 rounded-full shadow-md hover:bg-[#006F35] transition-all duration-300"
             >
               <FaWhatsapp className="mr-2" size={18} /> Share on WhatsApp
             </button>
             <button
-              onClick={() => (window.location.href = "tel:+212689164146")}
-              className="bg-blue-500 text-white flex items-center py-2 px-4 rounded-full shadow-md hover:bg-blue-600 transition-all duration-300"
+              onClick={() => (window.location.href = "tel:+39123456789")}
+              className="bg-[#D52B1E] text-white flex items-center py-2 px-4 rounded-full shadow-md hover:bg-[#B0231B] transition-all duration-300"
             >
               <FaPhone className="mr-2" size={18} /> Call for Assistance
             </button>
@@ -120,37 +227,52 @@ const Ex1 = ({ onScoreUpdate, nextStep, remainingAttempts, handleAttemptDecrease
             <p className="text-xl text-gray-800 mb-6 text-center font-medium">
               {questions[currentQuestionIndex].question}
             </p>
-            {questions[currentQuestionIndex].options.map((option, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleOptionSelect(idx)}
-                disabled={answered || remainingAttempts <= 0}
-                className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
-                  selectedOptionIndex === idx
-                    ? option.correct
-                      ? "bg-green-100 border-green-500"
-                      : "bg-red-100 border-red-500"
-                    : "bg-gray-100 border-gray-300 hover:bg-gray-200"
-                }`}
-              >
-                {option.text}
-              </button>
-            ))}
+            {questions[currentQuestionIndex].type === "text" ? (
+              <input
+                type="text"
+                value={inputAnswer}
+                onChange={(e) => setInputAnswer(e.target.value)}
+                className="border-2 p-3 rounded-lg mb-4 block w-full"
+                placeholder="Type your answer"
+              />
+            ) : (
+              questions[currentQuestionIndex].options.map((option, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleOptionSelect(idx)}
+                  disabled={answered || remainingAttempts <= 0}
+                  className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
+                    selectedOptionIndex === idx
+                      ? option.correct
+                        ? "bg-[#DFFFD6] border-[#008C45]"
+                        : "bg-[#FFD6D6] border-[#D52B1E]"
+                      : "bg-gray-100 border-gray-300 hover:bg-gray-200"
+                  }`}
+                >
+                  {option.text}
+                </button>
+              ))
+            )}
           </div>
 
           <button
-  onClick={handleSubmit}
-  disabled={selectedOptionIndex === null || remainingAttempts <= 0}
-  className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none flex items-center justify-center space-x-2"
->
-  <FiCheckCircle className="text-white" />
-  <span>Submit</span>
-</button>
-
+            onClick={
+              questions[currentQuestionIndex].type === "text"
+                ? handleInputSubmit
+                : handleSubmit
+            }
+            disabled={(selectedOptionIndex === null && inputAnswer === "") || remainingAttempts <= 0}
+            className="bg-[#D52B1E] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-[#B0231B] transition-transform duration-300 focus:outline-none flex items-center justify-center space-x-2"
+          >
+            <FiCheckCircle className="text-white" />
+            <span>Submit</span>
+          </button>
         </>
       )}
     </div>
   );
+
+
 };
 
 export default Ex1;

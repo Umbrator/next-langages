@@ -12,6 +12,7 @@ const Ex2 = ({
 }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+  const [inputAnswer, setInputAnswer] = useState("");
   const [correctCount, setCorrectCount] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [showNotQualifiedModal, setShowNotQualifiedModal] = useState(false);
@@ -21,75 +22,94 @@ const Ex2 = ({
     {
       question: "Choose the correct word: 'I ___ to the gym every morning.'",
       options: [
-        { text: "go", correct: true },
         { text: "goes", correct: false },
+        { text: "going", correct: false },
+        { text: "gone", correct: false },
+        { text: "go", correct: true },
       ],
     },
     {
       question: "Which word is an adjective?",
       options: [
-        { text: "Beautiful", correct: true },
         { text: "Quickly", correct: false },
+        { text: "Beautiful", correct: true },
+        { text: "Run", correct: false },
+        { text: "Beauty", correct: false },
       ],
     },
     {
-      question: "Complete the sentence: 'They ___ at the park yesterday.'",
+      question: "What is the opposite of 'happy'?",
+      type: "text", // Text input answer
+      answer: "sad",
+    },
+    {
+      question: "Complete the sentence: 'The dog chased the ___.'",
       options: [
-        { text: "were", correct: true },
-        { text: "was", correct: false },
+        { text: "cat", correct: true },
+        { text: "run", correct: false },
+        { text: "quickly", correct: false },
+        { text: "small", correct: false },
       ],
+    },
+    {
+      question: "Write the past tense of 'go'.",
+      type: "text",
+      answer: "went",
     },
     {
       question: "Choose the correct answer: 'She ___ coffee, but she doesn't like tea.'",
       options: [
-        { text: "likes", correct: true },
         { text: "like", correct: false },
+        { text: "liked", correct: false },
+        { text: "is like", correct: false },
+        { text: "likes", correct: true },
       ],
     },
     {
       question: "Select the correct question: '___ you speak English?'",
       options: [
-        { text: "Do", correct: true },
         { text: "Does", correct: false },
+        { text: "Are", correct: false },
+        { text: "Do", correct: true },
+        { text: "Is", correct: false },
       ],
     },
     {
-      question: "What is the opposite of 'happy'?",
-      options: [
-        { text: "Sad", correct: true },
-        { text: "Angry", correct: false },
-      ],
+      question: "Write the opposite of 'easy'.",
+      type: "text",
+      answer: "hard",
     },
     {
       question: "Choose the correct sentence.",
       options: [
-        { text: "She is a doctor.", correct: true },
         { text: "She are a doctor.", correct: false },
+        { text: "She be a doctor.", correct: false },
+        { text: "She is a doctor.", correct: true },
+        { text: "She doctors.", correct: false },
       ],
     },
     {
-      question: "Which of these is a noun?",
+      question: "Fill in the blank: 'The children ___ playing in the garden yesterday.'",
       options: [
-        { text: "Teacher", correct: true },
-        { text: "Running", correct: false },
-      ],
-    },
-    {
-      question: "Select the correct preposition: 'The cat is ___ the table.'",
-      options: [
-        { text: "on", correct: true },
-        { text: "in", correct: false },
-      ],
-    },
-    {
-      question: "What is the past tense of 'go'?",
-      options: [
-        { text: "Went", correct: true },
-        { text: "Goed", correct: false },
+        { text: "were", correct: true },
+        { text: "was", correct: false },
+        { text: "are", correct: false },
+        { text: "is", correct: false },
       ],
     },
 ];
 
+
+  // Shuffle options for each question on component mount
+  useEffect(() => {
+    questions.forEach((question) => {
+      if (question.options) {
+        question.options = question.options
+          .map((option) => ({ ...option }))
+          .sort(() => Math.random() - 0.5);
+      }
+    });
+  }, []);
 
   useEffect(() => {
     if (remainingAttempts <= 0 && correctCount < 3) {
@@ -116,6 +136,30 @@ const Ex2 = ({
     setAnswered(true);
   };
 
+  const handleInputSubmit = () => {
+    const isCorrect = inputAnswer.trim().toLowerCase() === questions[currentQuestionIndex].answer.toLowerCase();
+    if (isCorrect) {
+      setCorrectCount((prev) => prev + 1);
+      if (correctCount + 1 >= 3) {
+        setShowCompletionModal(true);
+        onScoreUpdate(correctCount + 1);
+        return;
+      }
+    }
+    handleAttemptDecrease();
+    setAnswered(true);
+    setTimeout(() => {
+      setAnswered(false);
+      setInputAnswer("");
+      if (currentQuestionIndex < questions.length - 1) {
+        setCurrentQuestionIndex((prev) => prev + 1);
+      } else if (correctCount < 3) {
+        setShowNotQualifiedModal(true);
+      }
+    }, 500);
+};
+
+
   const handleConfirm = () => {
     setShowCompletionModal(false);
     nextStep();
@@ -126,6 +170,7 @@ const Ex2 = ({
 
     setAnswered(false);
     setSelectedOptionIndex(null);
+    setInputAnswer("");
 
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
@@ -200,27 +245,41 @@ const Ex2 = ({
             <p className="text-xl text-gray-800 mb-6 text-center font-medium">
               {questions[currentQuestionIndex].question}
             </p>
-            {questions[currentQuestionIndex].options.map((option, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleOptionSelect(idx)}
-                disabled={answered || remainingAttempts <= 0}
-                className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
-                  selectedOptionIndex === idx
-                    ? option.correct
-                      ? "bg-green-100 border-green-500"
-                      : "bg-red-100 border-red-500"
-                    : "bg-gray-100 border-gray-300 hover:bg-gray-200"
-                }`}
-              >
-                {option.text}
-              </button>
-            ))}
+            {questions[currentQuestionIndex].type === "text" ? (
+              <input
+                type="text"
+                value={inputAnswer}
+                onChange={(e) => setInputAnswer(e.target.value)}
+                className="border-2 p-3 rounded-lg mb-4 block w-full"
+                placeholder="Type your answer"
+              />
+            ) : (
+              questions[currentQuestionIndex].options.map((option, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleOptionSelect(idx)}
+                  disabled={answered || remainingAttempts <= 0}
+                  className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
+                    selectedOptionIndex === idx
+                      ? option.correct
+                        ? "bg-green-100 border-green-500"
+                        : "bg-red-100 border-red-500"
+                      : "bg-gray-100 border-gray-300 hover:bg-gray-200"
+                  }`}
+                >
+                  {option.text}
+                </button>
+              ))
+            )}
           </div>
 
           <button
-            onClick={handleSubmit}
-            disabled={selectedOptionIndex === null || remainingAttempts <= 0}
+            onClick={
+              questions[currentQuestionIndex].type === "text"
+                ? handleInputSubmit
+                : handleSubmit
+            }
+            disabled={(selectedOptionIndex === null && inputAnswer === "") || remainingAttempts <= 0}
             className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none flex items-center justify-center space-x-2"
           >
             <FiCheckCircle className="text-white" />

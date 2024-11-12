@@ -167,8 +167,8 @@ const Page = () => {
       <Navbar />
       <main className="pt-20 max-w-6xl mx-auto px-4 flex flex-col items-center">
         <div className="bg-white shadow-lg rounded-lg p-6 mb-6 w-full">
-          <h1 className="text-4xl font-semibold mb-6 text-center text-[#65A662]">
-            English Language Proficiency Test
+          <h1 className="text-4xl font-semibold mb-6 text-center text-[#007bff]">
+            French Language Proficiency Test
           </h1>
           <div className="w-full bg-gray-300 rounded-full h-3 mb-6 shadow-lg overflow-hidden relative">
             <div

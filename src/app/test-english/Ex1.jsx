@@ -12,6 +12,7 @@ const Ex1 = ({
 }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+  const [inputAnswer, setInputAnswer] = useState("");
   const [correctCount, setCorrectCount] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [showNotQualifiedModal, setShowNotQualifiedModal] = useState(false);
@@ -19,77 +20,80 @@ const Ex1 = ({
 
   const questions = [
     {
-      question: "Choose the correct article: ___ apple",
+      question: "Complete the sentence: 'I ____ breakfast at 8:00 every morning.'",
       options: [
-        { text: "An", correct: true },
-        { text: "A", correct: false },
+        { text: "had", correct: false },
+        { text: "having", correct: false },
+        { text: "have", correct: true },
+        { text: "has", correct: false },
       ],
     },
     {
-      question: "What is the plural of 'cat'?",
+      question: "What is the opposite of 'cold'?",
+      type: "text",
+      answer: "hot",
+    },
+    {
+      question: "Choose the correct preposition: 'She is going ___ the store.'",
       options: [
-        { text: "Cats", correct: true },
-        { text: "Cat", correct: false },
+        { text: "in", correct: false },
+        { text: "at", correct: false },
+        { text: "to", correct: true },
+        { text: "on", correct: false },
       ],
     },
     {
-      question: "Which of these is a greeting?",
+      question: "Write the plural form of 'child'.",
+      type: "text",
+      answer: "children",
+    },
+    {
+      question: "Select the correct answer: Which of these is a type of weather?",
       options: [
-        { text: "Hello", correct: true },
-        { text: "Goodbye", correct: false },
+        { text: "Stone", correct: false },
+        { text: "Carpet", correct: false },
+        { text: "Rain", correct: true },
+        { text: "Noise", correct: false },
       ],
     },
     {
-      question: "Fill in the blank: 'I ___ a student.'",
-      options: [
-        { text: "am", correct: true },
-        { text: "is", correct: false },
-      ],
-    },
-    {
-      question: "Choose the correct verb: 'She ___ coffee every morning.'",
-      options: [
-        { text: "drinks", correct: true },
-        { text: "drink", correct: false },
-      ],
-    },
-    {
-      question: "Which of these words is a color?",
-      options: [
-        { text: "Blue", correct: true },
-        { text: "Chair", correct: false },
-      ],
-    },
-    {
-      question: "What is the opposite of 'big'?",
-      options: [
-        { text: "Small", correct: true },
-        { text: "Tall", correct: false },
-      ],
-    },
-    {
-      question: "How do you say 5:00 in English?",
-      options: [
-        { text: "Five o'clock", correct: true },
-        { text: "Five hours", correct: false },
-      ],
-    },
-    {
-      question: "What is the correct form? 'He ___ a teacher.'",
+      question: "Fill in the blank: 'He ___ a student.'",
       options: [
         { text: "is", correct: true },
         { text: "are", correct: false },
+        { text: "am", correct: false },
+        { text: "be", correct: false },
       ],
     },
     {
-      question: "Which one is a fruit?",
+      question: "What is the plural of 'mouse'?",
+      type: "text",
+      answer: "mice",
+    },
+    {
+      question: "Select the correct word: 'The cat ___ on the mat.'",
       options: [
-        { text: "Apple", correct: true },
-        { text: "Car", correct: false },
+        { text: "sit", correct: false },
+        { text: "sits", correct: true },
+        { text: "sat", correct: false },
+        { text: "sitting", correct: false },
       ],
     },
-];
-
+    {
+      question: "Which of these is a color?",
+      options: [
+        { text: "Chair", correct: false },
+        { text: "Table", correct: false },
+        { text: "Laptop", correct: false },
+        { text: "Blue", correct: true },
+      ],
+    },
+    {
+      question: "What time is this? '5:00'",
+      type: "text",
+      answer: "five o'clock",
+    },
+  ];
 
   useEffect(() => {
     if (remainingAttempts <= 0 && correctCount < 3) {
@@ -112,9 +116,32 @@ const Ex1 = ({
       }
     }
 
-    handleAttemptDecrease(); // Decrement attempts globally via prop function
+    handleAttemptDecrease();
     setAnswered(true);
   };
+
+  const handleInputSubmit = () => {
+    const isCorrect = inputAnswer.toLowerCase() === questions[currentQuestionIndex].answer.toLowerCase();
+    if (isCorrect) {
+      setCorrectCount((prev) => prev + 1);
+      if (correctCount + 1 >= 3) {
+        setShowCompletionModal(true);
+        onScoreUpdate(correctCount + 1);
+        return;
+      }
+    }
+    handleAttemptDecrease();
+    setAnswered(true);
+    setTimeout(() => {
+      setAnswered(false);
+      setInputAnswer("");
+      if (currentQuestionIndex < questions.length - 1) {
+        setCurrentQuestionIndex((prev) => prev + 1);
+      } else if (correctCount < 3) {
+        setShowNotQualifiedModal(true);
+      }
+    }, 500);
+};
 
   const handleConfirm = () => {
     setShowCompletionModal(false);
@@ -126,6 +153,7 @@ const Ex1 = ({
 
     setAnswered(false);
     setSelectedOptionIndex(null);
+    setInputAnswer("");
 
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
@@ -200,27 +228,41 @@ const Ex1 = ({
             <p className="text-xl text-gray-800 mb-6 text-center font-medium">
               {questions[currentQuestionIndex].question}
             </p>
-            {questions[currentQuestionIndex].options.map((option, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleOptionSelect(idx)}
-                disabled={answered || remainingAttempts <= 0}
-                className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
-                  selectedOptionIndex === idx
-                    ? option.correct
-                      ? "bg-green-100 border-green-500"
-                      : "bg-red-100 border-red-500"
-                    : "bg-gray-100 border-gray-300 hover:bg-gray-200"
-                }`}
-              >
-                {option.text}
-              </button>
-            ))}
+            {questions[currentQuestionIndex].type === "text" ? (
+              <input
+                type="text"
+                value={inputAnswer}
+                onChange={(e) => setInputAnswer(e.target.value)}
+                className="border-2 p-3 rounded-lg mb-4 block w-full"
+                placeholder="Type your answer"
+              />
+            ) : (
+              questions[currentQuestionIndex].options.map((option, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleOptionSelect(idx)}
+                  disabled={answered || remainingAttempts <= 0}
+                  className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
+                    selectedOptionIndex === idx
+                      ? option.correct
+                        ? "bg-green-100 border-green-500"
+                        : "bg-red-100 border-red-500"
+                      : "bg-gray-100 border-gray-300 hover:bg-gray-200"
+                  }`}
+                >
+                  {option.text}
+                </button>
+              ))
+            )}
           </div>
 
           <button
-            onClick={handleSubmit}
-            disabled={selectedOptionIndex === null || remainingAttempts <= 0}
+            onClick={
+              questions[currentQuestionIndex].type === "text"
+                ? handleInputSubmit
+                : handleSubmit
+            }
+            disabled={(selectedOptionIndex === null && inputAnswer === "") || remainingAttempts <= 0}
             className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none flex items-center justify-center space-x-2"
           >
             <FiCheckCircle className="text-white" />

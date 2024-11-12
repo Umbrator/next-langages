@@ -55,13 +55,19 @@
   }
   
   .icon-lock,
-  .icon-unlock {
+  .icon-unlock,
+  .icon-unlock-fr,
+  .icon-unlock-de,
+  .icon-unlock-es{
     font-size: 40px;
     display: block;
     margin: 0 auto;
   }
   
-  .icon-lock {
+  .icon-lock,
+  .icon-unlock-fr,
+  .icon-unlock-de,
+  .icon-unlock-es{
     color: #FF4500;
   }
   
@@ -70,6 +76,25 @@
     opacity: 0;
     animation: unlockAppear 0.6s 0.5s forwards;
   }
+
+  .icon-unlock-fr{
+    color: #007bff;
+    opacity: 0;
+    animation: unlockAppear 0.6s 0.5s forwards;
+  }
+
+  .icon-unlock-de{
+    color: #FFCC00;
+    opacity: 0;
+    animation: unlockAppear 0.6s 0.5s forwards;
+  }
+
+  .icon-unlock-es{
+    color: #FF5733;
+    opacity: 0;
+    animation: unlockAppear 0.6s 0.5s forwards;
+  }
+
   
   @keyframes lidOpening {
     0% {

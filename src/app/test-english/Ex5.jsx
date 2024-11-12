@@ -12,6 +12,7 @@ const Ex5 = ({
 }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+  const [inputAnswer, setInputAnswer] = useState("");
   const [correctCount, setCorrectCount] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [showNotQualifiedModal, setShowNotQualifiedModal] = useState(false);
@@ -23,74 +24,76 @@ const Ex5 = ({
       options: [
         { text: "would have left", correct: true },
         { text: "would leave", correct: false },
+        { text: "has left", correct: false },
+        { text: "had left", correct: false },
       ],
     },
     {
-      question: "Select the sentence that uses 'hardly' correctly.",
+      question: "Select the sentence that correctly uses 'hardly.'",
       options: [
         { text: "He had entered hardly the room when the phone rang.", correct: false },
         { text: "He had hardly entered the room when the phone rang.", correct: true },
+        { text: "Hardly he had entered the room when the phone rang.", correct: false },
+        { text: "He had entered hardly when the phone rang.", correct: false },
       ],
     },
     {
-      question: "What is the correct meaning of the phrase? 'To hit the nail on the head.'",
+      question: "Fill in the blank: 'The decision was entirely ___ her control.'",
+      type: "text",
+      answer: "beyond",
+    },
+    {
+      question: "What does the idiom 'To hit the nail on the head' mean?",
       options: [
         { text: "To describe something accurately.", correct: true },
         { text: "To misunderstand a situation.", correct: false },
+        { text: "To react impulsively.", correct: false },
+        { text: "To start a new project.", correct: false },
       ],
     },
     {
-      question: "Choose the best option to complete the sentence: 'Not only ___ the contract, but she also received a promotion.'",
+      question: "Complete the sentence: 'Not only ___ the contract, but she also received a promotion.'",
       options: [
         { text: "did she sign", correct: true },
         { text: "she signed", correct: false },
+        { text: "does she sign", correct: false },
+        { text: "had she signed", correct: false },
       ],
     },
     {
-      question: "Which option best completes the sentence? 'The witness’s account was inconsistent and full of ___.'",
-      options: [
-        { text: "contradictory", correct: false },
-        { text: "contradictions", correct: true },
-      ],
+      question: "Fill in the blank with the correct preposition: 'He insisted ___ paying for dinner.'",
+      type: "text",
+      answer: "on",
     },
     {
-      question: "Which sentence uses the correct tense? 'By this time next year, he ___ his degree.'",
+      question: "Which sentence uses the correct future perfect form? 'By this time next year, he ___ his degree.'",
       options: [
         { text: "would complete", correct: false },
         { text: "will have completed", correct: true },
+        { text: "has completed", correct: false },
+        { text: "is completing", correct: false },
       ],
     },
     {
-      question: "What does this sentence imply? 'She was bound to find out eventually.'",
-      options: [
-        { text: "It was inevitable that she would find out.", correct: true },
-        { text: "It was impossible for her to find out.", correct: false },
-      ],
+      question: "Explain what 'She was bound to find out eventually' implies.",
+      type: "text",
+      answer: "inevitable",
     },
     {
       question: "Select the correct word: 'The research was carried out ___ to provide accurate results.'",
       options: [
         { text: "meticulously", correct: true },
         { text: "meticulous", correct: false },
+        { text: "methodical", correct: false },
+        { text: "methodically", correct: false },
       ],
     },
     {
-      question: "Which option best completes the sentence? 'Having ___ the decision, she felt relieved.'",
-      options: [
-        { text: "made", correct: true },
-        { text: "make", correct: false },
-      ],
+      question: "Fill in the blank with the correct adverb: 'Her decision was ___ influenced by her upbringing.'",
+      type: "text",
+      answer: "significantly",
     },
-    {
-      question: "Choose the correct sentence.",
-      options: [
-        { text: "No sooner had they arrived than it started to rain.", correct: true },
-        { text: "No sooner they had arrived than it started to rain.", correct: false },
-      ],
-    },
-];
-
-
+  ];
 
   useEffect(() => {
     if (remainingAttempts <= 0 && correctCount < 3) {
@@ -117,6 +120,24 @@ const Ex5 = ({
     setAnswered(true);
   };
 
+  const handleInputSubmit = () => {
+    if (answered || showNotQualifiedModal || remainingAttempts <= 0) return;
+
+    const isCorrect = inputAnswer.trim().toLowerCase() === questions[currentQuestionIndex].answer.toLowerCase();
+
+    if (isCorrect) {
+      setCorrectCount((prev) => prev + 1);
+      if (correctCount + 1 >= 3) {
+        setShowCompletionModal(true);
+        onScoreUpdate(correctCount + 1);
+        return;
+      }
+    }
+
+    handleAttemptDecrease();
+    setAnswered(true);
+  };
+
   const handleConfirm = () => {
     setShowCompletionModal(false);
     nextStep();
@@ -127,6 +148,7 @@ const Ex5 = ({
 
     setAnswered(false);
     setSelectedOptionIndex(null);
+    setInputAnswer("");
 
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
@@ -144,6 +166,7 @@ const Ex5 = ({
       <p className="text-lg text-gray-500 mb-4 text-center">
         Answer the following questions to complete the proficiency test.
       </p>
+
       {showCompletionModal ? (
         <div className="text-center mt-8">
           <p className="text-2xl font-bold text-green-500 mb-2">
@@ -200,27 +223,44 @@ const Ex5 = ({
             <p className="text-xl text-gray-800 mb-6 text-center font-medium">
               {questions[currentQuestionIndex].question}
             </p>
-            {questions[currentQuestionIndex].options.map((option, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleOptionSelect(idx)}
-                disabled={answered || remainingAttempts <= 0}
-                className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
-                  selectedOptionIndex === idx
-                    ? option.correct
-                      ? "bg-green-100 border-green-500"
-                      : "bg-red-100 border-red-500"
-                    : "bg-gray-100 border-gray-300 hover:bg-gray-200"
-                }`}
-              >
-                {option.text}
-              </button>
-            ))}
+            {questions[currentQuestionIndex].type === "text" ? (
+              <input
+                type="text"
+                value={inputAnswer}
+                onChange={(e) => setInputAnswer(e.target.value)}
+                className="border-2 p-3 rounded-lg mb-4 block w-full"
+                placeholder="Type your answer"
+              />
+            ) : (
+              questions[currentQuestionIndex].options.map((option, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleOptionSelect(idx)}
+                  disabled={answered || remainingAttempts <= 0}
+                  className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
+                    selectedOptionIndex === idx
+                      ? option.correct
+                        ? "bg-green-100 border-green-500"
+                        : "bg-red-100 border-red-500"
+                      : "bg-gray-100 border-gray-300 hover:bg-gray-200"
+                  }`}
+                >
+                  {option.text}
+                </button>
+              ))
+            )}
           </div>
 
           <button
-            onClick={handleSubmit}
-            disabled={selectedOptionIndex === null || remainingAttempts <= 0}
+            onClick={
+              questions[currentQuestionIndex].type === "text"
+                ? handleInputSubmit
+                : handleSubmit
+            }
+            disabled={
+              (selectedOptionIndex === null && inputAnswer === "") ||
+              remainingAttempts <= 0
+            }
             className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none flex items-center justify-center space-x-2"
           >
             <FiCheckCircle className="text-white" />

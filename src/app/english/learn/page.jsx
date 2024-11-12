@@ -53,12 +53,14 @@ const LearnEnglish = () => {
     animateText("Learn English Online with Professional Instructors", setHeadlineText, 50);
   }, []);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
   const closeModal = () => {
     setIsModalOpen(false);
+  };
+  const scrollToOurCourses = () => {
+    const ourCoursesSection = document.getElementById("OurCourses");
+    if (ourCoursesSection) {
+      ourCoursesSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -106,7 +108,7 @@ const LearnEnglish = () => {
           </p>
 
           <button
-            onClick={openModal}
+            onClick={scrollToOurCourses}
             className="hover:bg-green-700 text-white py-3 px-8 rounded-full text-lg"
             style={{ backgroundColor: "#65A662" }}
           >

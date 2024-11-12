@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const closeTimeoutRef = useRef(null);
   const router = useRouter();
 
   const mainLinks = [
@@ -31,12 +32,22 @@ console.log('f')
 
   const handleGetStartedClick = (e) => {
     e.preventDefault();
-
     if (window.location.pathname === "/") {
       scrollToCourseSection();
     } else {
       router.push("/#CourseSection");
     }
+  };
+
+  // Opens dropdown immediately
+  const handleMouseEnter = () => {
+    clearTimeout(closeTimeoutRef.current); // Clear any existing timeout
+    setDropdownOpen(true);
+  };
+
+  // Closes dropdown with a delay
+  const handleMouseLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 200); // Delay of 200ms
   };
 
   return (
@@ -46,7 +57,7 @@ console.log('f')
           {/* Logo */}
           <Link href="/" passHref>
             <Image
-              src="/ocean.png"
+              src="/ocean.svg"
               alt="Logo"
               width={70}
               height={70}
@@ -66,11 +77,12 @@ console.log('f')
                 {link.label}
               </Link>
             ))}
-            <div className="relative">
-              <button
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="text-gray-600 hover:text-blue-600 flex items-center transition duration-300 ease-in-out"
-              >
+            <div
+              className="relative"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button className="text-gray-600 hover:text-blue-600 flex items-center transition duration-300 ease-in-out">
                 Learn
                 <svg
                   className={`w-5 h-5 ml-1 transform transition-transform duration-300 ${
@@ -91,7 +103,11 @@ console.log('f')
 
               {/* Dropdown Menu */}
               {dropdownOpen && (
-                <div className="absolute mt-2 py-2 w-48 bg-white rounded-lg shadow-lg transition-all duration-300 ease-in-out">
+                <div
+                  className="absolute mt-2 py-2 w-48 bg-white rounded-lg shadow-lg transition-all duration-300 ease-in-out"
+                  onMouseEnter={handleMouseEnter} // Keep open if mouse enters dropdown
+                  onMouseLeave={handleMouseLeave} // Delay close if mouse leaves dropdown
+                >
                   {learnLinks.map((link) => (
                     <Link
                       key={link.href}

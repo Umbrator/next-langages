@@ -69,8 +69,11 @@ const LearnEnglish = () => {
     );
   }, []);
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const scrollToOurCourses = () => {
+    const ourCoursesSection = document.getElementById("OurCourses");
+    if (ourCoursesSection) {
+      ourCoursesSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const closeModal = () => {
@@ -127,7 +130,7 @@ const LearnEnglish = () => {
           </p>
 
           <button
-            onClick={openModal}
+            onClick={scrollToOurCourses}
             className="bg-red-600 hover:bg-yellow-500 text-white py-3 px-8 rounded-full text-lg transition-colors duration-300"
           >
             Start Now

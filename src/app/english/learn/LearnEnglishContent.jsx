@@ -193,7 +193,7 @@ const LearnEnglishContent = () => {
       )}
 
       {/* Courses Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white " id="OurCourses">
         <div className="container mx-auto text-center mb-12">
           <h3 className="text-sm font-semibold text-blue-600 mb-2 flex items-center justify-center">
             <FaAngleDoubleRight className="ml-2" /> COURSES

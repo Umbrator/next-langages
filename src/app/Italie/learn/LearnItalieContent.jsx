@@ -203,7 +203,7 @@ const LearnEnglishContent = () => {
       )}
 
       {/* Courses Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-gray-100" id="OurCourses">
         <div className="container mx-auto text-center mb-12">
           <h3 className="text-sm font-semibold text-green-700 mb-2 flex items-center justify-center">
             {/* Green accent for "COURSES" */}

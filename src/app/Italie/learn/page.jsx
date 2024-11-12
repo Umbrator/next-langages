@@ -56,8 +56,11 @@ const LearnEnglish = () => {
     animateText("Learn Italie Online with Professional Instructors", setHeadlineText, 50);
   }, []);
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const scrollToOurCourses = () => {
+    const ourCoursesSection = document.getElementById("OurCourses");
+    if (ourCoursesSection) {
+      ourCoursesSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const closeModal = () => {
@@ -109,7 +112,7 @@ const LearnEnglish = () => {
     </p>
 
     <button
-      onClick={openModal}
+      onClick={scrollToOurCourses}
       className="bg-green-600 hover:bg-red-700 text-white py-3 px-8 rounded-full text-lg transition-colors duration-300 ease-in-out"
     >
       Start Now

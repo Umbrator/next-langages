@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
 
@@ -14,19 +13,30 @@ const Carousel = () => {
         button2: "Watch Intro",
         features: [
           { title: "60+", description: "Interactive Courses" },
-          { title: "1250+", description: "Activate Students" },
+          { title: "1250+", description: "Active Students" },
           { title: "Get 20% Disc Off", description: "On Every Course" },
         ],
+        youtubeUrl: "https://www.youtube.com/embed/njx-CtWPX3E",
       },
     ],
     []
   );
 
   const [currentIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const scrollToCourseSection = () => {
+    const courseSection = document.getElementById("CourseSection");
+    if (courseSection) {
+      courseSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <section className="relative bg-blue-50 pt-32 py-16 overflow-hidden min-h-screen">
-      {/* SVG Wave Background */}
       <div className="absolute inset-0 -z-10">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +52,6 @@ const Carousel = () => {
       </div>
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center h-full">
-        {/* Left Side: Text Content */}
         <div className="space-y-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 leading-tight relative overflow-hidden">
             <span className="block animate-typing">
@@ -66,10 +75,16 @@ const Carousel = () => {
           </p>
 
           <div className="flex space-x-4 mt-6 animate-fade-in-delayed">
-            <button className="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 hover:scale-105 shadow-lg transform transition duration-300">
+            <button
+              onClick={scrollToCourseSection}
+              className="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 hover:scale-105 shadow-lg transform transition duration-300"
+            >
               {slides[currentIndex].button1}
             </button>
-            <button className="flex items-center text-blue-900 font-medium py-3 px-6 hover:text-blue-700 hover:scale-105 transform transition duration-300">
+            <button
+              onClick={openModal}
+              className="flex items-center text-blue-900 font-medium py-3 px-6 hover:text-blue-700 hover:scale-105 transform transition duration-300"
+            >
               <svg
                 className="w-6 h-6 mr-2"
                 fill="none"
@@ -95,7 +110,6 @@ const Carousel = () => {
           </div>
         </div>
 
-        {/* Right Side: Image and Floating Features */}
         <div className="relative flex justify-center items-center animate-fade-up-delayed">
           <div className="absolute w-[420px] h-[420px] bg-indigo-200 rounded-full bottom-0 right-0 z-0 animate-pulse-slow"></div>
           <div className="absolute w-[300px] h-[300px] bg-indigo-400 rounded-full top-10 right-12 z-0 animate-pulse-slow"></div>
@@ -116,7 +130,7 @@ const Carousel = () => {
           </div>
           <div className="absolute bottom-16 left-0 w-[180px] p-4 bg-white rounded-lg shadow-lg z-20 transition-all transform hover:scale-105 hover:shadow-2xl animate-fade-up delay-[800ms]">
             <p className="text-blue-900 font-bold">1250+</p>
-            <p className="text-gray-500">Activate Students</p>
+            <p className="text-gray-500">Active Students</p>
           </div>
           <div className="absolute bottom-5 right-0 w-[220px] p-4 bg-white rounded-lg shadow-lg z-20 transition-all transform hover:scale-105 hover:shadow-2xl animate-fade-up delay-[1100ms]">
             <p className="text-blue-900 font-bold">Get 20% Disc Off</p>
@@ -124,6 +138,30 @@ const Carousel = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
+          <div className="relative w-full max-w-3xl bg-white rounded-lg shadow-lg">
+            {/* Close button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
+            >
+              ✕
+            </button>
+            
+            {/* YouTube video iframe */}
+            <iframe
+              className="w-full h-80 rounded-lg"
+              src={slides[currentIndex].youtubeUrl}
+              title="YouTube video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

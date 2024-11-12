@@ -12,6 +12,7 @@ const Ex4 = ({
 }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+  const [inputAnswer, setInputAnswer] = useState("");
   const [correctCount, setCorrectCount] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [showNotQualifiedModal, setShowNotQualifiedModal] = useState(false);
@@ -19,73 +20,81 @@ const Ex4 = ({
 
   const questions = [
     {
-      question: "Choose the correct form: 'If I ___ him, I would have told him the truth.'",
+      question: "Choose the correct form: 'If he ___ harder, he might have passed the exam.'",
       options: [
-        { text: "have seen", correct: false },
-        { text: "had seen", correct: true },
+        { text: "would study", correct: false },
+        { text: "studied", correct: false },
+        { text: "had studied", correct: true },
+        { text: "has studied", correct: false },
       ],
     },
     {
-      question: "Which sentence is correct?",
+      question: "Which of these sentences is correct?",
       options: [
-        { text: "Despite the heavy traffic, we managed to arrive on time.", correct: true },
-        { text: "Although the heavy traffic, we managed to arrive on time.", correct: false },
+        { text: "She recommended me to apply for the job.", correct: false },
+        { text: "She recommended that I apply for the job.", correct: true },
+        { text: "She recommended that I applied for the job.", correct: false },
+        { text: "She recommended to apply for the job.", correct: false },
       ],
     },
     {
-      question: "Select the correct word: 'The company is known for ___ reliable products.'",
+      question: "Complete the sentence: 'The decision was entirely ___ his control.' (Fill in with the correct preposition)",
+      type: "text",
+      answer: "beyond"
+    },
+    {
+      question: "Identify the correct sentence structure.",
       options: [
-        { text: "its", correct: true },
-        { text: "it's", correct: false },
+        { text: "She’s used to working under pressure.", correct: true },
+        { text: "She’s used to work under pressure.", correct: false },
+        { text: "She’s use to working under pressure.", correct: false },
+        { text: "She’s use to work under pressure.", correct: false },
       ],
     },
     {
-      question: "What does this sentence mean? 'He might have gone to the meeting.'",
-      options: [
-        { text: "It’s possible that he went to the meeting.", correct: true },
-        { text: "He definitely went to the meeting.", correct: false },
-      ],
+      question: "Fill in the blank with the correct word: 'He refused to apologize, ___ made everyone more upset.'",
+      type: "text",
+      answer: "which"
     },
     {
-      question: "Complete the sentence: 'He insisted ___ paying for dinner.'",
+      question: "Which sentence uses the future perfect correctly? 'By this time next year, she ___ her degree.'",
       options: [
-        { text: "in", correct: false },
-        { text: "on", correct: true },
-      ],
-    },
-    {
-      question: "Which sentence uses the correct form? 'By the end of the year, they ___ the project.'",
-      options: [
-        { text: "will complete", correct: false },
         { text: "will have completed", correct: true },
+        { text: "will completed", correct: false },
+        { text: "will be complete", correct: false },
+        { text: "is completing", correct: false },
       ],
     },
     {
-      question: "Choose the correct answer: 'The report was ___ by many employees.'",
+      question: "What is the implied meaning of the sentence: 'She can’t have finished the report already.'",
       options: [
-        { text: "criticized", correct: true },
-        { text: "criticism", correct: false },
+        { text: "It's impossible that she has finished the report.", correct: true },
+        { text: "She definitely finished the report.", correct: false },
+        { text: "She might have finished the report.", correct: false },
+        { text: "She is required to finish the report.", correct: false },
       ],
     },
     {
-      question: "Which option best completes the sentence? 'He’s interested in ___ a new language.'",
+      question: "Fill in the blank: 'Despite ___ extremely talented, he struggled to find a job.'",
+      type: "text",
+      answer: "being"
+    },
+    {
+      question: "What is the meaning of the idiom 'to hit the nail on the head'?",
       options: [
-        { text: "to learn", correct: false },
-        { text: "learning", correct: true },
+        { text: "To describe something precisely.", correct: true },
+        { text: "To make a mistake.", correct: false },
+        { text: "To start an argument.", correct: false },
+        { text: "To complete a task quickly.", correct: false },
       ],
     },
     {
-      question: "What is the correct meaning of the phrase? 'To break the ice.'",
+      question: "Choose the correct option: 'She has a tendency ___ things overcomplicated.'",
       options: [
-        { text: "To make people feel more comfortable in a social setting.", correct: true },
-        { text: "To break something cold.", correct: false },
-      ],
-    },
-    {
-      question: "Select the correct word to complete the sentence: 'Her decision was ___ influenced by her upbringing.'",
-      options: [
-        { text: "significant", correct: false },
-        { text: "significantly", correct: true },
+        { text: "to make", correct: true },
+        { text: "of making", correct: false },
+        { text: "for make", correct: false },
+        { text: "in making", correct: false },
       ],
     },
 ];
@@ -114,6 +123,29 @@ const Ex4 = ({
 
     handleAttemptDecrease();
     setAnswered(true);
+  };
+
+  const handleInputSubmit = () => {
+    const isCorrect = inputAnswer.trim().toLowerCase() === questions[currentQuestionIndex].answer.toLowerCase();
+    
+    if (isCorrect) {
+      setCorrectCount((prev) => prev + 1);
+      if (correctCount + 1 >= 3) {
+        setShowCompletionModal(true);
+        onScoreUpdate(correctCount + 1);
+        return;
+      }
+    }
+
+    handleAttemptDecrease();
+    setInputAnswer("");
+    setAnswered(false);
+
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex((prev) => prev + 1);
+    } else if (correctCount < 3) {
+      setShowNotQualifiedModal(true);
+    }
   };
 
   const handleConfirm = () => {
@@ -200,27 +232,41 @@ const Ex4 = ({
             <p className="text-xl text-gray-800 mb-6 text-center font-medium">
               {questions[currentQuestionIndex].question}
             </p>
-            {questions[currentQuestionIndex].options.map((option, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleOptionSelect(idx)}
-                disabled={answered || remainingAttempts <= 0}
-                className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
-                  selectedOptionIndex === idx
-                    ? option.correct
-                      ? "bg-green-100 border-green-500"
-                      : "bg-red-100 border-red-500"
-                    : "bg-gray-100 border-gray-300 hover:bg-gray-200"
-                }`}
-              >
-                {option.text}
-              </button>
-            ))}
+            {questions[currentQuestionIndex].options ? (
+              questions[currentQuestionIndex].options.map((option, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleOptionSelect(idx)}
+                  disabled={answered || remainingAttempts <= 0}
+                  className={`border-2 p-3 rounded-lg mb-4 block w-full text-left transition-all duration-300 ${
+                    selectedOptionIndex === idx
+                      ? option.correct
+                        ? "bg-green-100 border-green-500"
+                        : "bg-red-100 border-red-500"
+                      : "bg-gray-100 border-gray-300 hover:bg-gray-200"
+                  }`}
+                >
+                  {option.text}
+                </button>
+              ))
+            ) : (
+              <input
+                type="text"
+                value={inputAnswer}
+                onChange={(e) => setInputAnswer(e.target.value)}
+                className="border-2 p-3 rounded-lg mb-4 block w-full"
+                placeholder="Type your answer"
+              />
+            )}
           </div>
 
           <button
-            onClick={handleSubmit}
-            disabled={selectedOptionIndex === null || remainingAttempts <= 0}
+            onClick={
+              questions[currentQuestionIndex].options
+                ? handleSubmit
+                : handleInputSubmit
+            }
+            disabled={(selectedOptionIndex === null && inputAnswer === "") || remainingAttempts <= 0}
             className="bg-[#65A662] text-white py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-green-600 transition-transform duration-300 focus:outline-none flex items-center justify-center space-x-2"
           >
             <FiCheckCircle className="text-white" />
