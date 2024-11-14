@@ -9,52 +9,53 @@ const Testimonials = () => {
     {
       name: "Colette Daniel",
       role: "Student",
-      text: "This program has significantly advanced my career! The hands-on projects and real-world applications were invaluable.",
+      text: "This program transformed my career trajectory! The hands-on projects and real-world applications allowed me to build practical skills that directly contributed to my success.",
       image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ftesti-83S5W35.jpg?alt=media&token=fe18257d-1a4d-4bad-9781-0c7e4c71fd5a",
       rating: 5,
-      subtitle: "Achieved her dream career through practical learning.",
+      subtitle: "Realized her career goals through skill-focused training.",
     },
     {
       name: "John Doe",
       role: "Graduate",
-      text: "The courses were in-depth, and the instructors were always available to support my learning journey. I highly recommend it.",
+      text: "The courses were comprehensive, and the instructors were incredibly supportive throughout my journey. The skills I gained helped me secure an exciting new role in my field.",
       image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ftesti-83S5W35.jpg?alt=media&token=fe18257d-1a4d-4bad-9781-0c7e4c71fd5a",
       rating: 4,
-      subtitle: "Gained a new job role thanks to the skills acquired.",
+      subtitle: "Transitioned into a new role, leveraging the expertise gained.",
     },
     {
       name: "Colette Daniel",
       role: "Student",
-      text: "This program has significantly advanced my career! The hands-on projects and real-world applications were invaluable.",
+      text: "This program has been instrumental in advancing my career! Every project felt like real-world experience, equipping me with skills that made a tangible difference in my job prospects.",
       image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ftesti-83S5W35.jpg?alt=media&token=fe18257d-1a4d-4bad-9781-0c7e4c71fd5a",
       rating: 5,
-      subtitle: "Achieved her dream career through practical learning.",
+      subtitle: "Career-advancing skills through hands-on learning.",
     },
     {
       name: "John Doe",
       role: "Graduate",
-      text: "The courses were in-depth, and the instructors were always available to support my learning journey. I highly recommend it.",
+      text: "The curriculum was detailed and engaging, and the instructors provided consistent guidance. I’m grateful for the practical skills that I’ve already applied in my new job.",
       image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ftesti-83S5W35.jpg?alt=media&token=fe18257d-1a4d-4bad-9781-0c7e4c71fd5a",
       rating: 4,
-      subtitle: "Gained a new job role thanks to the skills acquired.",
+      subtitle: "Applied new skills effectively in a professional role.",
     },
     {
       name: "Colette Daniel",
       role: "Student",
-      text: "This program has significantly advanced my career! The hands-on projects and real-world applications were invaluable.",
+      text: "This learning experience was exceptional! The hands-on projects aligned perfectly with industry standards, making it easier to transition smoothly into my career.",
       image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ftesti-83S5W35.jpg?alt=media&token=fe18257d-1a4d-4bad-9781-0c7e4c71fd5a",
       rating: 5,
-      subtitle: "Achieved her dream career through practical learning.",
+      subtitle: "Successfully transitioned to her career with confidence.",
     },
     {
       name: "John Doe",
       role: "Graduate",
-      text: "The courses were in-depth, and the instructors were always available to support my learning journey. I highly recommend it.",
+      text: "I highly recommend this program. The detailed lessons and projects not only prepared me for my current role but also gave me the confidence to excel professionally.",
       image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ftesti-83S5W35.jpg?alt=media&token=fe18257d-1a4d-4bad-9781-0c7e4c71fd5a",
       rating: 4,
-      subtitle: "Gained a new job role thanks to the skills acquired.",
+      subtitle: "Enhanced his professional skill set and confidence.",
     },
-  ];
+];
+
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slide, setSlide] = useState("");

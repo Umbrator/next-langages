@@ -9,55 +9,58 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      question: "What levels of English courses do you offer?",
+      question: "What levels of Italian courses do you offer?",
       answer:
-        "We offer English courses for all proficiency levels, from beginner to advanced. Our courses are designed to cater to learners with varying language abilities."
+        "We offer Italian courses for all proficiency levels, from beginner to advanced. Our courses are designed to cater to learners with varying language abilities."
     },
     {
       question: "Are your instructors certified and experienced?",
       answer:
-        "Yes, all our instructors are highly certified and come with years of teaching experience in the field of English education."
+        "Yes, all our instructors are certified professionals with extensive experience in teaching Italian and guiding students to fluency."
     },
     {
       question: "What teaching methods and materials do you use?",
       answer:
-        "We use a combination of traditional and modern teaching methods, including interactive materials, online resources, and real-life case studies."
+        "Our courses combine traditional and interactive teaching methods, including engaging materials, online resources, and real-life scenarios to enhance learning."
     },
     {
-      question: "Can I join an English course if I have a busy schedule?",
+      question: "Can I join an Italian course if I have a busy schedule?",
       answer:
-        "Absolutely! We offer flexible scheduling options, including weekend and evening classes, to accommodate your busy schedule."
+        "Absolutely! We offer flexible scheduling options, including evening and weekend classes, to accommodate your schedule."
     },
     {
-      question: "Is there any age restriction for enrolling in English courses?",
+      question: "Is there any age restriction for enrolling in Italian courses?",
       answer:
-        "No, we welcome learners of all ages. Whether you're a student or a professional, we have a course suited for your needs."
+        "No, we welcome learners of all ages. Our Italian courses are designed to support both students and professionals."
     }
   ];
+  
 
   return (
     <section className="py-16 bg-gray-100">
   <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+    {/* Image Section */}
     <div className="relative flex items-center">
       <img
         src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fchildren-learning-together-how-speak-therapy%20(1).jpg?alt=media&token=374a473a-456a-4af3-8b51-b38634a14699"
-        alt="Happy Students"
+        alt="Italian language learning - students collaborating in class"
         className="w-full h-full rounded-lg shadow-md object-cover"
-        style={{ transform: "none", transition: "none" }}
+        loading="lazy"
       />
-      <div className="absolute bottom-0 right-0 flex space-x-1 space-y-1">
+      <div className="absolute bottom-0 right-0 flex space-x-1">
         <div className="w-4 h-4 bg-white"></div>
         <div className="w-4 h-4 bg-gray-300"></div>
       </div>
     </div>
     
+    {/* FAQ Section */}
     <div className="text-left flex flex-col justify-center">
       <h3 className="text-sm font-semibold text-green-700 mb-2 flex items-center">
-        <FaAngleDoubleRight className="ml-2 text-red-700" /> {/* Red icon for Italian theme */}
-        FAQ
+        <FaAngleDoubleRight className="ml-2 text-red-700" />
+        Frequently Asked Questions
       </h3>
       <h2 className="text-4xl font-bold text-gray-800 mb-4">
-        Just in Case You Missed Anything.
+        Learn More About Our Italian Courses
       </h2>
       <ul className="text-gray-800 space-y-4">
         {faqData.map((faq, index) => (
@@ -65,17 +68,20 @@ const FAQSection = () => {
             <div
               className="flex justify-between cursor-pointer"
               onClick={() => toggleFAQ(index)}
+              aria-expanded={openIndex === index}
+              aria-controls={`faq-content-${index}`}
             >
               <span className="font-semibold">{faq.question}</span>
               <span
                 className={`text-xl transform transition-transform duration-300 ${
                   openIndex === index ? "rotate-45 text-red-700" : "text-green-700"
-                }`} // Color changes for open/closed states
+                }`}
               >
                 {openIndex === index ? "−" : "+"}
               </span>
             </div>
             <div
+              id={`faq-content-${index}`}
               className={`overflow-hidden transition-max-height duration-500 ease-in-out ${
                 openIndex === index ? "max-h-40" : "max-h-0"
               }`}
@@ -88,6 +94,7 @@ const FAQSection = () => {
     </div>
   </div>
 </section>
+
 
   );
 };

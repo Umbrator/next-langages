@@ -24,9 +24,9 @@ const Contact = () => {
 
   const locationData = [
     {
-      address: "Jl. Sunset Road No.815, Kuta",
-      phone: "+1234567890",
-      email: "support@domain.com",
+      address: "Ocean Connecting sarl, Agadir 80000",
+      phone: "+212-704309787",
+      email: "oceanconnecting.ma@gmail.com",
       workingHours: "Mon - Fri: 9 AM - 6 PM",
     },
   ];

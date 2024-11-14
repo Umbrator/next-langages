@@ -1,4 +1,3 @@
-// page.jsx
 import React from 'react';
 import Navbar from './header/navbar';
 import Carousel from './header/Carousel';

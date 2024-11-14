@@ -7,7 +7,7 @@ const Carousel = () => {
     () => [
       {
         title: "Learn New Languages  and Move  Forward",
-        subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        subtitle: "Join our platform to master new languages with interactive courses, experienced instructors, and a community of active learners.",
         image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fimage-JA74V7F-768x1054.png?alt=media&token=0080c1ec-ad15-496d-96e9-e74abd5984d3",
         button1: "Get Started",
         button2: "Watch Intro",

@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import LearnEnglishContent from './LearnEnglishContent';
 import LearnEnligshFaQ from "../LearnEnligshFaQ";
@@ -19,13 +20,11 @@ const LearnEnglish = () => {
   useEffect(() => {
     const incrementNumber = (start, end, setter, duration) => {
       let current = start;
-      const stepTime = Math.abs(Math.floor(duration / (end - start)));
+      const stepTime = Math.floor(duration / (end - start));
       const timer = setInterval(() => {
         current += 1;
         setter(current);
-        if (current === end) {
-          clearInterval(timer);
-        }
+        if (current === end) clearInterval(timer);
       }, stepTime);
     };
     
@@ -36,9 +35,7 @@ const LearnEnglish = () => {
         currentText += fullText[index];
         setter(currentText);
         index += 1;
-        if (index === fullText.length) {
-          clearInterval(timer);
-        }
+        if (index === fullText.length) clearInterval(timer);
       }, delay);
     };
 
@@ -53,19 +50,16 @@ const LearnEnglish = () => {
     animateText("Learn English Online with Professional Instructors", setHeadlineText, 50);
   }, []);
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const closeModal = () => setIsModalOpen(false);
+
   const scrollToOurCourses = () => {
-    const ourCoursesSection = document.getElementById("OurCourses");
-    if (ourCoursesSection) {
-      ourCoursesSection.scrollIntoView({ behavior: "smooth" });
-    }
+    document.getElementById("OurCourses")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className="learn-english-page" style={{ fontFamily: '"Public Sans", sans-serif' }}>
-      <Navbar/>
+      <Navbar />
+      
       <style jsx>{`
         /* Media query for mobile devices */
         @media (max-width: 768px) {
@@ -90,6 +84,7 @@ const LearnEnglish = () => {
           }
         }
       `}</style>
+      
       <section
         className="hero bg-cover bg-center h-screen text-white relative flex items-center pt-20"
         style={{
@@ -99,9 +94,7 @@ const LearnEnglish = () => {
         <div className="overlay absolute inset-0 bg-black bg-opacity-60"></div>
 
         <div className="container mx-auto relative z-10 flex flex-col items-start text-left">
-          <h1 className="text-5xl md:text-5xl font-bold mb-4">
-            {headlineText}
-          </h1>
+          <h1 className="text-5xl md:text-5xl font-bold mb-4">{headlineText}</h1>
 
           <p className="text-lg md:text-1xl mb-8 max-w-2xl">
             Your English progress is what matters the most to us. If you're not satisfied after 12 weeks of learning, you get your money back.
@@ -115,110 +108,48 @@ const LearnEnglish = () => {
             Start Now
           </button>
 
-          {/* Stats Section */}
           <div className="mt-10 flex flex-col md:flex-row justify-between w-full max-w-4xl text-left text-white items-start stats">
-            {/* Years of Experience */}
             <div className="flex flex-col items-start mb-6 md:mr-8">
-              <div className="flex flex-col items-start">
-                <div className="flex items-baseline">
-                  <h3
-                    className="font-bold"
-                    style={{
-                      fontSize: "42px",
-                      color: "#65A662",
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    {years}
-                  </h3>
-                  <span
-                    style={{
-                      color: "#FFFFFF",
-                      fontSize: "26px",
-                      marginLeft: "8px",
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    Years
-                  </span>
-                </div>
-                <p className="text-sm mt-0" style={{ textAlign: "left" }}>
-                  {yearsText}
-                </p>
+              <div className="flex items-baseline">
+                <h3 className="font-bold" style={{ fontSize: "42px", color: "#65A662" }}>
+                  {years}
+                </h3>
+                <span style={{ color: "#FFFFFF", fontSize: "26px", marginLeft: "8px" }}>Years</span>
               </div>
+              <p className="text-sm mt-0 text-gray-300" style={{ textAlign: "left" }}>{yearsText}</p>
             </div>
             <div className="divider-line h-12 border-l-2 border-white mx-8 md:block"></div>
+
             <div className="flex flex-col items-start mb-6 md:mr-8">
-              <div className="flex flex-col items-start">
-                <div className="flex items-baseline">
-                  <h3
-                    className="font-bold"
-                    style={{
-                      fontSize: "42px",
-                      color: "#65A662",
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    {recommendedPercentage}%
-                  </h3>
-                  <span
-                    style={{
-                      color: "#FFFFFF",
-                      fontSize: "26px",
-                      marginLeft: "8px",
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    Recommended
-                  </span>
-                </div>
-                <p className="text-sm mt-0" style={{ textAlign: "left" }}>
-                  {recommendedText}
-                </p>
+              <div className="flex items-baseline">
+                <h3 className="font-bold" style={{ fontSize: "42px", color: "#65A662" }}>
+                  {recommendedPercentage}%
+                </h3>
+                <span style={{ color: "#FFFFFF", fontSize: "26px", marginLeft: "8px" }}>Recommended</span>
               </div>
+              <p className="text-sm mt-0 text-gray-300" style={{ textAlign: "left" }}>{recommendedText}</p>
             </div>
             <div className="divider-line h-12 border-l-2 border-white mx-8 md:block"></div>
 
             <div className="flex flex-col items-start mb-6">
-              <div className="flex flex-col items-start">
-                <div className="flex items-baseline">
-                  <h3
-                    className="font-bold"
-                    style={{
-                      fontSize: "42px",
-                      color: "#65A662",
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    {students.toLocaleString()}
-                  </h3>
-                  <span
-                    style={{
-                      color: "#FFFFFF",
-                      fontSize: "26px",
-                      marginLeft: "8px",
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    Students
-                  </span>
-                </div>
-                <p className="text-sm mt-0" style={{ textAlign: "left" }}>
-                  {studentsText}
-                </p>
+              <div className="flex items-baseline">
+                <h3 className="font-bold" style={{ fontSize: "42px", color: "#65A662" }}>
+                  {students.toLocaleString()}
+                </h3>
+                <span style={{ color: "#FFFFFF", fontSize: "26px", marginLeft: "8px" }}>Students</span>
               </div>
+              <p className="text-sm mt-0 text-gray-300" style={{ textAlign: "left" }}>{studentsText}</p>
             </div>
           </div>
         </div>
       </section>
-      
+
       <LearnEnglishContent />
       <LearnEnglishModel />
       <LearnEnligshFaQ />
 
-      {/* Modal for sign-up */}
       {isModalOpen && <Modal closeModal={closeModal} />}
-      <Footer/>
+      <Footer />
     </div>
   );
 };

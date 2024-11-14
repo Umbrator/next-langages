@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Ex1 from '../components/Exercice/Ex1'; // Adjusted import paths for Next.js
+import Ex1 from '../components/Exercice/Ex1';
 import Ex2 from '../components/Exercice/Ex2';
 import Ex3 from '../components/Exercice/Ex3';
 import Ex4 from '../components/Exercice/Ex4';

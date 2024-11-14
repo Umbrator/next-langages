@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import LearnSpainContent from "./LearnSpainContent";
 import LearnSpainFaQ from "../LearnSpainFaQ";
@@ -8,72 +9,67 @@ import Footer from "../../header/Footer";
 
 const LearnSpain = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const [years, setYears] = useState(0);
-  const [recommendedPercentage, setRecommendedPercentage] = useState(0);
-  const [students, setStudents] = useState(0);
-
-  const [yearsText, setYearsText] = useState("");
-  const [recommendedText, setRecommendedText] = useState("");
-  const [studentsText, setStudentsText] = useState("");
-
-  const [headlineText, setHeadlineText] = useState("");
+  const [stats, setStats] = useState({
+    years: 0,
+    recommendedPercentage: 0,
+    students: 0,
+  });
+  const [textContent, setTextContent] = useState({
+    yearsText: "",
+    recommendedText: "",
+    studentsText: "",
+    headlineText: "",
+  });
 
   useEffect(() => {
-    const incrementNumber = (start, end, setter, duration) => {
+    const animateCounter = (start, end, key, duration) => {
       let current = start;
       const stepTime = Math.abs(Math.floor(duration / (end - start)));
       const timer = setInterval(() => {
         current += 1;
-        setter(current);
-        if (current === end) {
-          clearInterval(timer);
-        }
+        setStats((prevStats) => ({ ...prevStats, [key]: current }));
+        if (current === end) clearInterval(timer);
       }, stepTime);
     };
 
-    const animateText = (fullText, setter, delay) => {
-      let currentText = "";
+    const animateText = (text, key, delay) => {
       let index = 0;
       const timer = setInterval(() => {
-        currentText += fullText[index];
-        setter(currentText);
+        setTextContent((prevText) => ({
+          ...prevText,
+          [key]: text.slice(0, index + 1),
+        }));
         index += 1;
-        if (index === fullText.length) {
-          clearInterval(timer);
-        }
+        if (index === text.length) clearInterval(timer);
       }, delay);
     };
 
-    incrementNumber(0, 10, setYears, 2000);
-    incrementNumber(0, 96, setRecommendedPercentage, 2000);
-    incrementNumber(0, 150, setStudents, 2000);
+    animateCounter(0, 10, "years", 2000);
+    animateCounter(0, 96, "recommendedPercentage", 2000);
+    animateCounter(0, 150, "students", 2000);
 
     setTimeout(
-      () => animateText("of excellence in education", setYearsText, 50),
+      () => animateText("of excellence in education", "yearsText", 50),
       500
     );
     setTimeout(
-      () => animateText("Recommended by students", setRecommendedText, 50),
+      () => animateText("Recommended by students", "recommendedText", 50),
       1000
     );
     setTimeout(
-      () => animateText("Students from 100 countries", setStudentsText, 50),
+      () => animateText("Students from 100 countries", "studentsText", 50),
       1500
     );
-
     animateText(
-      "Learn Spain Online with Professional Instructors",
-      setHeadlineText,
+      "Learn Spanish Online with Professional Instructors",
+      "headlineText",
       50
     );
   }, []);
 
-  const scrollToOurCourses = () => {
-    const ourCoursesSection = document.getElementById("OurCourses");
-    if (ourCoursesSection) {
-      ourCoursesSection.scrollIntoView({ behavior: "smooth" });
-    }
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
   const closeModal = () => {
@@ -82,19 +78,16 @@ const LearnSpain = () => {
 
   return (
     <div
-      className="learn-spain-page "
+      className="learn-spain-page"
       style={{ fontFamily: '"Public Sans", sans-serif' }}
     >
       <Navbar />
       <style jsx>{`
-        /* Media query for mobile devices */
         @media (max-width: 768px) {
           .hero h1 {
             font-size: 1.8rem !important;
           }
-          .hero p {
-            font-size: 0.9rem !important;
-          }
+          .hero p,
           .hero button {
             font-size: 0.9rem !important;
           }
@@ -104,12 +97,12 @@ const LearnSpain = () => {
           .stats span {
             font-size: 18px !important;
           }
-          /* Hide divider lines on mobile */
           .divider-line {
             display: none !important;
           }
         }
       `}</style>
+
       <section
         className="hero bg-cover bg-center h-screen text-white relative flex items-center pt-20"
         style={{
@@ -120,17 +113,17 @@ const LearnSpain = () => {
 
         <div className="container mx-auto relative z-10 flex flex-col items-start text-left">
           <h1 className="text-5xl md:text-5xl font-bold mb-4 text-white">
-            {headlineText}
+            {textContent.headlineText}
           </h1>
 
-          <p className="text-lg md:text-1xl mb-8 max-w-2xl">
-            Your Spain learning progress is what matters the most to us. If
+          <p className="text-lg md:text-1xl mb-8 max-w-2xl text-gray-300">
+            Your Spanish learning progress is what matters the most to us. If
             you're not satisfied after 12 weeks of learning, you get your money
             back.
           </p>
 
           <button
-            onClick={scrollToOurCourses}
+            onClick={() => scrollToSection("OurCourses")}
             className="bg-red-600 hover:bg-yellow-500 text-white py-3 px-8 rounded-full text-lg transition-colors duration-300"
           >
             Start Now
@@ -138,110 +131,101 @@ const LearnSpain = () => {
 
           {/* Stats Section */}
           <div className="mt-10 flex flex-col md:flex-row justify-between w-full max-w-4xl text-left text-white items-start stats">
-            {/* Years of Experience */}
             <div className="flex flex-col items-start mb-6 md:mr-8">
-              <div className="flex flex-col items-start">
-                <div className="flex items-baseline">
-                  <h3
-                    className="font-bold"
-                    style={{
-                      fontSize: "42px",
-                      color: "#FFD700", // Yellow for the stat number
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    {years}
-                  </h3>
-                  <span
-                    style={{
-                      color: "#FFFFFF",
-                      fontSize: "26px",
-                      marginLeft: "8px",
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    Years
-                  </span>
-                </div>
-                <p
-                  className="text-sm mt-0 text-gray-300"
-                  style={{ textAlign: "left" }}
+              <div className="flex items-baseline">
+                <h3
+                  className="font-bold"
+                  style={{
+                    fontSize: "42px",
+                    color: "#FFD700",
+                    fontFamily: '"Public Sans", sans-serif',
+                  }}
                 >
-                  {yearsText}
-                </p>
+                  {stats.years}
+                </h3>
+                <span
+                  style={{
+                    color: "#FFFFFF",
+                    fontSize: "26px",
+                    marginLeft: "8px",
+                    fontFamily: '"Public Sans", sans-serif',
+                  }}
+                >
+                  Years
+                </span>
               </div>
+              <p
+                className="text-sm mt-0 text-gray-300"
+                style={{ textAlign: "left" }}
+              >
+                {textContent.yearsText}
+              </p>
             </div>
 
             <div className="divider-line h-12 border-l-2 border-white mx-8 md:block"></div>
 
-            {/* Recommended Percentage */}
             <div className="flex flex-col items-start mb-6 md:mr-8">
-              <div className="flex flex-col items-start">
-                <div className="flex items-baseline">
-                  <h3
-                    className="font-bold"
-                    style={{
-                      fontSize: "42px",
-                      color: "#FFD700", // Yellow for the stat number
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    {recommendedPercentage}%
-                  </h3>
-                  <span
-                    style={{
-                      color: "#FFFFFF",
-                      fontSize: "26px",
-                      marginLeft: "8px",
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    Recommended
-                  </span>
-                </div>
-                <p
-                  className="text-sm mt-0 text-gray-300"
-                  style={{ textAlign: "left" }}
+              <div className="flex items-baseline">
+                <h3
+                  className="font-bold"
+                  style={{
+                    fontSize: "42px",
+                    color: "#FFD700",
+                    fontFamily: '"Public Sans", sans-serif',
+                  }}
                 >
-                  {recommendedText}
-                </p>
+                  {stats.recommendedPercentage}%
+                </h3>
+                <span
+                  style={{
+                    color: "#FFFFFF",
+                    fontSize: "26px",
+                    marginLeft: "8px",
+                    fontFamily: '"Public Sans", sans-serif',
+                  }}
+                >
+                  Recommended
+                </span>
               </div>
+              <p
+                className="text-sm mt-0 text-gray-300"
+                style={{ textAlign: "left" }}
+              >
+                {textContent.recommendedText}
+              </p>
             </div>
 
-            <div className=" divider-line h-12 border-l-2 border-white mx-8 md:block"></div>
+            <div className="divider-line h-12 border-l-2 border-white mx-8 md:block"></div>
 
-            {/* Number of Students */}
             <div className="flex flex-col items-start mb-6">
-              <div className="flex flex-col items-start">
-                <div className="flex items-baseline">
-                  <h3
-                    className="font-bold"
-                    style={{
-                      fontSize: "42px",
-                      color: "#FFD700", // Yellow for the stat number
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    {students.toLocaleString()}
-                  </h3>
-                  <span
-                    style={{
-                      color: "#FFFFFF",
-                      fontSize: "26px",
-                      marginLeft: "8px",
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    Students
-                  </span>
-                </div>
-                <p
-                  className="text-sm mt-0 text-gray-300"
-                  style={{ textAlign: "left" }}
+              <div className="flex items-baseline">
+                <h3
+                  className="font-bold"
+                  style={{
+                    fontSize: "42px",
+                    color: "#FFD700",
+                    fontFamily: '"Public Sans", sans-serif',
+                  }}
                 >
-                  {studentsText}
-                </p>
+                  {stats.students.toLocaleString()}
+                </h3>
+                <span
+                  style={{
+                    color: "#FFFFFF",
+                    fontSize: "26px",
+                    marginLeft: "8px",
+                    fontFamily: '"Public Sans", sans-serif',
+                  }}
+                >
+                  Students
+                </span>
               </div>
+              <p
+                className="text-sm mt-0 text-gray-300"
+                style={{ textAlign: "left" }}
+              >
+                {textContent.studentsText}
+              </p>
             </div>
           </div>
         </div>
@@ -251,7 +235,6 @@ const LearnSpain = () => {
       <LearnSpainFaQ />
       <LearnSpainModel />
 
-      {/* Modal for sign-up */}
       {isModalOpen && <Modal closeModal={closeModal} />}
       <Footer />
     </div>

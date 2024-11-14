@@ -93,7 +93,7 @@ const LearnFrench = () => {
       <section
         className="hero bg-cover bg-center h-screen text-white relative flex items-center pt-20"
         style={{
-          backgroundImage: `url("https://img.freepik.com/premium-photo/eiffel-tower-french-flag-sunset_1276750-8399.jpg?w=1060")`, // French flag image background
+          backgroundImage: `url("https://img.freepik.com/premium-photo/eiffel-tower-french-flag-sunset_1276750-8399.jpg?w=1060")`,
         }}
       >
         <div className="overlay absolute inset-0 bg-black bg-opacity-50"></div>
@@ -110,7 +110,7 @@ const LearnFrench = () => {
           <button
             onClick={scrollToOurCourses}
             className="hover:bg-blue-800 text-white py-3 px-8 rounded-full text-lg"
-            style={{ backgroundColor: "#0052A5" }} // Blue color for French theme
+            style={{ backgroundColor: "#0052A5" }}
           >
             Start Now
           </button>
@@ -213,7 +213,6 @@ const LearnFrench = () => {
       </section>
       <OffrsSection />
       <LearnFrenchModel />
-      {/* Modal for sign-up */}
       {isModalOpen && <Modal closeModal={closeModal} />}
       <Footer/>
     </div>

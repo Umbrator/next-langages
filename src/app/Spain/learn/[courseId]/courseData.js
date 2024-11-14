@@ -98,58 +98,58 @@ export const courseData = {
     ],
   },
   "business-spanish": {
-    title: "Español para Negocios",
+    title: "Spanish for Business",
     description:
-      "Nuestras clases particulares se adaptan a tus necesidades y objetivos de aprendizaje individuales. Nos enfocamos en las áreas principales del español con un enfoque personalizado.",
+      "Our private classes are tailored to your individual needs and learning goals. We focus on the core areas of Spanish with a personalized approach..",
     image:
       "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-stacks-table-working-space.jpg?alt=media&token=f3614889-d8b9-4054-91d9-fba83dbd3ba0",
     levels: [
       {
-        level: "Nivel Principiante",
+        level: "Beginner Level",
         description:
-          "Se enfoca en la gramática básica y el vocabulario profesional. Aprenderás a mantener conversaciones simples y redactar textos básicos.",
+          "It focuses on basic grammar and professional vocabulary. You will learn to maintain simple conversations and write basic texts..",
         topics: [
-          "Introducción a la gramática básica y vocabulario de negocios",
-          "Diálogos simples en un contexto profesional",
-          "Redacción y respuesta de correos electrónicos básicos",
-          "Práctica de frases comunes en entornos laborales",
+          "Introduction to basic grammar and business vocabulary",
+          "Simple dialogues in a professional context",
+          "Writing and responding to basic emails",
+          "Practice common phrases in work environments",
         ],
       },
       // ... otros niveles
     ],
     objectives: [
-      "Lograr fluidez y confianza en la comunicación diaria en español",
-      "Desarrollar habilidades auditivas mediante lecciones personalizadas",
-      "Expandir vocabulario para diversos contextos",
+      "Achieve fluency and confidence in daily communication in Spanish",
+"Develop listening skills through personalized lessons",
+"Expand vocabulary for various contexts",
     ],
     schedule: [
       {
-        day: "Lunes - Jueves",
-        session: "Sesión de la Mañana",
-        time: "9:00 AM - 11:00 AM",
+        day: "Monday - Thursday",
+session: "Morning Session",
+time: "9:00 AM - 11:00 AM",
       },
       {
-        day: "Lunes - Jueves",
-        session: "Sesión de la Tarde",
-        time: "1:00 PM - 3:00 PM",
+        day: "Monday - Thursday",
+session: "Afternoon Session",
+time: "1:00 PM - 3:00 PM",
       },
     ],
     fee: 350,
     prerequisites:
-      "No hay requisitos específicos para principiantes. Los estudiantes intermedios y avanzados deben tener un conocimiento básico de la gramática española.",
+      "There are no specific requirements for beginners. Intermediate and advanced students should have a basic knowledge of Spanish grammar..",
     faq: [
       {
-        question: "¿Qué materiales se proporcionan?",
+        question: "What materials are provided?",
         answer:
-          "Un plan de curso personalizado, folletos y acceso a recursos en línea.",
+          "A personalized course plan, handouts, and access to online resources.",
       },
       {
-        question: "¿Puedo programar lecciones en horarios diferentes?",
-        answer: "Sí, contactándonos con antelación, puedes ajustar tu horario.",
+        question: "Can I schedule lessons at different times?",
+        answer: "Yes, by contacting us in advance, you can adjust your schedule..",
       },
       {
-        question: "¿Hay un certificado después de completar el curso?",
-        answer: "Sí, al completar con éxito, se entrega un certificado.",
+        question: "Is there a certificate after completing the course?",
+        answer: "Yes, upon successful completion, a certificate is awarded..",
       },
     ],
   },
