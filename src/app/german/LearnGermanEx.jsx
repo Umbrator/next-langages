@@ -6,7 +6,7 @@ import Ex4 from '../Exercice/Ex4';
 import Ex5 from '../Exercice/Ex5';
 import Levels from '../Exercice/Levels';
 
-const LearnEnglishEx = () => {
+const LearnGermanEx = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [scores, setScores] = useState({ ex1: 0, ex2: 0, ex3: 0, ex4: 0, ex5: 0 });
   const [unlockedLevels, setUnlockedLevels] = useState({ A1: true, A2: false, B1: false, B2: false, C1: false });
@@ -160,4 +160,4 @@ const LearnEnglishEx = () => {
   );
 };
 
-export default LearnEnglishEx;
+export default LearnGermanEx;

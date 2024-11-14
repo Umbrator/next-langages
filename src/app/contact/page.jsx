@@ -79,15 +79,15 @@ export default function ContactUs() {
                 <ul className="text-gray-700 space-y-3">
                   <li className="flex items-center space-x-4">
                     <FaPhoneAlt className="text-blue-600" />
-                    <span>+91-9998887776</span>
+                    <span>+212-704309787</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <FaEnvelope className="text-blue-600" />
-                    <span>feedback@geeksforgeeks.org</span>
+                    <span>oceanconnecting.ma@gmail.com</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <FaMapMarkerAlt className="text-blue-600" />
-                    <span>A-143, 9th Floor, Sector-136, Noida</span>
+                    <span>Ocean Connecting sarl, Agadir 80000</span>
                   </li>
                 </ul>
               </section>

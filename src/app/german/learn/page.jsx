@@ -6,67 +6,64 @@ import LearnGermanModel from "../LearnGermanModel";
 import Navbar from "../../header/navbar";
 import Footer from "../../header/Footer";
 
-const LearnEnglish = () => {
+const LearnGerman = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const [years, setYears] = useState(0);
-  const [recommendedPercentage, setRecommendedPercentage] = useState(0);
-  const [students, setStudents] = useState(0);
-
-  const [yearsText, setYearsText] = useState("");
-  const [recommendedText, setRecommendedText] = useState("");
-  const [studentsText, setStudentsText] = useState("");
+  // Stats state variables grouped in one object
+  const [stats, setStats] = useState({
+    years: 0,
+    recommendedPercentage: 0,
+    students: 0,
+    yearsText: "",
+    recommendedText: "",
+    studentsText: "",
+  });
 
   const [headlineText, setHeadlineText] = useState("");
 
   useEffect(() => {
-    const incrementNumber = (start, end, setter, duration) => {
+    const incrementNumber = (start, end, key, duration) => {
       let current = start;
-      const stepTime = Math.abs(Math.floor(duration / (end - start)));
+      const stepTime = Math.floor(duration / (end - start));
       const timer = setInterval(() => {
         current += 1;
-        setter(current);
-        if (current === end) {
-          clearInterval(timer);
-        }
+        setStats((prevStats) => ({ ...prevStats, [key]: current }));
+        if (current === end) clearInterval(timer);
       }, stepTime);
     };
 
-    const animateText = (fullText, setter, delay) => {
+    const animateText = (text, key, delay) => {
       let currentText = "";
       let index = 0;
       const timer = setInterval(() => {
-        currentText += fullText[index];
-        setter(currentText);
+        currentText += text[index];
+        setStats((prevStats) => ({ ...prevStats, [key]: currentText }));
         index += 1;
-        if (index === fullText.length) {
-          clearInterval(timer);
-        }
+        if (index === text.length) clearInterval(timer);
       }, delay);
     };
 
-    incrementNumber(0, 10, setYears, 2000);
-    incrementNumber(0, 96, setRecommendedPercentage, 2000);
-    incrementNumber(0, 150, setStudents, 2000);
+    incrementNumber(0, 10, "years", 2000);
+    incrementNumber(0, 96, "recommendedPercentage", 2000);
+    incrementNumber(0, 150, "students", 2000);
 
-    setTimeout(
-      () => animateText("of excellence in education", setYearsText, 50),
-      500
-    );
-    setTimeout(
-      () => animateText("Recommended by students", setRecommendedText, 50),
-      1000
-    );
-    setTimeout(
-      () => animateText("Students from 100 countries", setStudentsText, 50),
-      1500
-    );
+    // Animating the texts with delay
+    setTimeout(() => animateText("of excellence in education", "yearsText", 50), 500);
+    setTimeout(() => animateText("Recommended by students", "recommendedText", 50), 1000);
+    setTimeout(() => animateText("Students from 100 countries", "studentsText", 50), 1500);
 
-    animateText(
-      "Learn German Online with Professional Instructors",
-      setHeadlineText,
-      50
-    );
+    // Headline text animation
+    const animateHeadlineText = (text, setter, delay) => {
+      let currentText = "";
+      let index = 0;
+      const timer = setInterval(() => {
+        currentText += text[index];
+        setter(currentText);
+        index += 1;
+        if (index === text.length) clearInterval(timer);
+      }, delay);
+    };
+    animateHeadlineText("Learn German Online with Professional Instructors", setHeadlineText, 50);
   }, []);
 
   const scrollToOurCourses = () => {
@@ -76,40 +73,22 @@ const LearnEnglish = () => {
     }
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div
-      className="learn-english-page"
-      style={{ fontFamily: '"Public Sans", sans-serif' }}
-    >
+    <div className="learn-english-page" style={{ fontFamily: '"Public Sans", sans-serif' }}>
       <Navbar />
+
       <style jsx>{`
-        /* Media query for mobile devices */
         @media (max-width: 768px) {
-          .hero h1 {
-            font-size: 1.8rem !important;
-          }
-          .hero p {
-            font-size: 0.9rem !important;
-          }
-          .hero button {
-            font-size: 0.9rem !important;
-          }
-          .stats h3 {
-            font-size: 28px !important;
-          }
-          .stats span {
-            font-size: 18px !important;
-          }
-          /* Hide divider lines on mobile */
-          .divider-line {
-            display: none !important;
-          }
+          .hero h1 { font-size: 1.8rem !important; }
+          .hero p, .hero button { font-size: 0.9rem !important; }
+          .stats h3 { font-size: 28px !important; }
+          .stats span { font-size: 18px !important; }
+          .divider-line { display: none !important; }
         }
       `}</style>
+
       <section
         className="hero bg-cover bg-center h-screen text-white relative flex items-center pt-20"
         style={{
@@ -136,112 +115,93 @@ const LearnEnglish = () => {
             Start Now
           </button>
 
-          {/* Stats Section */}
           <div className="mt-10 flex flex-col md:flex-row justify-between w-full max-w-4xl text-left text-white items-start stats">
-            {/* Years of Experience */}
             <div className="flex flex-col items-start mb-6 md:mr-8">
-              <div className="flex flex-col items-start">
-                <div className="flex items-baseline">
-                  <h3
-                    className="font-bold"
-                    style={{
-                      fontSize: "42px",
-                      color: "#FFD700", // Yellow for the stat number
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    {years}
-                  </h3>
-                  <span
-                    style={{
-                      color: "#FFFFFF",
-                      fontSize: "26px",
-                      marginLeft: "8px",
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    Years
-                  </span>
-                </div>
-                <p
-                  className="text-sm mt-0 text-gray-300"
-                  style={{ textAlign: "left" }}
+              <div className="flex items-baseline">
+                <h3
+                  className="font-bold"
+                  style={{
+                    fontSize: "42px",
+                    color: "#FFD700",
+                    fontFamily: '"Public Sans", sans-serif',
+                  }}
                 >
-                  {yearsText}
-                </p>
+                  {stats.years}
+                </h3>
+                <span
+                  style={{
+                    color: "#FFFFFF",
+                    fontSize: "26px",
+                    marginLeft: "8px",
+                    fontFamily: '"Public Sans", sans-serif',
+                  }}
+                >
+                  Years
+                </span>
               </div>
+              <p className="text-sm mt-0 text-gray-300" style={{ textAlign: "left" }}>
+                {stats.yearsText}
+              </p>
             </div>
 
             <div className="divider-line h-12 border-l-2 border-white mx-8 md:block"></div>
 
-            {/* Recommended Percentage */}
             <div className="flex flex-col items-start mb-6 md:mr-8">
-              <div className="flex flex-col items-start">
-                <div className="flex items-baseline">
-                  <h3
-                    className="font-bold"
-                    style={{
-                      fontSize: "42px",
-                      color: "#FFD700", // Yellow for the stat number
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    {recommendedPercentage}%
-                  </h3>
-                  <span
-                    style={{
-                      color: "#FFFFFF",
-                      fontSize: "26px",
-                      marginLeft: "8px",
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    Recommended
-                  </span>
-                </div>
-                <p
-                  className="text-sm mt-0 text-gray-300"
-                  style={{ textAlign: "left" }}
+              <div className="flex items-baseline">
+                <h3
+                  className="font-bold"
+                  style={{
+                    fontSize: "42px",
+                    color: "#FFD700",
+                    fontFamily: '"Public Sans", sans-serif',
+                  }}
                 >
-                  {recommendedText}
-                </p>
+                  {stats.recommendedPercentage}%
+                </h3>
+                <span
+                  style={{
+                    color: "#FFFFFF",
+                    fontSize: "26px",
+                    marginLeft: "8px",
+                    fontFamily: '"Public Sans", sans-serif',
+                  }}
+                >
+                  Recommended
+                </span>
               </div>
+              <p className="text-sm mt-0 text-gray-300" style={{ textAlign: "left" }}>
+                {stats.recommendedText}
+              </p>
             </div>
 
             <div className="divider-line h-12 border-l-2 border-white mx-8 md:block"></div>
 
-            {/* Number of Students */}
             <div className="flex flex-col items-start mb-6">
-              <div className="flex flex-col items-start">
-                <div className="flex items-baseline">
-                  <h3
-                    className="font-bold"
-                    style={{
-                      fontSize: "42px",
-                      color: "#FFD700", // Yellow for the stat number
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    {students.toLocaleString()}
-                  </h3>
-                  <span
-                    style={{
-                      color: "#FFFFFF",
-                      fontSize: "26px",
-                      marginLeft: "8px",
-                      fontFamily: '"Public Sans", sans-serif',
-                    }}
-                  >
-                    Students
-                  </span>
-                </div>
-                <p
-                  className="text-sm mt-0 text-gray-300"
-                  style={{ textAlign: "left" }}
+              <div className="flex items-baseline">
+                <h3
+                  className="font-bold"
+                  style={{
+                    fontSize: "42px",
+                    color: "#FFD700",
+                    fontFamily: '"Public Sans", sans-serif',
+                  }}
                 >
-                  {studentsText}
-                </p>
+                  {stats.students.toLocaleString()}
+                </h3>
+                <span
+                  style={{
+                    color: "#FFFFFF",
+                    fontSize: "26px",
+                    marginLeft: "8px",
+                    fontFamily: '"Public Sans", sans-serif',
+                  }}
+                >
+                  Students
+                </span>
               </div>
+              <p className="text-sm mt-0 text-gray-300" style={{ textAlign: "left" }}>
+                {stats.studentsText}
+              </p>
             </div>
           </div>
         </div>
@@ -251,11 +211,10 @@ const LearnEnglish = () => {
       <LearnGermanFaQ />
       <LearnGermanModel />
 
-      {/* Modal for sign-up */}
       {isModalOpen && <Modal closeModal={closeModal} />}
       <Footer />
     </div>
   );
 };
 
-export default LearnEnglish;
+export default LearnGerman;
