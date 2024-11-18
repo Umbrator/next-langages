@@ -123,19 +123,19 @@ const Footer = () => {
 
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6 mt-8 mb-4">
-          <a href="#" className="text-gray-300 hover:text-white">
+          <a href="https://www.linkedin.com/company/ocean-connecting/mycompany/" className="text-gray-300 hover:text-white">
             <FaLinkedin size={24} />
           </a>
-          <a href="#" className="text-gray-300 hover:text-white">
+          <a href="https://www.facebook.com/the.ocean.connecting/" className="text-gray-300 hover:text-white">
             <FaFacebookF size={24} />
           </a>
-          <a href="#" className="text-gray-300 hover:text-white">
+          <a href="https://www.instagram.com/oceanconnecting.ma/" className="text-gray-300 hover:text-white">
             <FaInstagram size={24} />
           </a>
-          <a href="#" className="text-gray-300 hover:text-white">
+          <a href="https://x.com/theoceansteam?lang=ar" className="text-gray-300 hover:text-white">
             <FaTwitter size={24} />
           </a>
-          <a href="#" className="text-gray-300 hover:text-white">
+          <a href="https://api.whatsapp.com/send/?phone=%2B212704309787" className="text-gray-300 hover:text-white">
             <FaWhatsapp size={24} />
           </a>
         </div>

@@ -39,15 +39,13 @@ const Navbar = () => {
     }
   };
 
-  // Opens dropdown immediately
   const handleMouseEnter = () => {
-    clearTimeout(closeTimeoutRef.current); // Clear any existing timeout
+    clearTimeout(closeTimeoutRef.current);
     setDropdownOpen(true);
   };
 
-  // Closes dropdown with a delay
   const handleMouseLeave = () => {
-    closeTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 200); // Delay of 200ms
+    closeTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 200);
   };
 
   return (

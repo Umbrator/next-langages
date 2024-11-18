@@ -16,7 +16,7 @@ const Carousel = () => {
           { title: "1250+", description: "Active Students" },
           { title: "Get 20% Disc Off", description: "On Every Course" },
         ],
-        youtubeUrl: "https://www.youtube.com/embed/njx-CtWPX3E",
+        youtubeUrl: "https://www.youtube.com/embed/gZDT_zOqxrw?si=doDr13sLA6Qys-GB",
       },
     ],
     []
