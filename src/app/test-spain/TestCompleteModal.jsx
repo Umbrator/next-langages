@@ -6,7 +6,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 const TestCompleteModal = ({ totalScore }) => {
   const shareOnWhatsApp = () => {
-    const message = `I completed the English Language Proficiency Test with a total score of ${totalScore}/100! 🎉`;
+    const message = `I completed the English Language Proficiency Test with a total score of ${totalScore}/50! 🎉`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };

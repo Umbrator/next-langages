@@ -6,8 +6,8 @@ import Courses from './header/CourseSection';
 import WhyLearnWithUs from './header/WhyLearnWithUs';
 import Testimonials from './header/Testimonials';
 import Contact from './header/Contact';
-import Footer from './header/Footer';
 import OfflineChat from './header/OfflineChat'
+import Footer from './header/Footer';
 
 const Page = () => {
   return (

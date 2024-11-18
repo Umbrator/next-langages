@@ -105,8 +105,8 @@ const Navbar = () => {
               {dropdownOpen && (
                 <div
                   className="absolute mt-2 py-2 w-48 bg-white rounded-lg shadow-lg transition-all duration-300 ease-in-out"
-                  onMouseEnter={handleMouseEnter} // Keep open if mouse enters dropdown
-                  onMouseLeave={handleMouseLeave} // Delay close if mouse leaves dropdown
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
                   {learnLinks.map((link) => (
                     <Link

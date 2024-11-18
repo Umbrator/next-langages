@@ -61,7 +61,7 @@ const Page = () => {
 
   const nextStep = () => {
     const currentExercise = `ex${currentStep}`;
-    const requiredScore = 3;
+    const requiredScore = 6;
 
     if (scores[currentExercise] >= requiredScore) {
       let nextLvl;
@@ -83,7 +83,7 @@ const Page = () => {
       }
 
       setUnlockedLevels((prev) => ({ ...prev, [nextLvl]: true }));
-      if (currentStep < 5) {
+      if (currentStep < 6) {
         setCurrentStep((prev) => prev + 1);
       } else {
         setShowFinalModal(true);

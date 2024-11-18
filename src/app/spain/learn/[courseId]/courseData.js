@@ -2,7 +2,7 @@ export const courseList = [
   {
     title: "General Spanish",
     description:
-      "Build a strong foundation in reading, writing, listening, and speaking skills in Spanish.",
+      "Build a strong foundation in reading, writing, listening, and speaking skills.",
     image:
       "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flovely-happy-girl-posing-with-book.jpg?alt=media&token=07f1dbb8-8c10-46c8-83d8-d01f65c74884",
   },

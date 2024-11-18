@@ -15,10 +15,10 @@ const Levels = ({ scores }) => {
   useEffect(() => {
     const newUnlockedLevels = {
       A1: true,
-      A2: scores.ex1 >= 3,
-      B1: scores.ex2 >= 3,
-      B2: scores.ex3 >= 3,
-      C1: scores.ex4 >= 3,
+      A2: scores.ex1 >= 6,
+      B1: scores.ex2 >= 6,
+      B2: scores.ex3 >= 6,
+      C1: scores.ex4 >= 6,
     };
 
     if (!Object.keys(newUnlockedLevels).every(key => newUnlockedLevels[key] === unlockedLevels[key])) {

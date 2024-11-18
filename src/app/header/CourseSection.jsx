@@ -6,35 +6,35 @@ import Link from "next/link";
 const CourseSection = () => {
   const courses = [
     {
-      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhome-bg-1-1.jpg?alt=media&token=f0e37178-3522-4f8e-ad8e-9e6c6b6e193c",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fstyle-blonde-woman-sitting-table-with-books-around-holds-usa-flag-yellow_87910-6703.jpg?alt=media&token=9f93bb69-19d5-413f-82cc-97c9e254b48a",
       title: "Learn English",
       description: "Learn essential English language skills for beginners.",
       countryFlag: "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
       link: "/english/learn",
     },
     {
-      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhome-bg-6.jpg?alt=media&token=b914aced-23f8-4ded-ab85-97f9b539b040",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmature-student-smiling-against-spain-flag-grunge-effect_1134-52857.jpg?alt=media&token=6eace9c7-be84-4c26-bbc8-bac9b6453885",
       title: "Learn Spanish",
       description: "Improve your Spanish with interactive exercises.",
       countryFlag: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg",
       link: "/spain/learn",
     },
     {
-      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhome-bg-4-1.jpg?alt=media&token=9f917b68-e190-4f9b-91dc-3776ab0bd7de",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fpeople-education-learning-school-concept-happy-smiling-teenage-student-girl-with-tablet-pc-folders-german-flag-background_380164-112357.avif?alt=media&token=9c50943b-84d5-4604-bf82-7cbee08b4b93",
       title: "Learn German",
       description: "Master German with our intensive language program.",
       countryFlag: "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
       link: "/german/learn",
     },
     {
-      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhome-bg-1-1.jpg?alt=media&token=f0e37178-3522-4f8e-ad8e-9e6c6b6e193c",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fstudent-studying-from-folders-against-italy-flag-grunge-effect_1134-52825.jpg?alt=media&token=c52e00f8-ab01-4f2f-bcd1-61147cbb01b5",
       title: "Learn Italian",
       description: "Start speaking Italian from day one.",
       countryFlag: "https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg",
       link: "/italie/learn",
     },
     {
-      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhome-bg-6.jpg?alt=media&token=b914aced-23f8-4ded-ab85-97f9b539b040",
+      image: "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fyoung-female-student-looking-webcam-talking-studying-teaching_116407-23399.jpg?alt=media&token=51732394-ef74-44b2-8c0e-3ff2f722481a",
       title: "Learn French",
       description: "Elevate your French language skills.",
       countryFlag: "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
@@ -55,7 +55,7 @@ const CourseSection = () => {
           }
         });
       },
-      { threshold: 0.1 } // 10% visibility to trigger
+      { threshold: 0.1 }
     );
 
     const cards = sectionRef.current.querySelectorAll(".course-card");
