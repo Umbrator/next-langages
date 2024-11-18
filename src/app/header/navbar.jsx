@@ -39,15 +39,13 @@ console.log('f')
     }
   };
 
-  // Opens dropdown immediately
   const handleMouseEnter = () => {
-    clearTimeout(closeTimeoutRef.current); // Clear any existing timeout
+    clearTimeout(closeTimeoutRef.current);
     setDropdownOpen(true);
   };
 
-  // Closes dropdown with a delay
   const handleMouseLeave = () => {
-    closeTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 200); // Delay of 200ms
+    closeTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 200);
   };
 
   return (
@@ -105,8 +103,8 @@ console.log('f')
               {dropdownOpen && (
                 <div
                   className="absolute mt-2 py-2 w-48 bg-white rounded-lg shadow-lg transition-all duration-300 ease-in-out"
-                  onMouseEnter={handleMouseEnter} // Keep open if mouse enters dropdown
-                  onMouseLeave={handleMouseLeave} // Delay close if mouse leaves dropdown
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
                   {learnLinks.map((link) => (
                     <Link

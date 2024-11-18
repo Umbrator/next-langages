@@ -96,7 +96,7 @@ const Ex2 = ({
   ];
 
   useEffect(() => {
-    if (remainingAttempts <= 0 && correctCount < 3) {
+    if (remainingAttempts <= 0 && correctCount < 6) {
       setShowNotQualifiedModal(true);
     }
   }, [remainingAttempts, correctCount]);
@@ -109,7 +109,7 @@ const Ex2 = ({
 
     if (isCorrect) {
       setCorrectCount((prev) => prev + 1);
-      if (correctCount + 1 >= 3) {
+      if (correctCount + 1 >= 6) {
         setShowCompletionModal(true);
         onScoreUpdate(correctCount + 1);
         return;
@@ -126,7 +126,7 @@ const Ex2 = ({
       questions[currentQuestionIndex].answer.toLowerCase();
     if (isCorrect) {
       setCorrectCount((prev) => prev + 1);
-      if (correctCount + 1 >= 3) {
+      if (correctCount + 1 >= 6) {
         setShowCompletionModal(true);
         onScoreUpdate(correctCount + 1);
         return;
@@ -139,7 +139,7 @@ const Ex2 = ({
       setInputAnswer("");
       if (currentQuestionIndex < questions.length - 1) {
         setCurrentQuestionIndex((prev) => prev + 1);
-      } else if (correctCount < 3) {
+      } else if (correctCount < 6) {
         setShowNotQualifiedModal(true);
       }
     }, 500);
@@ -159,7 +159,7 @@ const Ex2 = ({
 
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
-    } else if (correctCount < 3) {
+    } else if (correctCount < 6) {
       setShowNotQualifiedModal(true);
     }
   };

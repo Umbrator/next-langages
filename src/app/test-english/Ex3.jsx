@@ -90,7 +90,7 @@ const Ex3 = ({
     {
       question: "Write the past tense of 'read'.",
       type: "text",
-      answer: "read", // pronounced 'red'
+      answer: "read",
     },
     {
       question: "Complete the sentence with a suitable word: 'They decided to go for a walk despite ___.'",
@@ -105,7 +105,7 @@ const Ex3 = ({
 
 
   useEffect(() => {
-    if (remainingAttempts <= 0 && correctCount < 3) {
+    if (remainingAttempts <= 0 && correctCount < 6) {
       setShowNotQualifiedModal(true);
     }
   }, [remainingAttempts, correctCount]);
@@ -118,7 +118,7 @@ const Ex3 = ({
 
     if (isCorrect) {
       setCorrectCount((prev) => prev + 1);
-      if (correctCount + 1 >= 3) {
+      if (correctCount + 1 >= 6) {
         setShowCompletionModal(true);
         onScoreUpdate(correctCount + 1);
         return;
@@ -133,7 +133,7 @@ const Ex3 = ({
     const isCorrect = inputAnswer.trim().toLowerCase() === questions[currentQuestionIndex].answer.toLowerCase();
     if (isCorrect) {
       setCorrectCount((prev) => prev + 1);
-      if (correctCount + 1 >= 3) {
+      if (correctCount + 1 >= 6) {
         setShowCompletionModal(true);
         onScoreUpdate(correctCount + 1);
         return;
@@ -146,7 +146,7 @@ const Ex3 = ({
 
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
-    } else if (correctCount < 3) {
+    } else if (correctCount < 6) {
       setShowNotQualifiedModal(true);
     }
   };
@@ -165,7 +165,7 @@ const Ex3 = ({
 
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
-    } else if (correctCount < 3) {
+    } else if (correctCount < 6) {
       setShowNotQualifiedModal(true);
     }
   };

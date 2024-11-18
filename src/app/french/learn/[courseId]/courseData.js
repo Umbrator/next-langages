@@ -1,7 +1,7 @@
 export const courseList = [
     {
       title: 'General French',
-      description: 'Build a strong foundation in reading, writing, listening, and speaking skills in French.',
+      description: 'Build a strong foundation in reading, writing, listening, and speaking skills.',
       image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flearn-french-language-online-education-concept.jpg?alt=media&token=429c5302-c283-4690-afbd-1bba4108a041',
     },
     {
