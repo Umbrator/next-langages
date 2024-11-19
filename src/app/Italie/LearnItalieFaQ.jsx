@@ -42,7 +42,7 @@ const FAQSection = () => {
     {/* Image Section */}
     <div className="relative flex items-center">
       <img
-        src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fchildren-learning-together-how-speak-therapy%20(1).jpg?alt=media&token=374a473a-456a-4af3-8b51-b38634a14699"
+        src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fstudent-holding-notepad-against-italy-flag-grunge-effect_1134-52826.jpg?alt=media&token=a4ec3d4d-e837-4341-a1d8-e2584735890f"
         alt="Italian language learning - students collaborating in class"
         className="w-full h-full rounded-lg shadow-md object-cover"
         loading="lazy"

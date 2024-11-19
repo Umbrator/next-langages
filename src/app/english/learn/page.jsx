@@ -88,7 +88,7 @@ const LearnEnglish = () => {
       <section
         className="hero bg-cover bg-center h-screen text-white relative flex items-center pt-20"
         style={{
-          backgroundImage: `url("https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fschoolchild-sitting-desk-living-room-holding-school-book%20(1).jpg?alt=media&token=7b62b7f7-de89-44b8-8beb-4cd420b0043d")`,
+          backgroundImage: `url("https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-textbook-is-hands-schoolgirl-who-points-her-finger-side_222185-3091.jpg?alt=media&token=e28e8b26-0fd6-44bd-9f29-5c26ba2d1d91")`,
         }}
       >
         <div className="overlay absolute inset-0 bg-black bg-opacity-60"></div>

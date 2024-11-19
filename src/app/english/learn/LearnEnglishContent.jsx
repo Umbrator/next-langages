@@ -66,7 +66,7 @@ const LearnEnglishContent = () => {
           {[
             {
               imgSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-holding-english-class.jpg?alt=media&token=ae6daef5-ddd9-4c3c-b7b5-42f670c1b28a",
+                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-english-asks-student-white-class_255847-1856.avif?alt=media&token=c8c5e256-46ae-4485-af92-89f6a6ea9e74",
               title: "1-on-1 English Lessons",
               description:
                 "Our 1-on-1 English lessons connect you with experienced teachers worldwide, offering customized sessions tailored to your learning pace and goals.",
@@ -74,7 +74,7 @@ const LearnEnglishContent = () => {
             },
             {
               imgSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fback-view-kids-writing-whiteboard%20(1).jpg?alt=media&token=6f3bb071-7dcc-4c8c-bf46-bd45e5eb5df3",
+                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fgroup-primary-schoolchildren-teacher-working-desks-classroom_104603-7351.jpg?alt=media&token=6282e1cf-a509-41a0-aeda-df0287c8bea8",
               title: "Interactive Group English Classes",
               description:
                 "Engage with other learners in our interactive group English classes, ideal for building conversational skills and cultural knowledge in a collaborative environment.",
@@ -82,7 +82,7 @@ const LearnEnglishContent = () => {
             },
             {
               imgSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-assortment.jpg?alt=media&token=ce9c7ca8-debb-44d5-a54a-621cc1f25441",
+                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-resting-table-working-space_23-2149429616.jpg?alt=media&token=b5d99be5-a1ad-46e3-add1-735174989371",
               title: "Free English Practice Materials",
               description:
                 "Access a variety of free English practice materials, including vocabulary lists, grammar guides, and conversation prompts, designed to support your language journey.",
@@ -117,7 +117,7 @@ const LearnEnglishContent = () => {
           <div className="overflow-hidden rounded-lg">
             <img
               className="w-full h-full object-cover"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmale-teacher-doing-english-lesson-online-his-students.jpg?alt=media&token=93f0c01b-53a1-47ae-bda1-75b5b7ee6881"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Femotional-caucasian-schoolgirl-sits-desk-raises-hand-english-lesson-great-britain-flag_136403-14493.jpg?alt=media&token=d36b77e1-3b72-4eb1-8b49-fe2d4b2ae387"
               alt="Experienced teacher conducting an online English lesson"
               loading="lazy"
             />
@@ -270,7 +270,7 @@ const LearnEnglishContent = () => {
           <div className="lg:w-1/2">
             <img
               className="rounded-lg shadow-md object-cover w-full h-[400px]"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhappy-girl-gesturing-class%20(1).jpg?alt=media&token=91b705d1-2a46-456b-82d6-27769d74db02"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fschoolgirl-is-very-happy-about-english-lesson_222185-2596.avif?alt=media&token=f3353ac2-149c-4bda-8d7a-1f34339150df"
               alt="Why Choose OceanConnecting English Courses"
               loading="lazy"
             />

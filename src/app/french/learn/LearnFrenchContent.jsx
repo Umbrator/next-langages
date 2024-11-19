@@ -74,7 +74,7 @@ const LearnFrenchContent = () => {
               description:
                 "Engage in one-on-one French lessons tailored to your learning pace, with certified instructors for personal guidance.",
               imageSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-holding-english-class.jpg?alt=media&token=9221c4ad-b8c3-4a11-942a-36625ff4cd4",
+                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-french-flag_1030879-62043.jpg?alt=media&token=bd1a17e8-d742-4b43-b380-edb071df1ce6",
               altText: "French teacher conducting 1-on-1 private lessons",
             },
             {
@@ -82,7 +82,7 @@ const LearnFrenchContent = () => {
               description:
                 "Practice speaking and understanding French in lively group settings to enhance your confidence and fluency.",
               imageSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fback-view-kids-writing-whiteboard%20(1).jpg?alt=media&token=c78a6aaf-0cea-4981-8d94-634411e9ba57",
+                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ffemale-study-school-computer-graphic-smiling_1134-1006.jpg?alt=media&token=21f7c42b-b0f6-4f0a-8c2a-65a5a2bb5d9a",
               altText: "Students participating in a French group class",
             },
             {
@@ -90,7 +90,7 @@ const LearnFrenchContent = () => {
               description:
                 "Access complimentary French learning materials to support your journey and practice French at your own pace.",
               imageSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fgirl-with-notebook-giving-ok-sign%20(1).jpg?alt=media&token=d5bad9a7-0f17-4f57-aea8-753333661fa2",
+                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fstyle-blonde-woman-beret-with-french-flag-books-around-yellow_87910-6686.avif?alt=media&token=eb801c55-949d-4f6c-9ba7-55059afe6034",
               altText: "Free French learning resources",
             },
           ].map((card, idx) => (
@@ -121,7 +121,7 @@ const LearnFrenchContent = () => {
           <div className="overflow-hidden rounded-lg shadow-lg">
             <img
               className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flovely-happy-girl-posing-with-book.webp?alt=media&token=acb8ae0b-0e5b-4a14-b8ef-b6182cd314bb"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Feducation-learning-france-school-girl-france-student-language-school_545934-17063.jpg?alt=media&token=ae06ad0b-5939-478f-9c7f-e6a34ef1ed3f"
               alt="Student learning French with a book"
               loading="lazy"
             />
@@ -281,7 +281,7 @@ const LearnFrenchContent = () => {
           <div className="lg:w-1/2">
             <img
               className="rounded-lg shadow-md object-cover w-full h-[400px]"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhappy-girl-gesturing-class%20(1).jpg?alt=media&token=91b705d1-2a46-456b-82d6-27769d74db02"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fyoung-student-with-braces-holds-textbook-front-flag-france_341862-687.jpg?alt=media&token=61db5ec1-b4d3-4bf3-8c83-a63bce17dece"
               alt="Why OceanConnecting German Courses - Happy student in class"
               loading="lazy"
             />
@@ -478,7 +478,7 @@ const LearnFrenchContent = () => {
           {/* Image Section */}
           <div className="relative flex items-center">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fchildren-learning-together-how-speak-therapy%20(1).webp?alt=media&token=57b732f4-d117-4341-80fe-0a7f2ad20f54"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fconcept-lack-knowledge-misunderstanding-falling-far-classmates_123211-3726.jpg?alt=media&token=17c8c21d-f1e6-4d8f-95ba-4be2ea37ba86"
               alt="Happy French language students engaged in learning together"
               className="w-full h-full rounded-lg shadow-md object-cover"
               loading="lazy"

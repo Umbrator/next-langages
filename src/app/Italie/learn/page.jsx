@@ -50,7 +50,7 @@ const LearnItalie = () => {
       <section
         className="hero bg-cover bg-center h-screen text-white relative flex items-center pt-20"
         style={{
-          backgroundImage: `url("https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flittle-girl-boy-holding-fla_1089479-3423.jpg?alt=media&token=31a4c34b-b407-4467-97f1-758cd66e21df")`,
+          backgroundImage: `url("https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fchild-holding-italian-flag_1234220-56519.jpg?alt=media&token=13c75873-df05-4927-964c-48ad9ad77be7")`,
         }}
       >
         <div className="overlay absolute inset-0 bg-black bg-opacity-60"></div>

@@ -92,7 +92,7 @@ const LearnGerman = () => {
       <section
         className="hero bg-cover bg-center h-screen text-white relative flex items-center pt-20"
         style={{
-          backgroundImage: `url("https://cdn1.ntv.com.tr/gorsel/st8X_lDYpE60jNKzBeDN8w.jpg?width=952&height=540&mode=both&scale=both&v=1624005311597")`,
+          backgroundImage: `url("https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Feducation-foreign-school-teen-girl-football-fan-choose-direction-happy-child-pointing-finger_545934-19162.jpg?alt=media&token=c4abfbca-595c-48a1-b849-360ff3c2af32")`,
         }}
       >
         <div className="overlay absolute inset-0 bg-black bg-opacity-60"></div>

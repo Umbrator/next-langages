@@ -69,7 +69,7 @@ const LearnItalieContent = () => {
         description:
           "Take your Italian skills to the next level with private, 1-on-1 lessons tailored to your unique learning needs. Connect with certified Italian teachers who will guide you through each step, focusing on speaking, grammar, and vocabulary.",
         imageSrc:
-          "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-holding-english-class.jpg?alt=media&token=9221c4ad-b8c3-4a11-942a-36625ff4cd4c",
+          "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fyoung-student-holding-tablet-flag-classroom-with-world-map_922936-29969.jpg?alt=media&token=1552d6c4-6fdd-4f17-8a5d-9dc9bec5ef16",
         altText: "Italian teacher conducting 1-on-1 private lessons",
       },
       {
@@ -77,7 +77,7 @@ const LearnItalieContent = () => {
         description:
           "Learn Italian in a dynamic group setting where you can interact with fellow learners and practice conversational skills. Our group classes are ideal for structured learning in a social environment, making language acquisition enjoyable.",
         imageSrc:
-          "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fback-view-kids-writing-whiteboard%20(1).jpg?alt=media&token=c78a6aaf-0cea-4981-8d94-634411e9ba57",
+          "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbusiness-woman-holding-italian-flag_556177-558.jpg?alt=media&token=d69de56d-3cc4-44fc-a23e-bb707ea75136",
         altText: "Students participating in an Italian group class",
       },
       {
@@ -115,7 +115,7 @@ const LearnItalieContent = () => {
     <div className="overflow-hidden rounded-lg">
       <img
         className="w-full h-full object-cover"
-        src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbeautiful-asian-student-showing-italy-flag-pink-isolated-background-education-concept_67155-33175.jpg?alt=media&token=7cf28213-1e14-4067-b849-1ad5c78ef6a4"
+        src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fyouth-female-student-with-flag-italy-background_341862-678.jpg?alt=media&token=3931d535-553a-4f03-87cd-f700ac818cec"
         alt="Student proudly holding Italian flag"
         loading="lazy"
       />
@@ -264,7 +264,7 @@ const LearnItalieContent = () => {
     <div className="lg:w-1/2">
       <img
         className="rounded-lg shadow-md object-cover w-full h-[400px]"
-        src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhappy-girl-gesturing-class%20(1).jpg?alt=media&token=91b705d1-2a46-456b-82d6-27769d74db02"
+        src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fstudent-studying-from-folders-against-italy-flag-grunge-effect_1134-52825.avif?alt=media&token=cef6bfca-3170-4481-be08-5f60f055792b"
         alt="Student enjoying Italian language class"
         loading="lazy"
       />

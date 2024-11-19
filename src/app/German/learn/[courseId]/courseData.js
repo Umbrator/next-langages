@@ -2,17 +2,17 @@ export const courseList = [
     {
       title: 'General German',
       description: 'Build a strong foundation in reading, writing, listening, and speaking skills.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fwoman-hands-hold-germany-deutschland-flag-patriotism.jpg?alt=media&token=8e9b91aa-2e0c-4146-8207-6a23ad6a9663',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Feducation-learning-people-concept-group-smiling-students-with-folders-school-bags-german-flag-background_380164-112354.jpg?alt=media&token=a27f44c2-9855-4832-bc54-e7962e976047',
     },
     {
       title: 'Business German',
       description: 'Enhance your business communication and professional skills in German.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flearn-german-language-online-education-concept%20(1).jpg?alt=media&token=1fb21271-15ce-43d0-8a32-66750fdf2d05',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fnavigating-higher-education-germany-insights-from-female-student_1233840-349.jpg?alt=media&token=16e891e7-8814-4bcd-9b7e-f386d7618354',
     },
     {
       title: 'Exam Preparation',
       description: 'Prepare for German proficiency exams with focused practice and strategies.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flearn-german-language-online-education-concept.jpg?alt=media&token=5d012e81-467c-4ba4-93ec-3121b8ae4b2e',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fpeople-national-education-knowledge-graduation-concept-smiling-young-student-woman-mortarboard-eyeglasses-with-encyclopedia-book-german-flag-background_380164-135430.jpg?alt=media&token=dd462752-58e2-40b0-a184-56894faceaf9  ',
     },
     {
       title: 'German for Kids',
@@ -27,7 +27,7 @@ export const courseList = [
     {
       title: 'Self-study Courses',
       description: 'Flexible and self-paced courses for independent learners.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Feducation-foreign-school-teen-girl-football-fan-choose-direction-happy-child-pointing-finger_545934-19162.jpg?alt=media&token=c4abfbca-595c-48a1-b849-360ff3c2af32',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhappy-teen-girl-hold-german-flag-yellow-background-showing-thumb-up-study-abroad_545934-11773.jpg?alt=media&token=c039b4a4-12b3-40ef-9b95-9c83619aa31d',
     },
   ];
 

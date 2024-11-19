@@ -2,32 +2,32 @@ export const courseList = [
   {
     title: 'General Italie',
     description: 'Build a strong foundation in reading, writing, listening, and speaking skills.',
-    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flooking-side-pleased-young-pretty-girl-holding-folders.jpg?alt=media&token=bd9c7c49-6bdd-4e20-805d-2439c48cf3cc',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbright-future-blonde-female-student-embracing-global-education-amidst-italian-flag-digi_1000124-202810.jpg?alt=media&token=cc5fd80f-430e-4ac9-8789-9e373009ee0e',
   },
   {
     title: 'Business Italie',
     description: 'Enhance your business communication and professional skills in Italie.',
-    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fitalian-flag-yellow-background.jpg?alt=media&token=5e816c19-4cc2-4f27-bcfb-281409a8e5d3',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fexploring-academic-opportunities-why-study-italy_1233840-451.jpg?alt=media&token=f54ffe8f-7e93-4e1f-928f-a7cde286908d',
   },
   {
     title: 'Exam Preparation',
     description: 'Prepare for Italie proficiency exams with focused practice and strategies.',
-    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbook-3089857_1280%20(1).jpg?alt=media&token=83a9dfb8-377e-44b3-ad14-06e37222682d',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fpupil-girl-learning-italian-female-primary-school-student-school-classroom-blackboard-background_221436-3187.jpg?alt=media&token=6314a2a1-4448-45a5-b4e9-ba2dd64a0dfe',
   },
   {
     title: 'Italie for Kids',
     description: 'Fun and interactive lessons designed for young learners to grasp Italie skills.',
-    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flittle-girl-boy-holding-fla_1089479-3411.jpg?alt=media&token=00ea1142-6e6f-43c7-9f5b-296e19119785',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fyoung-girl-with-textbook-italian-language-flag-language-school-learning-italian_250497-194.jpg?alt=media&token=252ce89f-5bde-4119-a16c-f0660aae7cd3',
   },
   {
     title: 'Private Lessons',
     description: 'Personalized lessons tailored to individual learning styles and goals.',
-    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fsmiling-boy-seven-years-old-keeps-book-flag-italy-as-background-closeup_106434-3820.jpg?alt=media&token=5c3d6f81-80bb-488c-b240-7b2b41aef72c',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbeautiful-happy-young-woman-against-italian-flag-background-live-education-work-italy_221436-7853.jpg?alt=media&token=5e6a9f70-9395-4efb-86ec-d74fb1f11586',
   },
   {
     title: 'Self-study Courses',
     description: 'Flexible and self-paced courses for independent learners.',
-    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-book-resting-table-working-space_23-2149429575.avif?alt=media&token=c597d799-e6de-441b-9f2b-9e6dda373a20',
+    image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fthinking-child-boy-student-against-italy-flag-background-it_221436-4373.jpg?alt=media&token=878c2f8e-b125-47dc-8b88-d07a68e4aa4e',
   },
 ];
 

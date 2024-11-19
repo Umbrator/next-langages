@@ -40,7 +40,7 @@ const FAQSection = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
         <div className="relative flex items-center">
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fchildren-learning-together-how-speak-therapy%20(1).jpg?alt=media&token=374a473a-456a-4af3-8b51-b38634a14699"
+            src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fconcept-lack-knowledge-misunderstanding-falling-far-classmates_123211-3726.jpg?alt=media&token=17c8c21d-f1e6-4d8f-95ba-4be2ea37ba86"
             alt="Happy Students"
             className="w-full h-full rounded-lg shadow-md object-cover"
             style={{ transform: "none", transition: "none" }}

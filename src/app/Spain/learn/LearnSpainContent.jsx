@@ -68,7 +68,7 @@ const LearnSpainContent = () => {
           <div className="bg-white shadow-lg rounded-lg overflow-hidden border-l-4 border-[#FF5733] transform hover:scale-105 transition-transform duration-300">
             <img
               className="w-full h-48 object-cover"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot-man-correcting-grammar-mistakes.jpg?alt=media&token=9f670054-b9ba-450e-a4f0-965215473dae"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot-man-correcting-grammar-mistakes_23-2150171356.jpg?alt=media&token=35819bb8-29fb-4b6c-bdcf-07e03735cd4f"
               alt="1-on-1 personalized Spanish lessons"
               loading="lazy"
             />
@@ -87,7 +87,7 @@ const LearnSpainContent = () => {
           <div className="bg-white shadow-lg rounded-lg overflow-hidden border-l-4 border-[#FF5733] transform hover:scale-105 transition-transform duration-300">
             <img
               className="w-full h-48 object-cover"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot-colleagues-high-five.jpg?alt=media&token=0beb345f-5744-4545-b930-2120f67597bc"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmale-teacher-talking-class_622301-9436.jpg?alt=media&token=f665de0e-0100-4418-9d54-aa74207de90b"
               alt="Spanish group classes for interactive learning"
               loading="lazy"
             />
@@ -106,7 +106,7 @@ const LearnSpainContent = () => {
           <div className="bg-white shadow-lg rounded-lg overflow-hidden border-l-4 border-[#FF5733] transform hover:scale-105 transition-transform duration-300">
             <img
               className="w-full h-48 object-cover"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flearn-spanish-language-online-education-concept%20(1)%20(1).jpg?alt=media&token=cb324783-4aed-4716-991f-0fb5b6208d57"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fblackboard-with-text-learn-spanish-flag-spain-books-pencils-compass_656538-1861.avif?alt=media&token=6a24e27c-5864-433e-b999-8980f3616b9c"
               alt="Free Spanish practice resources"
               loading="lazy"
             />
@@ -129,7 +129,7 @@ const LearnSpainContent = () => {
           <div className="overflow-hidden rounded-lg">
             <img
               className="w-full h-full object-cover"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot.jpg?alt=media&token=fdb3d1fe-f6a1-4dd0-98f9-785ae5ad1bf5"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot-man-correcting-grammar-mistakes_23-2150171365.jpg?alt=media&token=1e76e30e-2c4a-4f80-be63-1c13861469de"
               alt="About Our Spanish Language Courses"
               loading="lazy"
             />
@@ -290,7 +290,7 @@ const LearnSpainContent = () => {
           <div className="lg:w-1/2">
             <img
               className="rounded-lg shadow-md object-cover w-full h-[400px]"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhappy-girl-gesturing-class%20(1).jpg?alt=media&token=91b705d1-2a46-456b-82d6-27769d74db02"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbackpack-blackboard-with-text-hablas-espanol-flag-spain-books-school-supplies_656538-3212.jpg?alt=media&token=bc151c73-2ba5-4c08-a55d-18236db04f96"
               alt="Why Choose Our Spanish Courses"
               loading="lazy"
             />
@@ -438,7 +438,7 @@ const LearnSpainContent = () => {
             </a>
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flittle-boy.jpg?alt=media&token=9843f96e-ce41-4439-98b8-621d22c97730"
+                src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fsmiley-little-boy-isolated-pink_23-2148984798.avif?alt=media&token=18f7385f-1572-4806-b2de-052acb9b06f5"
                 alt="Student giving testimonial"
                 className="rounded-lg object-cover w-full h-48"
                 loading="lazy"

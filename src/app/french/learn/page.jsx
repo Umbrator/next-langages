@@ -93,7 +93,7 @@ const LearnFrench = () => {
       <section
         className="hero bg-cover bg-center h-screen text-white relative flex items-center pt-20"
         style={{
-          backgroundImage: `url("https://img.freepik.com/premium-photo/eiffel-tower-french-flag-sunset_1276750-8399.jpg?w=1060")`,
+          backgroundImage: `url("https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhappy-teen-girl-hold-french-flag-school-copybook-studying-education-abroad-banner-school-girl-student-schoolgirl-pupil-portrait-with-copy-space_545934-40438.jpg?alt=media&token=cc0965b4-d9a1-4bce-b428-6fa88715c846")`,
         }}
       >
         <div className="overlay absolute inset-0 bg-black bg-opacity-50"></div>

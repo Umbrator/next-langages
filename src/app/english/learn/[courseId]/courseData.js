@@ -2,32 +2,32 @@ export const courseList = [
     {
       title: 'General English',
       description: 'Build a strong foundation in reading, writing, listening, and speaking skills.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-book-resting-table-working-space.jpg?alt=media&token=f55fc22a-2916-4375-9f59-5c6352b7115c',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ffemale-student-posing-english-language-school_141192-1472.avif?alt=media&token=683d5e56-16ef-4df2-9ce4-4c7d37e572fd',
     },
     {
       title: 'Business English',
       description: 'Enhance your business communication and professional skills in English.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-resting-table-working-space__1_.jpg?alt=media&token=df136c03-7708-4b28-a757-c49ee9b2754d',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Feconomy-finance-patriotism-freedom-independence-day-usa-american-education-reform-scho_265223-9612.jpg?alt=media&token=1f60957b-4d89-458f-a27e-410117ed92e2',
     },
     {
       title: 'Exam Preparation',
       description: 'Prepare for English proficiency exams with focused practice and strategies.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-assortment-still-life.jpg?alt=media&token=178c4ade-0912-4629-83d3-3175cf948f32',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-book-resting-table-working-space_23-2149429594.jpg?alt=media&token=61fa7f6f-12f2-4a56-aa25-1cd232e8d50f',
     },
     {
       title: 'English for Kids',
       description: 'Fun and interactive lessons designed for young learners to grasp English skills.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-language-books-with-blue-background.jpg?alt=media&token=c9074638-4449-4a10-bb75-9e3df6567e5e',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ffemale-blonde-english-teacher-reading-book-with-smart-kid-girl-language-child-studying-process-white-stylish-classroom_280538-4751.avif?alt=media&token=4b3667eb-1c06-415d-a9ec-bdbf190693be',
     },
     {
       title: 'Private Lessons',
       description: 'Personalized lessons tailored to individual learning styles and goals.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-books-stacks-table-working-space.jpg?alt=media&token=b1c72fe5-5821-41dd-825f-b676d706c5c3',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmixed-race-tutor-with-beard-sitting-table-nursery-room-explaining-rule-girl_622301-1187.jpg?alt=media&token=d736a292-54f0-4892-85c8-3d06735b8158',
     },
     {
       title: 'Self-study Courses',
       description: 'Flexible and self-paced courses for independent learners.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fenglish-book-resting-table-working-space_23-2149429575.avif?alt=media&token=c597d799-e6de-441b-9f2b-9e6dda373a20',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot-woman-reading_23-2148882772.jpg?alt=media&token=62d7a261-7ed5-4b6c-b5b8-89d0961e523a',
     },
   ];
 
