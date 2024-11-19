@@ -71,7 +71,7 @@ const LearnGermanContent = () => {
               description:
                 "Take your German skills to the next level with private, 1-on-1 lessons tailored to your unique learning needs. Connect with certified German teachers who will guide you through each step, focusing on speaking, grammar, and vocabulary.",
               imageSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-holding-english-class.jpg?alt=media&token=9221c4ad-b8c3-4a11-942a-36625ff4cd4",
+                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fpeople-education-learning-school-concept-happy-smiling-teenage-student-girl-with-books-backpack-german-flag-background_380164-112641.jpg?alt=media&token=b5b6026f-d3ce-4c77-88e3-7d18b3b229c0",
               altText: "German teacher conducting 1-on-1 private lessons",
             },
             {
@@ -79,7 +79,7 @@ const LearnGermanContent = () => {
               description:
                 "Learn German in a dynamic group setting where you can interact with fellow learners and practice conversational skills. Our group classes are ideal for structured learning in a social environment, making language acquisition enjoyable.",
               imageSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fback-view-kids-writing-whiteboard%20(1).jpg?alt=media&token=c78a6aaf-0cea-4981-8d94-634411e9ba57",
+                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fsmiling-teen-girl-hold-german-flag-workbook-schengen-countries-touristic-visa-back-school_545934-34674.jpg?alt=media&token=568aff7c-5f27-4567-8cab-fafd8898a568",
               altText: "Students participating in a German group class",
             },
             {
@@ -87,7 +87,7 @@ const LearnGermanContent = () => {
               description:
                 "Access a variety of free German language materials and practice sessions to supplement your learning journey. Our resources help you strengthen vocabulary, grammar, and pronunciation at your own pace.",
               imageSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fgirl-with-notebook-giving-ok-sign%20(1).jpg?alt=media&token=d5bad9a7-0f17-4f57-aea8-753333661fa2",
+                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fpeople-education-learning-school-concept-happy-student-girl-with-folders-pointing-finger-german-flag-background_380164-112358.jpg?alt=media&token=518f85de-5217-4e51-abf0-241832d466e8",
               altText: "German language learner practicing with free resources",
             },
           ].map((card, idx) => (
@@ -118,7 +118,7 @@ const LearnGermanContent = () => {
           <div className="overflow-hidden rounded-lg shadow-lg">
             <img
               className="w-full h-full object-cover"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fcute-little-girl-table-with-lot-colorful-books%20(1).jpg?alt=media&token=aca4a34c-0582-492a-a1f3-4d3be7e80f04"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhappy-winking-child-hold-german-flag-yellow-background-showing-ok-gesture-education-abroad_545934-1400.jpg?alt=media&token=71d5645f-7b0b-4f12-bb18-283a19474d0e"
               alt="Young girl studying German with colorful books at table"
               loading="lazy"
             />
@@ -278,7 +278,7 @@ const LearnGermanContent = () => {
           <div className="lg:w-1/2">
             <img
               className="rounded-lg shadow-md object-cover w-full h-[400px]"
-              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhappy-girl-gesturing-class%20(1).jpg?alt=media&token=91b705d1-2a46-456b-82d6-27769d74db02"
+              src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fyoung-student-caucasian-man-studying-german-isolated-white-standing-with-outstretched-hand-showing-stop-sign-preventing-you_1187-152830.jpg?alt=media&token=3e6aa1db-1a04-4383-915a-4eeb03e88087"
               alt="Why OceanConnecting German Courses - Happy student in class"
               loading="lazy"
             />
@@ -388,7 +388,7 @@ const LearnGermanContent = () => {
             </a>
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flittle-boy.jpg?alt=media&token=9843f96e-ce41-4439-98b8-621d22c97730"
+                src="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fsmiley-little-boy-isolated-pink_23-2148984798.avif?alt=media&token=18f7385f-1572-4806-b2de-052acb9b06f5"
                 alt="Student testimonial image 1"
                 className="rounded-lg object-cover w-full h-48"
                 loading="lazy"

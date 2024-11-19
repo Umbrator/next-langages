@@ -2,27 +2,27 @@ export const courseList = [
     {
       title: 'General French',
       description: 'Build a strong foundation in reading, writing, listening, and speaking skills.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flearn-french-language-online-education-concept.jpg?alt=media&token=429c5302-c283-4690-afbd-1bba4108a041',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fyoung-student-with-braces-holds-textbook-front-flag-france_341862-687.jpg?alt=media&token=61db5ec1-b4d3-4bf3-8c83-a63bce17dece',
     },
     {
       title: 'Business French',
       description: 'Enhance your business communication and professional skills in French.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fpencil-sharpener-notepad-books%20(1).jpg?alt=media&token=30676f52-3dcd-449c-9ab0-92c5ae66243b',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-french-flag_1030879-62043.jpg?alt=media&token=bd1a17e8-d742-4b43-b380-edb071df1ce6',
     },
     {
       title: 'DELF Exam Preparation',
       description: 'Prepare for French proficiency exams with focused practice and strategies.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhigh-angle-man-holding-notebook%20(1).jpg?alt=media&token=e024c3d8-f24a-4265-a056-cfae4d015578',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fcheerful-students-having-talk-classroom_23-2147666615.jpg?alt=media&token=d7e8433a-c810-4f87-bb8e-8811df579078',
     },
     {
       title: 'French for Kids',
       description: 'Fun and interactive lessons designed for young learners to grasp French skills.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbook-3089857_1280%20(1).jpg?alt=media&token=3964006d-a85b-4b24-984f-a079c34e9bc3',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fyoung-boy-celebrating-french-culture-with-flag-book-classroom-setting_922936-29324.jpg?alt=media&token=25c313cf-2315-4af5-ad8d-d37e114d77ab',
     },
     {
       title: 'Private French Lessons',
       description: 'Personalized lessons tailored to individual learning styles and goals.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Frow-various.jpg?alt=media&token=dd0a1fc1-616b-48e5-b6de-40b33f6a394d',
+      image: 'https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Famazed-kid-hold-french-flag-school-copybook-studying-isolated-white-study-abroad_545934-15400.avif?alt=media&token=8aca5341-1d04-42a5-a739-f5f98a55d46b',
     },
     {
       title: 'Self-study French Courses',

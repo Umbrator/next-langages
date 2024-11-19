@@ -4,41 +4,41 @@ export const courseList = [
     description:
       "Build a strong foundation in reading, writing, listening, and speaking skills.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flovely-happy-girl-posing-with-book.jpg?alt=media&token=07f1dbb8-8c10-46c8-83d8-d01f65c74884",
+      "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fblackboard-with-text-learn-spanish-flag-spain-books-pencils-compass_656538-1861.avif?alt=media&token=6a24e27c-5864-433e-b999-8980f3616b9c",
   },
   {
     title: "Business Spanish",
     description:
       "Enhance your business communication and professional skills in Spanish.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fbook-3089857_1280%20(1).jpg?alt=media&token=83a9dfb8-377e-44b3-ad14-06e37222682d",
+      "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot-woman-correcting-grammar-mistakes_23-2150171424.jpg?alt=media&token=fd9fcd5f-8d71-4c88-be9d-48979c33292a",
   },
   {
     title: "DELE Exam Preparation",
     description:
       "Prepare for Spanish proficiency exams with focused practice and strategies.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fpencil-sharpener-notepad-books%20(1).jpg?alt=media&token=844d30c4-39e6-49c0-87f6-02bfbe1536f6",
+      "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fman-correcting-grammar-mistakes-side-view_23-2150171344.jpg?alt=media&token=a3a8f70e-7442-4a6c-8485-2bc73e1b37e6",
   },
   {
     title: "Spanish for Kids",
     description:
       "Fun and interactive lessons designed for young learners to grasp Spanish skills.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fhigh-angle-man-holding-notebook%20(1).jpg?alt=media&token=5fbd344f-9fad-4825-96c8-e5bc33561f99",
+      "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmale-teacher-talking-class_622301-9436.jpg?alt=media&token=f665de0e-0100-4418-9d54-aa74207de90b",
   },
   {
     title: "Private Spanish Lessons",
     description:
       "Personalized lessons tailored to individual learning styles and goals.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Flearn-spanish-language-online-education-concept%20(1).jpg?alt=media&token=d718f38b-046a-4e43-8419-977da816f0e6",
+      "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fmedium-shot-man-correcting-grammar-mistakes_23-2150171356.jpg?alt=media&token=35819bb8-29fb-4b6c-bdcf-07e03735cd4f",
   },
   {
     title: "Self-study Spanish Courses",
     description: "Flexible and self-paced courses for independent learners.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Frow-various-old-books%20(1).jpg?alt=media&token=f37115de-af88-4948-bfd0-520753f21a47",
+      "https://img.freepik.com/premium-photo/political-news-education-concept-red-typewriter-flag-spain-book-stationery-table_656538-3237.jpg?w=900&t=st=1704913568~exp=1704914168~hmac=e14854cd935cb0730d56cd3890b7378767977e063612b9b05f7c86692add9061",
   },
 ];
 

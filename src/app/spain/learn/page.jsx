@@ -106,7 +106,7 @@ const LearnSpain = () => {
       <section
         className="hero bg-cover bg-center h-screen text-white relative flex items-center pt-20"
         style={{
-          backgroundImage: `url("https://img.freepik.com/premium-photo/against-backlit-sunset-spanish-flag-waves-prominently-cityscape-creating-symbol-national-pride_95891-71775.jpg?w=1060")`,
+          backgroundImage: `url("https://img.freepik.com/premium-photo/woman-holding-spanish-flag-portrait_1234220-54869.jpg?w=1060")`,
         }}
       >
         <div className="overlay absolute inset-0 bg-black bg-opacity-60"></div>
