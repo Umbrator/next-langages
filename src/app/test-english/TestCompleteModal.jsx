@@ -20,7 +20,7 @@ const TestCompleteModal = ({ totalScore }) => {
           </div>
           <h2 className="text-3xl font-bold text-gray-800 mb-2">Test Complete!</h2>
           <p className="text-lg text-gray-600 mb-4">
-            Your total score is: <span className="font-bold text-[#43cea2] text-2xl">{totalScore}/100</span>
+            Your total score is: <span className="font-bold text-[#43cea2] text-2xl">{totalScore}/50</span>
           </p>
           <button
             onClick={shareOnWhatsApp}

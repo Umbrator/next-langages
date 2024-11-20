@@ -228,7 +228,7 @@ const Ex2 = ({
               <FaWhatsapp className="mr-2" size={18} /> Partager sur WhatsApp
             </button>
             <button
-              onClick={() => (window.location.href = "tel:+33123456789")}
+              onClick={() => (window.location.href = "tel:+212704309787")}
               className="bg-blue-500 text-white flex items-center py-2 px-4 rounded-full shadow-md hover:bg-blue-600 transition-all duration-300"
             >
               <FaPhone className="mr-2" size={18} /> Appeler pour assistance

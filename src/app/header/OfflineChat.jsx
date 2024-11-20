@@ -14,7 +14,7 @@ const OfflineChat = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
   const [showCard, setShowCard] = useState(true);
-  const [showOptions, setShowOptions] = useState(true); // Added to control options visibility
+  const [showOptions, setShowOptions] = useState(true);
 
   const chatEndRef = useRef(null);
 
@@ -56,7 +56,7 @@ const OfflineChat = () => {
       };
       setChatHistory((prevHistory) => [...prevHistory, newBotMessage]);
       setIsTyping(false);
-      setShowOptions(false); // Hide options after bot responds
+      setShowOptions(false);
     }, 1000);
   };
 
@@ -66,7 +66,7 @@ const OfflineChat = () => {
     if (lowercasedMessage.includes('pricing')) {
         return 'Our pricing ranges from $50 to $200 depending on the package and level you choose. Would you like more details about specific language courses?';
     } else if (lowercasedMessage.includes('contact')) {
-        return 'You can reach us at support@example.com or call us at +1234567890. How else can I assist you?';
+        return 'You can reach us at oceanconnecting.ma@gmail.com or call us at +212-704309787. How else can I assist you?';
     } else if (lowercasedMessage.includes('learn english')) {
         return 'We offer English courses from beginner to advanced levels. Would you like information on course levels, pricing, or learning resources?';
     } else if (lowercasedMessage.includes('learn french')) {
