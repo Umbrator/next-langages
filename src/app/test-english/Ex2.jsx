@@ -39,7 +39,7 @@ const Ex2 = ({
     },
     {
       question: "What is the opposite of 'happy'?",
-      type: "text", // Text input answer
+      type: "text",
       answer: "sad",
     },
     {

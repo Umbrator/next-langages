@@ -52,8 +52,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Contact Information Section */}
           <div className="flex flex-col items-center space-y-4">
             <div className="flex flex-col items-center mb-4">
               <img
@@ -84,7 +82,7 @@ const Footer = () => {
             { href: 'https://www.linkedin.com/company/ocean-connecting/mycompany/', icon: <FaLinkedin size={24} />, label: 'LinkedIn' },
             { href: 'https://www.facebook.com/the.ocean.connecting/', icon: <FaFacebookF size={24} />, label: 'Facebook' },
             { href: 'https://www.instagram.com/oceanconnecting.ma/', icon: <FaInstagram size={24} />, label: 'Instagram' },
-            { href: 'https://x.com/theoceansteam?lang=ar', icon: <FaTwitter size={24} />, label: 'Twitter' },
+            { href: 'https://x.com/OceanConnecting', icon: <FaTwitter size={24} />, label: 'Twitter' },
             { href: 'https://api.whatsapp.com/send/?phone=%2B212704309787', icon: <FaWhatsapp size={24} />, label: 'WhatsApp' },
           ].map((social, index) => (
             <a
