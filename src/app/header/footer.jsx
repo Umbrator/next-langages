@@ -1,5 +1,15 @@
+"use client";
+
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedin, FaWhatsapp, FaAt, FaPhoneAlt } from 'react-icons/fa';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+  FaWhatsapp,
+  FaAt,
+  FaPhoneAlt,
+} from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -24,7 +34,9 @@ const Footer = () => {
               ].map((service, index) => (
                 <li key={index} className="flex items-center">
                   <span className="text-yellow-400 mr-2">•</span>
-                  <a href="#" className="hover:text-white">{service}</a>
+                  <a href="#" className="hover:text-white">
+                    {service}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -47,17 +59,22 @@ const Footer = () => {
               ].map((link, index) => (
                 <li key={index} className="flex items-center">
                   <span className="text-yellow-400 mr-2">•</span>
-                  <a href="#" className="hover:text-white">{link}</a>
+                  <a href="#" className="hover:text-white">
+                    {link}
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
+
+          {/* Contact Section */}
           <div className="flex flex-col items-center space-y-4">
             <div className="flex flex-col items-center mb-4">
               <img
                 src="https://howdycode.com/templates/howdycode/img/flags/morocco-map.png"
                 alt="Morocco Map"
                 className="w-35 h-35"
+                loading="lazy"
               />
               <p className="text-center text-gray-300">Proudly based in Morocco!</p>
             </div>
@@ -79,11 +96,31 @@ const Footer = () => {
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6 mt-8 mb-4">
           {[
-            { href: 'https://www.linkedin.com/company/ocean-connecting/mycompany/', icon: <FaLinkedin size={24} />, label: 'LinkedIn' },
-            { href: 'https://www.facebook.com/the.ocean.connecting/', icon: <FaFacebookF size={24} />, label: 'Facebook' },
-            { href: 'https://www.instagram.com/oceanconnecting.ma/', icon: <FaInstagram size={24} />, label: 'Instagram' },
-            { href: 'https://x.com/OceanConnecting', icon: <FaTwitter size={24} />, label: 'Twitter' },
-            { href: 'https://api.whatsapp.com/send/?phone=%2B212704309787', icon: <FaWhatsapp size={24} />, label: 'WhatsApp' },
+            {
+              href: 'https://www.linkedin.com/company/ocean-connecting/mycompany/',
+              icon: <FaLinkedin size={24} />,
+              label: 'LinkedIn',
+            },
+            {
+              href: 'https://www.facebook.com/the.ocean.connecting/',
+              icon: <FaFacebookF size={24} />,
+              label: 'Facebook',
+            },
+            {
+              href: 'https://www.instagram.com/oceanconnecting.ma/',
+              icon: <FaInstagram size={24} />,
+              label: 'Instagram',
+            },
+            {
+              href: 'https://x.com/OceanConnecting',
+              icon: <FaTwitter size={24} />,
+              label: 'Twitter',
+            },
+            {
+              href: 'https://api.whatsapp.com/send/?phone=%2B212704309787',
+              icon: <FaWhatsapp size={24} />,
+              label: 'WhatsApp',
+            },
           ].map((social, index) => (
             <a
               key={index}
