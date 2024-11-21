@@ -12,6 +12,9 @@ import Levels from "../Levels";
 import TestCompleteModal from "../TestCompleteModal";
 
 const Page = () => {
+  // Unique namespace for Italian test local storage data
+  const localStorageNamespace = "italian_test";
+
   const [currentStep, setCurrentStep] = useState(1);
   const [scores, setScores] = useState({
     ex1: 0,
@@ -32,22 +35,26 @@ const Page = () => {
   const [remainingAttempts, setRemainingAttempts] = useState(19);
 
   useEffect(() => {
-    const savedStep = localStorage.getItem("currentStep");
-    const savedScores = localStorage.getItem("scores");
-    const savedUnlockedLevels = localStorage.getItem("unlockedLevels");
-    const savedAttempts = localStorage.getItem("remainingAttempts");
-
-    if (savedStep) setCurrentStep(Number(savedStep));
-    if (savedScores) setScores(JSON.parse(savedScores));
-    if (savedUnlockedLevels) setUnlockedLevels(JSON.parse(savedUnlockedLevels));
-    if (savedAttempts) setRemainingAttempts(Number(savedAttempts));
+    // Load data from local storage specific to the Italian test
+    const savedData = localStorage.getItem(localStorageNamespace);
+    if (savedData) {
+      const parsedData = JSON.parse(savedData);
+      setCurrentStep(parsedData.currentStep || 1);
+      setScores(parsedData.scores || {});
+      setUnlockedLevels(parsedData.unlockedLevels || {});
+      setRemainingAttempts(parsedData.remainingAttempts || 19);
+    }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("currentStep", currentStep);
-    localStorage.setItem("scores", JSON.stringify(scores));
-    localStorage.setItem("unlockedLevels", JSON.stringify(unlockedLevels));
-    localStorage.setItem("remainingAttempts", remainingAttempts);
+    // Save data to local storage specific to the Italian test
+    const dataToSave = {
+      currentStep,
+      scores,
+      unlockedLevels,
+      remainingAttempts,
+    };
+    localStorage.setItem(localStorageNamespace, JSON.stringify(dataToSave));
   }, [currentStep, scores, unlockedLevels, remainingAttempts]);
 
   const handleScoreUpdate = (exercise, score) => {
@@ -168,7 +175,7 @@ const Page = () => {
       <main className="pt-20 max-w-6xl mx-auto px-4 flex flex-col items-center">
         <div className="bg-white shadow-lg rounded-lg p-6 mb-6 w-full">
           <h1 className="text-4xl font-semibold mb-6 text-center text-[#B0231B]">
-          Italie Language Proficiency Test
+            Italian Language Proficiency Test
           </h1>
           <div className="w-full bg-gray-300 rounded-full h-3 mb-6 shadow-lg overflow-hidden relative">
             <div
