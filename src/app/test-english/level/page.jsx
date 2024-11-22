@@ -216,7 +216,6 @@ const Page = () => {
             </div>
           </div>
         )}
-
         {showFinalModal && <TestCompleteModal totalScore={totalScore} />}
       </main>
       <Footer />
