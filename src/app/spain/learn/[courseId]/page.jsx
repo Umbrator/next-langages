@@ -5,15 +5,16 @@ import { FaCalendarAlt, FaUserGraduate } from 'react-icons/fa';
 import { courseData } from './courseData';
 import Navbar from '../../../header/navbar';
 import Footer from '../../../header/Footer';
+import LearnSpainModel from '../../LearnSpainModel';
 import Head from 'next/head';
 import { use } from 'react';
 
 const CourseDetails = ({ params }) => {
-  const { courseId } = use(params); // Use courseId directly
+  const { courseId } = use(params);
   const [course, setCourse] = useState(null);
 
   useEffect(() => {
-    setCourse(courseData[courseId]); // Set course based on courseId
+    setCourse(courseData[courseId]);
   }, [courseId]);
 
   if (!course) {
@@ -22,7 +23,6 @@ const CourseDetails = ({ params }) => {
 
   return (
     <>
-      {/* SEO and Page Title */}
       <Head>
         <title>{course.title} - OceanConnecting Course Details</title>
         <meta 
@@ -127,6 +127,7 @@ const CourseDetails = ({ params }) => {
 
       {/* Footer */}
       <Footer />
+      <LearnSpainModel/>
     </>
   );
 };

@@ -5,6 +5,7 @@ import { FaCalendarAlt, FaUserGraduate } from 'react-icons/fa';
 import { courseData } from './courseData';
 import Navbar from '../../../header/navbar';
 import Footer from '../../../header/Footer';
+import LearnGermanModel from '../../LearnGermanModel'
 import Head from 'next/head';
 
 const CourseDetails = ({ params }) => {
@@ -130,6 +131,7 @@ const CourseDetails = ({ params }) => {
 
       {/* Footer */}
       <Footer />
+      <LearnGermanModel/>
     </>
   );
 };
