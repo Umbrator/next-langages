@@ -53,67 +53,65 @@ const LearnFrenchContent = () => {
         content="Learn French in the classroom with OceanConnecting! Our interactive courses, vocabulary tools, and grammar guides help you master French from beginner to advanced levels. Start speaking and writing confidently with OceanConnecting today."
       />
       <section className="py-16 bg-gradient-to-r from-[#0052A5] via-white to-[#EF4135]">
-        {/* Section Heading */}
-        <div className="text-center mb-12">
-          <h3 className="text-sm font-semibold text-red-600 mb-2 flex items-center justify-center">
-            <FaAngleDoubleRight className="mr-2 text-yellow-600" />
-            French Language Learning Offers
-          </h3>
-          <p className="text-gray-700 mt-4 max-w-2xl mx-auto">
-            Explore our specialized French courses designed to help you reach
-            fluency quickly and confidently.
-          </p>
-        </div>
+  {/* Section Heading */}
+  <div className="text-center mb-12">
+    <h3 className="text-sm font-semibold text-red-600 mb-2 flex items-center justify-center">
+      <FaAngleDoubleRight className="mr-2 text-yellow-600" />
+      French Language Learning Offers
+    </h3>
+    <p className="text-gray-700 mt-4 max-w-2xl mx-auto">
+      Explore our specialized French courses designed to help you reach fluency quickly and confidently.
+    </p>
+  </div>
 
-        {/* Cards Section */}
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Offer Cards */}
-          {[
-            {
-              title: "Personalized 1-on-1 French Lessons",
-              description:
-                "Engage in one-on-one French lessons tailored to your learning pace, with certified instructors for personal guidance.",
-              imageSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-french-flag_1030879-62043.jpg?alt=media&token=bd1a17e8-d742-4b43-b380-edb071df1ce6",
-              altText: "French teacher conducting 1-on-1 private lessons",
-            },
-            {
-              title: "Interactive Group French Classes",
-              description:
-                "Practice speaking and understanding French in lively group settings to enhance your confidence and fluency.",
-              imageSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ffemale-study-school-computer-graphic-smiling_1134-1006.jpg?alt=media&token=21f7c42b-b0f6-4f0a-8c2a-65a5a2bb5d9a",
-              altText: "Students participating in a French group class",
-            },
-            {
-              title: "Free French Practice Resources",
-              description:
-                "Access complimentary French learning materials to support your journey and practice French at your own pace.",
-              imageSrc:
-                "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fstyle-blonde-woman-beret-with-french-flag-books-around-yellow_87910-6686.avif?alt=media&token=eb801c55-949d-4f6c-9ba7-55059afe6034",
-              altText: "Free French learning resources",
-            },
-          ].map((card, idx) => (
-            <div
-              key={idx}
-              className="bg-gradient-to-br from-black to-gray-900 shadow-2xl rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-yellow-600"
-            >
-              <img
-                className="w-full h-48 object-cover opacity-80"
-                src={card.imageSrc}
-                alt={card.altText}
-                loading="lazy"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-red-600">
-                  {card.title}
-                </h3>
-                <p className="text-gray-300 mt-2">{card.description}</p>
-              </div>
-            </div>
-          ))}
+  {/* Cards Section */}
+  <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    {/* Offer Cards */}
+    {[
+      {
+        title: "Personalized 1-on-1 French Lessons",
+        description:
+          "Engage in one-on-one French lessons tailored to your learning pace, with certified instructors for personal guidance.",
+        imageSrc:
+          "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fteacher-french-flag_1030879-62043.jpg?alt=media&token=bd1a17e8-d742-4b43-b380-edb071df1ce6",
+        altText: "French teacher conducting 1-on-1 private lessons",
+      },
+      {
+        title: "Interactive Group French Classes",
+        description:
+          "Practice speaking and understanding French in lively group settings to enhance your confidence and fluency.",
+        imageSrc:
+          "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Ffemale-study-school-computer-graphic-smiling_1134-1006.jpg?alt=media&token=21f7c42b-b0f6-4f0a-8c2a-65a5a2bb5d9a",
+        altText: "Students participating in a French group class",
+      },
+      {
+        title: "Free French Practice Resources",
+        description:
+          "Access complimentary French learning materials to support your journey and practice French at your own pace.",
+        imageSrc:
+          "https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/ocean_lagagues%2Fstyle-blonde-woman-beret-with-french-flag-books-around-yellow_87910-6686.avif?alt=media&token=eb801c55-949d-4f6c-9ba7-55059afe6034",
+        altText: "Free French learning resources",
+      },
+    ].map((card, idx) => (
+      <div
+        key={idx}
+        className="bg-gradient-to-br from-[#0052A5] to-[#EF4135] shadow-xl rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-blue-600"
+      >
+        <img
+          className="w-full h-48 object-cover opacity-90"
+          src={card.imageSrc}
+          alt={card.altText}
+          loading="lazy"
+        />
+        <div className="p-6">
+          <h3 className="text-xl font-semibold text-white">{card.title}</h3>
+          <p className="text-gray-100 mt-2">{card.description}</p>
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       <section className="py-16 bg-gradient-to-r from-[#0052A5] via-white to-[#EF4135]">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
