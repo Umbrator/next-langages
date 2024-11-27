@@ -20,7 +20,7 @@ export default function ContactUs() {
     message: "",
   });
   const [errors, setErrors] = useState({});
-  const [submitted, setSubmitted] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,31 +39,28 @@ export default function ContactUs() {
       newErrors.contact = "Enter a 10-digit contact number";
     if (Object.keys(newErrors).length) return setErrors(newErrors);
 
-    setSubmitted(true);
-    setFormData({ issue: "", email: "", contact: "", message: "" });
-    setTimeout(() => setSubmitted(false), 3000);
+    setShowModal(true); // Show success modal
+    setFormData({ issue: "", email: "", contact: "", message: "" }); // Reset form
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-blue-50 text-gray-800 ">
+    <div className="min-h-screen flex flex-col bg-blue-50 text-gray-800">
       <Navbar />
 
-      {/* Image Banner Below Navbar */}
+      {/* Image Banner */}
       <div className="w-full">
         <img
           src="https://img.freepik.com/premium-photo/business-people-wearing-headset-working-office-support-remote-customer-colleague-call-center-telemarketing-customer-support-agent-provide-service-telephone-video-conference-oratory-call_31965-245544.jpg?w=1380"
           alt="Contact Us Banner"
-          className="w-full max-h-[500px] object-cover" // Limits the max height to 200 pixels
+          className="w-full max-h-[500px] object-cover"
         />
       </div>
 
-      {/* Main Content Area with Padding and Width Adjustment */}
+      {/* Main Content */}
       <main className="flex-1 pt-20">
         <div className="container mx-auto px-8 max-w-6xl">
           <header className="text-center mb-14">
-            <h1 className="text-4xl font-extrabold text-blue-900">
-              Get in Touch
-            </h1>
+            <h1 className="text-4xl font-extrabold text-blue-900">Get in Touch</h1>
             <p className="text-lg text-gray-600 mt-3">
               We're here to help with any inquiries or feedback you have.
             </p>
@@ -95,14 +92,31 @@ export default function ContactUs() {
               {/* Social Links */}
               <section className="flex justify-evenly space-x-6">
                 {[
-                  { href: "#", icon: FaFacebook, color: "bg-blue-700" },
-                  { href: "#", icon: FaInstagram, color: "bg-pink-500" },
-                  { href: "#", icon: FaYoutube, color: "bg-red-600" },
+                  {
+                    href: "https://web.facebook.com/the.ocean.connecting/",
+                    icon: FaFacebook,
+                    color: "bg-blue-700",
+                  },
+                  {
+                    href: "https://www.instagram.com/oceanconnecting.ma/",
+                    icon: FaInstagram,
+                    color: "bg-pink-500",
+                  },
+                  {
+                    href: "https://www.youtube.com/@ocean.connecting",
+                    icon: FaYoutube,
+                    color: "bg-red-600",
+                  },
                 ].map(({ href, icon: Icon, color }, index) => (
                   <a
                     key={index}
                     href={href}
                     className={`w-12 h-12 ${color} text-white rounded-full flex items-center justify-center transition transform hover:scale-105`}
+                    aria-label={`Visit our ${
+                      Icon.displayName || "social media"
+                    } page`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Icon />
                   </a>
@@ -219,18 +233,31 @@ export default function ContactUs() {
               >
                 Send Message
               </button>
-              {submitted && (
-                <p className="text-green-600 text-center mt-4">
-                  Thank you! Your message has been sent.
-                </p>
-              )}
             </form>
           </div>
         </div>
       </main>
 
+      {/* Success Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-xl shadow-md">
+            <h2 className="text-lg font-bold text-blue-900 mb-2">
+              Message Sent!
+            </h2>
+            <p className="text-gray-600">Thank you for contacting us.</p>
+            <button
+              onClick={() => setShowModal(false)}
+              className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       <Footer />
-      <OfflineChat/>
+      <OfflineChat />
     </div>
   );
 }
