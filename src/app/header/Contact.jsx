@@ -12,6 +12,8 @@ const Contact = () => {
     message: "",
   });
 
+  const [showModal, setShowModal] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -19,7 +21,8 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Message submitted successfully!");
+    setShowModal(true); // Show the success modal
+    setFormData({ name: "", email: "", subject: "", message: "" }); // Reset the form
   };
 
   const locationData = [
@@ -34,6 +37,7 @@ const Contact = () => {
   return (
     <section className="bg-indigo-50 dark:bg-gray-900 py-12">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        {/* Contact Info Section */}
         <div className="space-y-8">
           <motion.div
             className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
@@ -85,13 +89,16 @@ const Contact = () => {
           </motion.div>
         </div>
 
+        {/* Contact Form */}
         <motion.div
           className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg transition-transform duration-500 transform hover:-translate-y-1 h-full flex flex-col justify-between"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
         >
-          <h3 className="text-2xl font-bold text-blue-900 dark:text-white mb-4">Contact Us</h3>
+          <h3 className="text-2xl font-bold text-blue-900 dark:text-white mb-4">
+            Contact Us
+          </h3>
           <form
             onSubmit={handleSubmit}
             className="space-y-6 flex-grow flex flex-col"
@@ -183,6 +190,26 @@ const Contact = () => {
           </form>
         </motion.div>
       </div>
+
+      {/* Success Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg space-y-4">
+            <h3 className="text-lg font-semibold text-blue-900 dark:text-white">
+              Success!
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300">
+              Your message has been submitted successfully.
+            </p>
+            <button
+              onClick={() => setShowModal(false)}
+              className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

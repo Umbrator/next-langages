@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -9,7 +9,7 @@ import {
   FaWhatsapp,
   FaAt,
   FaPhoneAlt,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -22,20 +22,24 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4">Services</h4>
             <ul className="text-gray-300 space-y-2">
               {[
-                'Learn English',
-                'Learn French',
-                'Learn Spanish',
-                'Learn Italian',
-                'Learn German',
-                'Learn For Kids',
-                'Consulting',
-                'Exam preparation',
-                'Online learning',
+                { label: "Learn English", href: "/english/learn" },
+                { label: "Learn French", href: "/french/learn" },
+                { label: "Learn Spanish", href: "/spain/learn" },
+                { label: "Learn Italian", href: "/italie/learn" },
+                { label: "Learn German", href: "/german/learn" },
+                // { label: "Learn For Kids", href: "/learn-for-kids" },
+                // { label: "Consulting", href: "/consulting" },
+                // { label: "Exam preparation", href: "/exam-preparation" },
+                { label: "Online learning", href: "/" },
               ].map((service, index) => (
                 <li key={index} className="flex items-center">
                   <span className="text-yellow-400 mr-2">•</span>
-                  <a href="#" className="hover:text-white">
-                    {service}
+                  <a
+                    href={service.href}
+                    className="hover:text-white"
+                    aria-label={`Navigate to ${service.label}`}
+                  >
+                    {service.label}
                   </a>
                 </li>
               ))}
@@ -47,20 +51,24 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4">Useful Links</h4>
             <ul className="text-gray-300 space-y-2">
               {[
-                'About Us',
-                'Announcements',
-                'Knowledgebase',
-                'Privacy Policy',
-                'Terms of Use',
-                'Network Status',
-                'Testimonial',
-                'Support',
-                'Contact Us',
+                { label: "About Us", href: "/" },
+                { label: "Announcements", href: "/" },
+                { label: "Knowledgebase", href: "/" },
+                // { label: "Privacy Policy", href: "/privacy-policy" },
+                // { label: "Terms of Use", href: "/terms-of-use" },
+                // { label: "Network Status", href: "/network-status" },
+                { label: "Testimonial", href: "/" },
+                { label: "Support", href: "/contact" },
+                { label: "Contact Us", href: "/contact" },
               ].map((link, index) => (
                 <li key={index} className="flex items-center">
                   <span className="text-yellow-400 mr-2">•</span>
-                  <a href="#" className="hover:text-white">
-                    {link}
+                  <a
+                    href={link.href}
+                    className="hover:text-white"
+                    aria-label={`Navigate to ${link.label}`}
+                  >
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -73,7 +81,7 @@ const Footer = () => {
               <img
                 src="https://howdycode.com/templates/howdycode/img/flags/morocco-map.png"
                 alt="Morocco Map"
-                className="w-35 h-35"
+                className="w-18 h-18"
                 loading="lazy"
               />
               <p className="text-center text-gray-300">Proudly based in Morocco!</p>
@@ -97,29 +105,29 @@ const Footer = () => {
         <div className="flex justify-center space-x-6 mt-8 mb-4">
           {[
             {
-              href: 'https://www.linkedin.com/company/ocean-connecting/mycompany/',
+              href: "https://www.linkedin.com/company/ocean-connecting/mycompany/",
               icon: <FaLinkedin size={24} />,
-              label: 'LinkedIn',
+              label: "LinkedIn",
             },
             {
-              href: 'https://www.facebook.com/the.ocean.connecting/',
+              href: "https://www.facebook.com/the.ocean.connecting/",
               icon: <FaFacebookF size={24} />,
-              label: 'Facebook',
+              label: "Facebook",
             },
             {
-              href: 'https://www.instagram.com/oceanconnecting.ma/',
+              href: "https://www.instagram.com/oceanconnecting.ma/",
               icon: <FaInstagram size={24} />,
-              label: 'Instagram',
+              label: "Instagram",
             },
             {
-              href: 'https://x.com/OceanConnecting',
+              href: "https://x.com/OceanConnecting",
               icon: <FaTwitter size={24} />,
-              label: 'Twitter',
+              label: "Twitter",
             },
             {
-              href: 'https://api.whatsapp.com/send/?phone=%2B212704309787',
+              href: "https://api.whatsapp.com/send/?phone=%2B212704309787",
               icon: <FaWhatsapp size={24} />,
-              label: 'WhatsApp',
+              label: "WhatsApp",
             },
           ].map((social, index) => (
             <a
@@ -133,6 +141,7 @@ const Footer = () => {
           ))}
         </div>
 
+        {/* Footer Bottom Text */}
         <div className="text-center text-gray-500 mt-8">
           <p>Copyright © 2024 Ocean Connecting. All Rights Reserved.</p>
         </div>
