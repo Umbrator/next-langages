@@ -24,9 +24,9 @@ const Footer = () => {
               {[
                 { label: "Learn English", href: "/english/learn" },
                 { label: "Learn French", href: "/french/learn" },
-                { label: "Learn Spanish", href: "/spain/learn" },
-                { label: "Learn Italian", href: "/italie/learn" },
-                { label: "Learn German", href: "/german/learn" },
+                { label: "Learn Spanish", href: "/Spain/learn" },
+                { label: "Learn Italian", href: "/Italie/learn" },
+                { label: "Learn German", href: "/German/learn" },
                 // { label: "Learn For Kids", href: "/learn-for-kids" },
                 // { label: "Consulting", href: "/consulting" },
                 // { label: "Exam preparation", href: "/exam-preparation" },
