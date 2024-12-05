@@ -89,6 +89,7 @@ const Testimonials = () => {
 
   return (
     <section
+    id="testimonials"
       {...handlers}
       className="bg-gray-50 py-20 relative overflow-hidden min-h-screen cursor-grab"
     >

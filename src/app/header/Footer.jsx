@@ -52,11 +52,11 @@ const Footer = () => {
             <ul className="text-gray-300 space-y-2">
               {[
                 { label: "About Us", href: "/" },
-                { label: "Announcements", href: "/" },
+                {
+                  label: "Announcements",
+                  href: "https://www.oceanconnecting.ma",
+                },
                 { label: "Knowledgebase", href: "/" },
-                // { label: "Privacy Policy", href: "/privacy-policy" },
-                // { label: "Terms of Use", href: "/terms-of-use" },
-                // { label: "Network Status", href: "/network-status" },
                 { label: "Testimonial", href: "/" },
                 { label: "Support", href: "/contact" },
                 { label: "Contact Us", href: "/contact" },
@@ -67,6 +67,19 @@ const Footer = () => {
                     href={link.href}
                     className="hover:text-white"
                     aria-label={`Navigate to ${link.label}`}
+                    onClick={(e) => {
+                      if (link.label === "Knowledgebase") {
+                        e.preventDefault();
+                        document
+                          .getElementById("CourseSection")
+                          ?.scrollIntoView({ behavior: "smooth" });
+                      } else if (link.label === "Testimonial") {
+                        e.preventDefault();
+                        document
+                          .getElementById("testimonials")
+                          ?.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
                   >
                     {link.label}
                   </a>
@@ -84,7 +97,9 @@ const Footer = () => {
                 className="w-18 h-18"
                 loading="lazy"
               />
-              <p className="text-center text-gray-300">Proudly based in Morocco!</p>
+              <p className="text-center text-gray-300">
+                Proudly based in Morocco!
+              </p>
             </div>
 
             <div className="relative bg-white text-blue-900 p-4 rounded-lg shadow-md w-full text-center">
