@@ -64,7 +64,7 @@ const OfflineChat = () => {
     const lowercasedMessage = message.toLowerCase();
 
     if (lowercasedMessage.includes('pricing')) {
-        return 'Our pricing ranges from $50 to $200 depending on the package and level you choose. Would you like more details about specific language courses?';
+        return 'Our pricing ranges from 350DH to 850DH depending on the package and level you choose. Would you like more details about specific language courses?';
     } else if (lowercasedMessage.includes('contact')) {
         return 'You can reach us at oceanconnecting.ma@gmail.com or call us at +212-704309787. How else can I assist you?';
     } else if (lowercasedMessage.includes('learn english')) {

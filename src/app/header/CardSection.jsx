@@ -37,7 +37,6 @@ const CardSection = () => {
   const [visibleCards, setVisibleCards] = useState([]);
 
   useEffect(() => {
-    // Utiliser un intervalle progressif pour révéler les cartes progressivement
     cards.forEach((_, index) => {
       setTimeout(() => {
         setVisibleCards((prev) => [...prev, index]);
