@@ -167,7 +167,7 @@ const Ex2 = ({
   return (
     <div className="p-8 bg-white rounded-lg shadow-lg max-w-3xl mx-auto mt-16">
       <h2 className="text-4xl font-bold text-center text-[#FFCC00] mb-6">
-        A1 German: Language Proficiency Test
+        A2 German: Language Proficiency Test
       </h2>
 
       <p className="text-lg text-gray-500 mb-4 text-center">
