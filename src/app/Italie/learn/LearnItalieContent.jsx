@@ -34,7 +34,7 @@ const LearnItalieContent = () => {
 
   const handleLearnMore = (courseTitle) => {
     const courseId = courseTitle.toLowerCase().replace(/ /g, "-");
-    router.push(`/italie/learn/${courseId}`);
+    router.push(`/Italie/learn/${courseId}`);
   };
 
   return (

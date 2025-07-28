@@ -34,7 +34,7 @@ const LearnGermanContent = () => {
 
   const handleLearnMore = (courseTitle) => {
     const courseId = courseTitle.toLowerCase().replace(/ /g, "-");
-    router.push(`/german/learn/${courseId}`);
+    router.push(`/German/learn/${courseId}`);
   };
 
   return (
