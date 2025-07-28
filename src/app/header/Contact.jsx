@@ -21,8 +21,8 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setShowModal(true); // Show the success modal
-    setFormData({ name: "", email: "", subject: "", message: "" }); // Reset the form
+    setShowModal(true);
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   const locationData = [
@@ -37,7 +37,6 @@ const Contact = () => {
   return (
     <section className="bg-indigo-50 dark:bg-gray-900 py-12">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        {/* Contact Info Section */}
         <div className="space-y-8">
           <motion.div
             className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"

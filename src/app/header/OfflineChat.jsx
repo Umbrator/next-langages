@@ -1,13 +1,13 @@
 "use client";
-import React, { useState, useEffect, useRef } from 'react';
-import { FaTimes, FaPaperPlane } from 'react-icons/fa';
-import { MdChatBubble } from 'react-icons/md';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef } from "react";
+import { FaTimes, FaPaperPlane } from "react-icons/fa";
+import { MdChatBubble } from "react-icons/md";
+import { motion, AnimatePresence } from "framer-motion";
 
 const OfflineChat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isWelcomeScreen, setIsWelcomeScreen] = useState(true);
-  const [userMessage, setUserMessage] = useState('');
+  const [userMessage, setUserMessage] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [showTooltip, setShowTooltip] = useState(false);
   const [showInput, setShowInput] = useState(false);
@@ -34,23 +34,23 @@ const OfflineChat = () => {
     setShowCard(false);
     setChatHistory([
       {
-        sender: 'bot',
-        text: 'Welcome to our support chat! 👋 How can we help you today?',
+        sender: "bot",
+        text: "Welcome to our support chat! 👋 How can we help you today?",
       },
     ]);
   };
 
   const handleSendMessage = (message) => {
-    if (message.trim() === '') return;
+    if (message.trim() === "") return;
 
-    const newUserMessage = { sender: 'user', text: message };
+    const newUserMessage = { sender: "user", text: message };
     setChatHistory((prevHistory) => [...prevHistory, newUserMessage]);
-    setUserMessage('');
+    setUserMessage("");
     setIsTyping(true);
 
     setTimeout(() => {
       const newBotMessage = {
-        sender: 'bot',
+        sender: "bot",
         text: getBotResponse(message),
         options: getResponseOptions(message),
       };
@@ -63,41 +63,43 @@ const OfflineChat = () => {
   const getBotResponse = (message) => {
     const lowercasedMessage = message.toLowerCase();
 
-    if (lowercasedMessage.includes('pricing')) {
-        return 'Our pricing ranges from 350DH to 850DH depending on the package and level you choose. Would you like more details about specific language courses?';
-    } else if (lowercasedMessage.includes('contact')) {
-        return 'You can reach us at oceanconnecting.ma@gmail.com or call us at +212-704309787. How else can I assist you?';
-    } else if (lowercasedMessage.includes('learn english')) {
-        return 'We offer English courses from beginner to advanced levels. Would you like information on course levels, pricing, or learning resources?';
-    } else if (lowercasedMessage.includes('learn french')) {
-        return 'Our French courses focus on grammar, vocabulary, and conversation practice. Are you interested in beginner or advanced materials, or would you like help selecting a level?';
-    } else if (lowercasedMessage.includes('learn spanish')) {
-        return 'We provide Spanish courses covering levels A1 to C2. Let us know if you need help choosing a level or want to explore our resources.';
-    } else if (lowercasedMessage.includes('learn german')) {
-        return 'Our German courses are designed to help you build fluency. Would you like details on course levels, pricing, or learning materials?';
-    } else if (lowercasedMessage.includes('learn italian')) {
-        return 'We offer Italian language learning for all levels, from beginner to advanced. Let us know if you need guidance on resources or specific learning strategies.';
+    if (lowercasedMessage.includes("pricing")) {
+      return "Our pricing ranges from 350DH to 850DH depending on the package and level you choose. Would you like more details about specific language courses?";
+    } else if (lowercasedMessage.includes("contact")) {
+      return "You can reach us at oceanconnecting.ma@gmail.com or call us at +212-704309787. How else can I assist you?";
+    } else if (lowercasedMessage.includes("learn english")) {
+      return "We offer English courses from beginner to advanced levels. Would you like information on course levels, pricing, or learning resources?";
+    } else if (lowercasedMessage.includes("learn french")) {
+      return "Our French courses focus on grammar, vocabulary, and conversation practice. Are you interested in beginner or advanced materials, or would you like help selecting a level?";
+    } else if (lowercasedMessage.includes("learn spanish")) {
+      return "We provide Spanish courses covering levels A1 to C2. Let us know if you need help choosing a level or want to explore our resources.";
+    } else if (lowercasedMessage.includes("learn german")) {
+      return "Our German courses are designed to help you build fluency. Would you like details on course levels, pricing, or learning materials?";
+    } else if (lowercasedMessage.includes("learn italian")) {
+      return "We offer Italian language learning for all levels, from beginner to advanced. Let us know if you need guidance on resources or specific learning strategies.";
     } else {
-        return 'I’m here to help! Please select one of the options below or ask your question directly.';
+      return "I’m here to help! Please select one of the options below or ask your question directly.";
     }
-};
+  };
 
-const getResponseOptions = (message) => {
+  const getResponseOptions = (message) => {
     const lowercasedMessage = message.toLowerCase();
-    if (lowercasedMessage.includes('pricing') || lowercasedMessage.includes('contact')) {
-        return null;
+    if (
+      lowercasedMessage.includes("pricing") ||
+      lowercasedMessage.includes("contact")
+    ) {
+      return null;
     }
     return [
-        'Pricing Information',
-        'Contact Support',
-        'Learn English',
-        'Learn French',
-        'Learn Spanish',
-        'Learn German',
-        'Learn Italian'
+      "Pricing Information",
+      "Contact Support",
+      "Learn English",
+      "Learn French",
+      "Learn Spanish",
+      "Learn German",
+      "Learn Italian",
     ];
-};
-
+  };
 
   const handleOptionClick = (option) => {
     handleSendMessage(option);
@@ -105,14 +107,14 @@ const getResponseOptions = (message) => {
   };
 
   const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       handleSendMessage(userMessage);
     }
   };
 
   useEffect(() => {
     if (chatEndRef.current) {
-      chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
+      chatEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [chatHistory]);
 
@@ -164,7 +166,11 @@ const getResponseOptions = (message) => {
         initial={{ scale: 1 }}
         animate={{
           scale: showNotification ? [1, 1.1, 1] : 1,
-          transition: { duration: 0.6, repeat: Infinity, repeatType: 'reverse' },
+          transition: {
+            duration: 0.6,
+            repeat: Infinity,
+            repeatType: "reverse",
+          },
         }}
       >
         <button
@@ -209,7 +215,11 @@ const getResponseOptions = (message) => {
           >
             <div className="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-4 flex justify-between items-center rounded-t-lg">
               <h3 className="font-semibold">Support Chat</h3>
-              <FaTimes onClick={toggleChat} className="cursor-pointer" size={20} />
+              <FaTimes
+                onClick={toggleChat}
+                className="cursor-pointer"
+                size={20}
+              />
             </div>
             {isWelcomeScreen ? (
               <div className="p-6 flex flex-col items-center text-center">
@@ -228,11 +238,16 @@ const getResponseOptions = (message) => {
                   {chatHistory.map((msg, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, x: msg.sender === 'user' ? 50 : -50 }}
+                      initial={{
+                        opacity: 0,
+                        x: msg.sender === "user" ? 50 : -50,
+                      }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3 }}
                       className={`p-3 rounded-lg shadow-md ${
-                        msg.sender === 'user' ? 'bg-blue-100 self-end' : 'bg-gray-100 self-start'
+                        msg.sender === "user"
+                          ? "bg-blue-100 self-end"
+                          : "bg-gray-100 self-start"
                       }`}
                     >
                       {msg.text}
@@ -240,33 +255,37 @@ const getResponseOptions = (message) => {
                   ))}
                   {isTyping && (
                     <div className="bg-gray-100 p-2 rounded-lg shadow-md self-start">
-                      <span className="italic text-gray-500">Support is typing...</span>
+                      <span className="italic text-gray-500">
+                        Support is typing...
+                      </span>
                     </div>
                   )}
                   <div ref={chatEndRef} />
                 </div>
-                {showOptions && chatHistory.length > 0 &&
+                {showOptions &&
+                  chatHistory.length > 0 &&
                   chatHistory[chatHistory.length - 1].options && (
                     <div className="p-4 bg-gray-100 flex flex-col space-y-2">
-                      {chatHistory[chatHistory.length - 1].options.map((option, index) => (
-                        <button
-                          key={index}
-                          onClick={() => handleOptionClick(option)}
-                          className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition duration-300"
-                        >
-                          {option}
-                        </button>
-                      ))}
+                      {chatHistory[chatHistory.length - 1].options.map(
+                        (option, index) => (
+                          <button
+                            key={index}
+                            onClick={() => handleOptionClick(option)}
+                            className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition duration-300"
+                          >
+                            {option}
+                          </button>
+                        )
+                      )}
                     </div>
                   )}
                 {!showOptions && (
                   <button
-                  onClick={() => setShowOptions(true)}
-                  className="bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 px-4 rounded-full hover:from-blue-600 hover:to-blue-800 transition duration-300 m-4"
-                >
-                  Show Options
-                </button>
-                
+                    onClick={() => setShowOptions(true)}
+                    className="bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 px-4 rounded-full hover:from-blue-600 hover:to-blue-800 transition duration-300 m-4"
+                  >
+                    Show Options
+                  </button>
                 )}
                 {showInput && (
                   <div className="p-4 bg-gray-200 rounded-b-lg flex items-center">
